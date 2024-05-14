@@ -354,6 +354,37 @@ body>footer ul.bnr .bg02{
 	height: 283px;
 }
 
+/* #sub_contents_area form */
+#sub_contents_area .form_area,
+#sub_contents_area .enquete_area {
+	width: 80%;
+	margin: 0 auto;
+}
+#sub_contents_area .privacy_area {
+	width: 60%;
+	margin: 70px auto;
+}
+#sub_contents_area table.form_table {
+	border-collapse: collapse;
+}
+#sub_contents_area table.form_table tbody tr th {
+	width: 25%;
+}
+#sub_contents_area .form_area input.w_lg,
+#sub_contents_area .form_area select.w_lg,
+#sub_contents_area .form_area textarea.w_lg {
+	width: 80%;
+}
+#sub_contents_area .form_area input.w_md,
+#sub_contents_area .form_area select.w_md,
+#sub_contents_area .form_area textarea.w_md {
+	width: 45%;
+}
+#sub_contents_area .form_area input.w_sm,
+#sub_contents_area .form_area select.w_sm,
+#sub_contents_area .form_area textarea.w_sm {
+	width: 35%;
+}
 /* sp */
 
 #sub_contents_area #sp_message{

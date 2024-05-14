@@ -1027,3 +1027,106 @@ body{
 	text-align: center;
 	margin: 100px 0;
 }
+
+/* #sub_contents_area form */
+#sub_contents_area span.mast {
+	content: "必須";
+	display: inline-block;
+	background-color: #ff0000;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin: 0 15px;
+}
+#sub_contents_area .form_area .form_table .input_list > label,
+#sub_contents_area .form_area .form_table .input_list > input {
+	display: block;
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+#sub_contents_area .form_area input,
+#sub_contents_area .form_area select,
+#sub_contents_area .form_area textarea {
+	border: #cdcdcd 1px solid;
+	border-radius: 0.25rem;
+	padding: 0.5rem 0.25rem;
+	margin-right: 10px;
+}
+#sub_contents_area .form_area textarea {
+	height: 10rem;
+	line-height: 1.25rem;
+	resize: none;
+}
+#sub_contents_area .privacy_area input[type="checkbox"] {
+	width: 17px;
+	height: 17px;
+	margin: 0 5px;
+	vertical-align: middle;
+}
+#sub_contents_area table.form_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+#sub_contents_area table.form_table tbody tr {
+	border-bottom: #A0A0A0 1px solid;
+}
+#sub_contents_area table.form_table tbody tr.no_border {
+	border: none;
+}
+#sub_contents_area table.form_table tbody tr.no_border th,
+#sub_contents_area table.form_table tbody tr.no_border td{
+	padding-bottom: 0;
+}
+#sub_contents_area table.form_table tbody tr:first-child {
+	border-top: #A0A0A0 1px solid;
+}
+#sub_contents_area table.form_table tbody tr th,
+#sub_contents_area table.form_table tbody tr td {
+	padding: 10px 0;
+	white-space: nowrap;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+#sub_contents_area table.form_table tbody tr th > span {
+	white-space: normal;
+	display: inline-block;
+	text-align: left;
+	baseline-source: first;
+}
+#sub_contents_area table.form_table tbody tr th {
+	font-weight: normal;
+}
+#sub_contents_area table.form_table tbody tr th.white_normal {
+	white-space: normal;
+}
+#sub_contents_area table.form_table tbody tr th.white_normal > span:first-child{
+	max-width: 50%;
+}
+#sub_contents_area table.form_table tbody tr td {
+	padding: 10px 20px;
+}
+#sub_contents_area .privacy_area > p a:link {
+	color: #000000;
+	text-decoration: underline;
+}
+#sub_contents_area .privacy_area .scroll_message {
+	height: 265px;
+	margin-bottom: 10px;
+	padding: 20px;
+	border: #9f9f9f 1px solid;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	text-align: left;
+}
+#sub_contents_area .privacy_area,
+#sub_contents_area .button_area {
+	text-align: center;
+}
+#sub_contents_area .button_area .btn{
+	display: inline-block;
+	min-width: 130px;
+	padding: 0.75rem 1.25rem;
+	color: #ffffff;
+	background-color: #28AE5E;
+	border: none;
+	cursor: pointer;
+}
