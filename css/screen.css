@@ -88,7 +88,7 @@ a.btn_d:hover{
 	a.btn_b{
 		font-size:16px;
 	}
-	
+
 	a.btn_b span{
 		padding:20px 0 20px 20px;
 	}
@@ -185,7 +185,7 @@ body{
 	br.pc{
 		display:none;
 	}
-	
+
 	#home_key_area p.catchcopy{
 		left:20px;
 		font-size:30px;
@@ -194,12 +194,12 @@ body{
 		padding:15px 20px;
 		overflow:hidden;
 	}
-	
+
 	#home_topics_area h2{
 		width:100%;
 		float:none;
 	}
-	
+
 	#home_topics_area p{
 		width:100%;
 		font-size:13px;
@@ -307,35 +307,35 @@ body{
 	#home_service_area{
 		padding:50px 20px;
 	}
-	
+
 	#home_service_area h2{
 		margin:0 auto 20px;
 		font-size:25px;
 	}
-	
+
 	#home_service_area h2 span{
 		font-size:12px;
 	}
-	
+
 	#home_service_area .txt{
 		margin:0 auto 40px;
 	}
-	
+
 	#home_service_area .txt>img{
 		width:100%;
 		float:none;
 	}
-	
+
 	#home_service_area .txt>div{
 		width:100%;
 		float:none;
 		margin:0 0 20px;
 	}
-	
+
 	#home_service_area .txt>div a.btn_a{
 		margin:0 auto;
 	}
-	
+
 	#home_service_area ul.item li{
 		width:50%;
 	}
@@ -547,12 +547,12 @@ body{
 	#home_sp_area{
 		padding:50px 0;
 	}
-	
+
 	#home_sp_area h2{
 		margin:0 auto 20px;
 		font-size:25px;
 	}
-	
+
 	#home_sp_area h2 span{
 		font-size:12px;
 	}
@@ -629,12 +629,12 @@ body{
 	#home_saq_area{
 		padding:50px 20px;
 	}
-	
+
 	#home_saq_area h2{
 		margin:0 auto 20px;
 		font-size:25px;
 	}
-	
+
 	#home_saq_area ul.list li{
 		width:100%;
 		padding:0 0 25px;
@@ -676,16 +676,16 @@ body{
 	#home_sponsor_area{
 		padding:40px 20px;
 	}
-	
+
 	#home_sponsor_area>div{
 		padding:20px;
 	}
-	
+
 	#home_sponsor_area>div img{
 		width:100%;
 		margin:0 0 10px;
 	}
-	
+
 	#home_sponsor_area>div p{
 		text-align:justify;
 		font-size:14px;
@@ -703,7 +703,7 @@ body{
 @media screen and (max-width:1350px){
 	#sub_contents_area #title_area h1{
 		margin-left: 30px;
-	}	
+	}
 }
 
 #title_area{
@@ -944,7 +944,7 @@ body{
 	justify-content: center;
 }
 #sub_contents_area #print_service02 div.print_exsample div div{
-	border: 0.5px solid #a5a5a5; 
+	border: 0.5px solid #a5a5a5;
 	width: 300px;
 	background: #fff;
 	align-items: center;
@@ -990,7 +990,7 @@ body{
 */
 #sub_contents_area #print_service03 div.other_sevice_area div.other_sevice:nth-child(2n){
 	flex-direction: row-reverse;
-} 
+}
 
 #sub_contents_area #print_service03 div.other_sevice_area div.other_sevice div{
 	width: 530px;
@@ -1037,6 +1037,12 @@ body{
 	padding: 5px 10px;
 	margin: 0 15px;
 }
+#sub_contents_area .hidden {
+	display: none;
+}
+#sub_contents_area .form_area .form_table label {
+	position: relative;
+}
 #sub_contents_area .form_area .form_table .input_list > label,
 #sub_contents_area .form_area .form_table .input_list > input {
 	display: block;
@@ -1055,6 +1061,48 @@ body{
 	height: 10rem;
 	line-height: 1.25rem;
 	resize: none;
+}
+#sub_contents_area .form_area .form_table input[type="radio"] {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+#sub_contents_area .form_area .form_table input[type="radio"] + label {
+	padding-left: 2rem;
+}
+#sub_contents_area .form_area .form_table input[type="radio"] + label::before,
+#sub_contents_area .form_area .form_table input[type="radio"] + label::after {
+	content: "";
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+}
+#sub_contents_area .form_area .form_table input[type="radio"] + label::before {
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	left: 5px;
+}
+#sub_contents_area .form_area .form_table input[type="radio"] + label::after {
+	background-color: #000000;
+	border-radius: 50%;
+	opacity: 0;
+	width: 10px;
+	height: 10px;
+	left: 10.5px
+}
+#sub_contents_area .form_area .form_table input[type="radio"]:checked + label::after {
+	opacity: 1;
 }
 #sub_contents_area .privacy_area input[type="checkbox"] {
 	width: 17px;
@@ -1129,4 +1177,10 @@ body{
 	background-color: #28AE5E;
 	border: none;
 	cursor: pointer;
+}
+
+/* confirm */
+#sub_contents_area .confirm_area {
+	background-color: rgba(115,111,111,0.05);
+	margin-bottom: 40px;
 }

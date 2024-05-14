@@ -77,7 +77,7 @@
 	<section>
 		<div>
 			<h2>メッセージ</h2>
-			<form method="POST" action="">
+			<form method="POST" action="./confirm.php" name="contact_form">
 				<div class="form_area">
 					<table class="form_table">
 						<tbody>
@@ -87,81 +87,248 @@
 									<span class="mast">必須</span>
 								</th>
 								<td>
-									<label>
-										<input type="radio" name="contact_type" id="" value="1">
-										お問い合わせ
-									<label>
-									<label>
-										<input type="radio" name="contact_type" id="" value="2">
-										お見積り
-									<label>
+									<input type="radio" name="contact_type" id="contact_type1" value="1" checked>
+									<label for="contact_type1">お問い合わせ</label>
+									<input type="radio" name="contact_type" id="contact_type2" value="2">
+									<label for="contact_type2">お見積り</label>
+									<span class="error" id="contact_type_error"></span>
 								</td>
 							</tr>
-							<tr>
+							<tr class="inquiry">
 								<th>
 									<span>お問い合わせ区分</span>
 								</th>
 								<td>
-									<label>
-										<input type="radio" name="contact_category" id="" value="1">
-										法人のお客様
-									<label>
-									<label>
-										<input type="radio" name="contact_category" id="" value="1">
-										個人のお客様
-									<label>
+									<input type="radio" name="contact_category" id="contact_category1" value="1">
+									<label for="contact_category1">法人のお客様<label for="">
+									<input type="radio" name="contact_category" id="contact_category2" value="1">
+									<label for="contact_category2">個人のお客様<label for="">
 								</td>
 							</tr>
-							<tr>
+							<tr class="inquiry">
 								<th>
 									<span>お問い合わせ内容</span>
 									<span class="mast">必須</span>
 								</th>
 								<td>
-									<select name="contact_details" class="w_sm">
+									<select name="contact_details" id="contact_details" class="w_sm">
 										<option calue="">ご希望の内容をご選択ください。</option>
 									</select>
+									<span class="error" id="contact_details_error"></span>
 								</td>
 							</tr>
-							<tr>
+							<tr class="inquiry">
 								<th class="white_normal">
 									<span>相談したい項目を選択（複数可）</span>
 									<span class="mast">必須</span>
 								</th>
 								<td class="input_list">
-									<label>
-										<input type="radio" name="consultation_item" id="" value="1">
-										印刷について
-									</label>
-									<label>
-										<input type="radio" name="consultation_item" id="" value="2">
-										製本について
-									</label>
-									<label>
-										<input type="radio" name="consultation_item" id="" value="3">
-										オンデマンド印刷について
-									</label>
-									<label>
-										<input type="radio" name="consultation_item" id="" value="4">
-										プリント相談について
-									</label>
-									<label>
-										<input type="radio" name="consultation_item" id="" value="5">
-										データ入稿について
-									</label>
-									<label>
-										<input type="radio" name="consultation_item" id="" value="6">
-										その他
-									</label>
+									<input type="radio" name="consultation_item" id="consultation_item1" value="1" checked>
+									<label for="consultation_item1">印刷について</label>
+									<input type="radio" name="consultation_item" id="consultation_item2" value="2">
+									<label for="consultation_item2">製本について</label>
+									<input type="radio" name="consultation_item" id="consultation_item3" value="3">
+									<label for="consultation_item3">オンデマンド印刷について</label>
+									<input type="radio" name="consultation_item" id="consultation_item4" value="4">
+									<label for="consultation_item4">プリント相談について</label>
+									<input type="radio" name="consultation_item" id="consultation_item5" value="5">
+									<label for="consultation_item5">データ入稿について</label>
+									<input type="radio" name="consultation_item" id="consultation_item6" value="6">
+									<label for="consultation_item6">その他</label>
+									<span class="error" id="consultation_item_error"></span>
 								</td>
 							</tr>
-							<tr>
+							<tr class="inquiry">
 								<th>
 									<span>ご予算</span>
 								</th>
-								<td><label><input type="text" name="budget" id="" class="w_sm">円</label></td>
+								<td>
+									<label for=""><input type="text" name="budget" id="budget" class="w_sm">円</label>
+									<span class="error" id="consultation_item_error"></span>
+								</td>
 							</tr>
-							<tr class="no_border">
+
+							<tr class="quotation hidden">
+								<th>
+									<span>部数</span>
+								</th>
+								<td>
+									<input type="text" name="num" class="w_md" >
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>サイズ</span>
+								</th>
+								<td>
+									<input type="text" name="size" class="w_tn" >
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>大判及び変形サイズ</span>
+								</th>
+								<td>
+									<input type="text" name="deformed_size" class="w_md" >
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>ページ数</span>
+								</th>
+								<td>
+									<input type="text" name="page_count" class="w_md" >
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>表紙色数</span>
+								</th>
+								<td>
+									<select name="cover_color_num" class="w_tn" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>本文色数</span>
+								</th>
+								<td>
+									<select name="color_num" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>製本体裁</span>
+								</th>
+								<td>
+									<select name="binding_style" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>表紙用紙</span>
+								</th>
+								<td>
+									<select name="cover_paper" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>表紙紙色</span>
+								</th>
+								<td>
+									<select name="cover_color" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>本文用紙</span>
+								</th>
+								<td>
+									<select name="book_paper" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>中扉</span>
+								</th>
+								<td>
+									<select name="frontispiece" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>中扉紙色</span>
+								</th>
+								<td>
+									<select name="frontispiece_color" class="w_md" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>見返し</span>
+								</th>
+								<td>
+									<input type="radio" name="endpaper" id="endpaper1" value="1" checked>
+									<label for="endpaper1">あり</label>
+									<input type="radio" name="endpaper" id="endpaper2" value="2" >
+									<label for="endpaper2">なし</label>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>ニス</span>
+								</th>
+								<td>
+									<input type="radio" name="varnish" id="varnish1" value="1" checked>
+									<label for="varnish1">光沢あり</label>
+									<input type="radio" name="varnish" id="varnish2" value="2" >
+									<label for="varnish2">マット（光沢なし）</label>
+									<input type="radio" name="varnish" id="varnish2" value="3" >
+									<label for="varnish3">なし</label>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>PP貼加工</span>
+								</th>
+								<td>
+									<input type="radio" name="varnish" id="processing1" value="1" checked>
+									<label for="processing1">光沢あり</label>
+									<input type="radio" name="processing" id="processing2" value="2" >
+									<label for="processing2">マット（光沢なし）</label>
+									<input type="radio" name="processing" id="processing3" value="3" >
+									<label for="processing3">なし</label>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>原稿種別</span>
+								</th>
+								<td>
+									<select name="manuscript_type" class="w_tn" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>OS</span>
+								</th>
+								<td>
+									<select name="os" class="w_tn" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>使用アプリケーション</span>
+								</th>
+								<td>
+									<select name="application" class="w_tn" >
+										<option>--</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr class="no_border inquiry">
 								<td colspan="2">
 									<p>
 										その他：ご希望の納期、仕様などご自由にお書きください。<br />
@@ -175,15 +342,29 @@
 									<textarea name="message" class="w_lg"></textarea>
 								</td>
 							</tr>
-							<tr>
+
+							<tr class="inquiry">
 								<th>
 									<span>会社名（氏名）</span>
 									<span class="mast">必須</span>
 								</th>
 								<td>
 									<input type="text" name="company_name" class="w_lg">
+									<span class="error" id="company_name_error"></span>
 								</td>
 							</tr>
+
+							<tr class="quotation hidden">
+								<th>
+									<span>氏名</span>
+									<span class="mast">必須</span>
+								</th>
+								<td>
+									<input type="text" name="name" class="w_lg" >
+									<span class="error" id="cname_error"></span>
+								</td>
+							</tr>
+
 							<tr>
 								<th>
 									<span>住所</span>
@@ -200,6 +381,8 @@
 								<td class="input_list">
 									<input type="text" name="mail_address" class="w_md">
 									<input type="text" name="mail_address_confirm" class="w_md">
+									<span class="error" id="mail_address_error"></span>
+									<span class="error" id="mail_address_confirm_error"></span>
 								</td>
 							</tr>
 							<tr>
@@ -209,6 +392,7 @@
 								</th>
 								<td>
 									<input type="text" name="telephone_number" class="w_sm">
+									<span class="error" id="telephone_number_error"></span>
 								</td>
 							</tr>
 							<tr>
@@ -227,19 +411,19 @@
 						アンケートにご協力ください<br />
 						弊社をお知りになったきっかけは・・
 					</p>
-					<label>
-						<input type="radio" name="enquete" value="1">
+					<label for="">
+						<input type="radio" name="enquete" value="1" checked>
 						Web
 					</label>
-					<label>
+					<label for="">
 						<input type="radio" name="enquete" value="2">
 						チラシ
 					</label>
-					<label>
+					<label for="">
 						<input type="radio" name="enquete" value="3">
 						ご紹介
 					</label>
-					<label>
+					<label for="">
 						<input type="radio" name="enquete" value="4">
 						その他
 					</label>
@@ -252,7 +436,7 @@
 						連絡先　電話：03-5621-3848　FAX:03-5621-3849
 						b)　利用目的について。 1. お客様が当社の会員としてサービスを利用する場合。 2. 製品を提供する為の取引遂行にあたり、製品の発送、お問い合わせへの対応、当社からお客様へのお問い合わせ、また、その他取引業務にあ
 					</div>
-					<label>
+					<label for="">
 						<input type="checkbox" name="">
 						同意する
 					</label>
@@ -359,7 +543,119 @@
 				$(this).toggleClass('open');
 				$(this).addClass('close');
 			});
+
 		});
+
+		$(document).on('change', '[name=contact_type]', function(){
+			$('.quotation').toggleClass('hidden');
+			$('.inquiry').toggleClass('hidden');
+
+			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
+				$('.enquete_area').removeClass('hidden');
+			}else{
+				$('.enquete_area').addClass('hidden');
+			}
+		})
+
+	// $(document).ready(function() {
+	// 	$("#form").validate({
+	// 		rules: {
+	// 			name1: {
+	// 				required: true
+	// 			},
+	// 			name2: {
+	// 				required: true
+	// 			},
+	// 			tel: {
+	// 				required: true,
+	// 				tel: true
+	// 			},
+	// 			doc_postal_code: {
+	// 				required: true,
+	// 				post_code: true
+	// 			},
+	// 			doc_address: {
+	// 				required: true
+	// 			},
+	// 			mail: {
+	// 				required: true,
+	// 				email: true
+	// 			},
+	// 			bridal_title: {
+	// 				required: true
+	// 			},
+	// 			doc_type: {
+	// 				required: true
+	// 			},
+	// 			body: {
+	// 				required: true
+	// 			},
+	// 		},
+	// 		messages: {
+	// 			name1: "必須項目に入力してください。",
+	// 			name2: "必須項目に入力してください。",
+	// 			tel: {
+	// 				required: "必須項目に入力してください。",
+	// 				tel: "電話番号に間違いがあります。"
+	// 			},
+	// 			mail: {
+	// 				required: "必須項目に入力してください。",
+	// 				email: "入力されたメールアドレスに間違いがあります。"
+	// 			},
+	// 			doc_postal_code: {
+	// 				required: "必須項目に入力してください。",
+	// 				post_code: "郵便番号に間違いがあります。"
+	// 			},
+	// 			doc_address: {
+	// 				required: "必須項目に入力してください。"
+	// 			},
+	// 			bridal_title: {
+	// 				required: "必須項目に入力してください。"
+	// 			},
+	// 			doc_type: {
+	// 				required: "必須項目に入力してください。"
+	// 			},
+	// 			body: {
+	// 				required: "必須項目に入力してください。"
+	// 			},
+	// 		},
+	// 		errorPlacement: function(error, element) {
+	// 			$('.response-output').addClass('text_visible');
+	// 			$('.response-output').removeClass('response-output');
+	// 			switch(element.attr('name')){
+	// 				case "name1":
+	// 					error.insertAfter($('#name1_error'));
+	// 					break;
+	// 				case "name2":
+	// 					error.insertAfter($('#name2_error'));
+	// 					break;
+	// 				case "tel":
+	// 					error.insertAfter($('#tel_error'));
+	// 					break;
+	// 				case "mail":
+	// 					error.insertAfter($('#mail_error'));
+	// 					break;
+	// 				case "doc_postal_code":
+	// 					error.insertAfter($('#doc_postal_code_error'));
+	// 					break;
+	// 				case "doc_address":
+	// 					error.insertAfter($('#doc_address_error'));
+	// 					break;
+	// 				case "bridal_title":
+	// 					error.insertAfter($('#bridal_title'));
+	// 					break;
+	// 				case "doc_type":
+	// 					error.insertAfter($('#doc_type_error'));
+	// 					break;
+	// 				case "body":
+	// 					error.insertAfter($('#body'));
+	// 					break;
+	// 			}
+	//
+	// 		}
+	// 	});
+	// });
+
 	</script>
 </body>
 </html>
