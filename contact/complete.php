@@ -1,105 +1,88 @@
 <?php
-	// error_reporting(0);
-	//
-	// session_start();
-	// if(!empty($_SESSION['page']) && $_SESSION['page'] === TRUE){
-	// 	//セッションの削除
-	// 	unset($_SESSION['page']);
-	//
-	// 	require_once('./qdmail.php');
-	//
-	// 	// 問い合わせフォーム内容送信先メールアドレス
-	// 	//$mailto = '';
-	// 	$mailto =  'staff@iolite.co.jp';
-	//
-	// 	//メール問い合わせ者メールアドレス
-	// 	$mailfrom = $_POST['mail_address'];
-	//
-	// 	//メールタイトル（管理者用）
-	// 	$admin_subject = "株式会社三進社 お問い合わせ";
-	//
-	// 	//メールタイトル（お問い合わせ送信者用）
-	// 	$sender_subject = "株式会社三進社 お問い合わせ";
-	//
-	// 	//問い合わせ内容生成
-	// 	if($_POST['name1'] == 1){
-	//
-	// 		$content = <<< EOF
-	// 		お問い合わせ種類: {$_POST['']}
-	// 		お問い合わせ区分: {$_POST['']}
-	// 		お問い合わせ内容: {$_POST['']}
-	// 		相談したい項目: {$_POST['']}
-	// 		ご予算: {$_POST['']}
-	// 		その他:
-	// 		{$_POST['']}
-	//
-	// 		会社名（氏名）: {$_POST['']}
-	// 		住所: {$_POST['']}
-	// 		メールアドレス: {$_POST['']}
-	// 		お電話番号: {$_POST['']}
-	// 		FAX番号: {$_POST['']}
-	//
-	// 		EOF;
-	// 	}else{
-	//
-	// 		$content = <<< EOF
-	// 		お問い合わせ種類: {$_POST['']}
-	// 		部数: {$_POST['']}
-	// 		サイズ: {$_POST['']}
-	// 		大判及び変形サイズ: {$_POST['']}
-	// 		ページ数: {$_POST['']}
-	// 		表紙色数: {$_POST['']}
-	// 		本文色数: {$_POST['']}
-	// 		製本体裁: {$_POST['']}
-	// 		表紙用紙: {$_POST['']}
-	// 		表紙紙色: {$_POST['']}
-	// 		本文用紙: {$_POST['']}
-	// 		中扉: {$_POST['']}
-	// 		中扉紙色: {$_POST['']}
-	// 		見返し: {$_POST['']}
-	// 		ニス: {$_POST['']}
-	// 		PP貼加工: {$_POST['']}
-	// 		原稿種別: {$_POST['']}
-	// 		OS: {$_POST['']}
-	// 		使用アプリケーション: {$_POST['']}
-	// 		その他:
-	// 		{$_POST['']}
-	//
-	// 		会社名（氏名）: {$_POST['']}
-	// 		住所: {$_POST['']}
-	// 		メールアドレス: {$_POST['']}
-	// 		お電話番号: {$_POST['']}
-	// 		FAX番号: {$_POST['']}
-	// 		EOF;
-	// 	}
-	//
-	// 	//メール内容（管理者用）
-	// 	$admin_content = <<< EOF
-	// 	{$content}
-	// 	EOF;
-	//
-	// 	//メール内容（お問い合わせ送信者用）
-	// 	$sender_content = <<< EOF
-	// 	ありがとうございます。メッセージは送信されました。
-	//
-	// 	{$content}
-	//
-	// 	EOF;
-	//
-	// 	//管理者にメール
-	// 	qd_send_mail( 'text' , $mailto , $admin_subject , $admin_content , $mailfrom );
-	//
-	// 	//お問い合わせ送信者にメール
-	// 	qd_send_mail( 'text' , $mailfrom , $sender_subject , $sender_content , $mailto );
-	//
-	// }else{
-	// 	$url = "./";
-	// 	header("Location: ".$url);
-	// 	exit;
-	// }
-	//
-	// require_once ('../../wp/wp-blog-header.php');
-	// get_header();
+	require_once('./qdmail.php');
+	// 問い合わせフォーム内容送信先メールアドレス
+	$mailto = 'mayu.imanari@iolite.co.jp';
+	// $mailto =  'staff@iolite.co.jp';
+
+	//メール問い合わせ者メールアドレス
+	$mailfrom = $_POST['mail_address'];
+
+	//メールタイトル（管理者用）
+	$admin_subject = "株式会社三進社 お問い合わせがありました";
+
+	//メールタイトル（お問い合わせ送信者用）
+	$sender_subject = "株式会社三進社 お問い合わせ";
+
+	//問い合わせ内容生成
+	if($_POST['contact_type'] == "お問い合わせ"){
+
+		$content = <<< EOF
+		お問い合わせ種類: {$_POST['contact_type']}
+		お問い合わせ区分: {$_POST['contact_category']}
+		お問い合わせ内容: {$_POST['contact_details']}
+		相談したい項目: {$_POST['consultation_item']}
+		ご予算: {$_POST['budget']}
+		その他:
+		{$_POST['message']}
+
+		会社名（氏名）: {$_POST['company_name']}
+		住所: {$_POST['address']}
+		メールアドレス: {$_POST['mail_address']}
+		お電話番号: {$_POST['telephone_number']}
+		FAX番号: {$_POST['fax_number']}
+
+		EOF;
+	}else{
+
+		$content = <<< EOF
+		お問い合わせ種類: {$_POST['contact_type']}
+		部数: {$_POST['num']}
+		サイズ: {$_POST['size']}
+		大判及び変形サイズ: {$_POST['deformed_size']}
+		ページ数: {$_POST['page_count']}
+
+		表紙色数: {$_POST['cover_color_num']}
+		本文色数: {$_POST['color_num']}
+		製本体裁: {$_POST['binding_style']}
+		表紙用紙: {$_POST['cover_paper']}
+		表紙紙色: {$_POST['cover_color']}
+		本文用紙: {$_POST['book_paper']}
+		中扉: {$_POST['frontispiece']}
+		中扉紙色: {$_POST['frontispiece_color']}
+		見返し: {$_POST['endpaper']}
+		ニス: {$_POST['varnish']}
+		PP貼加工: {$_POST['processing']}
+		原稿種別: {$_POST['manuscript_type']}
+		OS: {$_POST['os_type']}
+		使用アプリケーション: {$_POST['application']}
+		その他:
+		{$_POST['name']}
+
+		氏名: {$_POST['name']}
+		住所: {$_POST['address']}
+		メールアドレス: {$_POST['mail_address']}
+		お電話番号: {$_POST['telephone_number']}
+		FAX番号: {$_POST['fax_number']}
+		EOF;
+	}
+
+	//メール内容（管理者用）
+	$admin_content = <<< EOF
+	{$content}
+	EOF;
+
+	//メール内容（お問い合わせ送信者用）
+	$sender_content = <<< EOF
+	ありがとうございます。メッセージは送信されました。
+	{$content}
+
+	EOF;
+
+	//管理者にメール
+	qd_send_mail( 'text' , $mailto , $admin_subject , $admin_content , $mailfrom );
+
+	//お問い合わせ送信者にメール
+	qd_send_mail( 'text' , $mailfrom , $sender_subject , $sender_content , $mailto );
 
 ?>
 <!DOCTYPE html>
@@ -118,6 +101,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="icon" type="image/png" href="../favicon-.png" sizes="16x16">
 <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+<script type="text/javascript" src="../lib/jquery/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../lib/jquery/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -165,7 +149,7 @@
 
 	<div id="title_area">
 		<h1>
-			お問い合わせ・お見積り
+			お問い合わせ<span class="sp_none">・</span>お見積り
 		</h1>
 	</div>
 

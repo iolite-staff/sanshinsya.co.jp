@@ -276,7 +276,7 @@ body header nav ul li ul.menu_inner{
 	margin: 0 auto 80px;
 }
 #sub_contents_area #title_area h1{
-	margin-left: 30px;
+	padding-left: 30px;
 }
 #sub_contents_area #greeting .precident_img{
 	text-align: center;
@@ -371,6 +371,49 @@ body header nav ul li ul.menu_inner{
 	height: auto;
 }
 
+/* #sub_contents_area form */
+#sub_contents_area .form_area,
+#sub_contents_area .enquete_area {
+	width: 100%;
+}
+#sub_contents_area table.form_table tbody tr {
+	padding: 10px 0;
+}
+#sub_contents_area table.form_table tbody tr th,
+#sub_contents_area table.form_table tbody tr td{
+	width: 100%;
+	padding: 10px 0;
+	display: block;
+	text-align: left;
+	white-space: normal;
+}
+#sub_contents_area table.form_table tbody tr td label,
+#sub_contents_area .enquete_area label {
+	display: block;
+	margin: 0 0 5px 0;
+}
+#sub_contents_area table.form_table tbody tr td label[for="budget"] {
+	display: inline-block;
+}
+#sub_contents_area .form_area input.w_lg,
+#sub_contents_area .form_area select.w_lg,
+#sub_contents_area .form_area textarea.w_lg,
+#sub_contents_area .form_area input.w_md,
+#sub_contents_area .form_area select.w_md,
+#sub_contents_area .form_area textarea.w_md {
+	width: 100%;
+	margin: 0;
+}
+#sub_contents_area .form_area input.w_sm,
+#sub_contents_area .form_area select.w_sm,
+#sub_contents_area .form_area textarea.w_sm  {
+	width: 70%;
+}
+#sub_contents_area .form_area input.w_tn,
+#sub_contents_area .form_area select.w_tn,
+#sub_contents_area .form_area textarea.w_tn {
+	width: 35%;
+}
 /* sp */
 
 #sub_contents_area #sp_message{
@@ -385,7 +428,10 @@ body header nav ul li ul.menu_inner{
 	font-size: 15px;
 	text-align: center;
 }
-
+h1 .sp_none {
+	font-size: 0;
+	display: block;
+}
 /* sp_action */
 
 .active_flex{

@@ -16,6 +16,7 @@
 <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
 <script type="text/javascript" src="../lib/jquery/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.validate.js"></script>
+<script type="text/javascript" src="../js/validate_config.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +63,7 @@
 
 	<div id="title_area">
 		<h1>
-			お問い合わせ・お見積り
+			お問い合わせ<span class="sp_none">・</span>お見積り
 		</h1>
 	</div>
 
@@ -78,7 +79,7 @@
 	<section>
 		<div>
 			<h2>メッセージ</h2>
-			<form method="POST" action="./confirm.php" name="contact_form">
+			<form method="POST" action="./confirm.php"name="contact_form" id="contact_form" autocomplete="off">
 				<div class="form_area">
 					<table class="form_table">
 						<tbody>
@@ -88,9 +89,9 @@
 									<span class="mast">必須</span>
 								</th>
 								<td>
-									<input type="radio" name="contact_type" id="contact_type1" value="1" checked>
+									<input type="radio" name="contact_type" id="contact_type1" value="お問い合わせ" checked>
 									<label for="contact_type1">お問い合わせ</label>
-									<input type="radio" name="contact_type" id="contact_type2" value="2">
+									<input type="radio" name="contact_type" id="contact_type2" value="お見積り">
 									<label for="contact_type2">お見積り</label>
 									<span class="error" id="contact_type_error"></span>
 								</td>
@@ -100,9 +101,9 @@
 									<span>お問い合わせ区分</span>
 								</th>
 								<td>
-									<input type="radio" name="contact_category" id="contact_category1" value="1">
+									<input type="radio" name="contact_category" id="contact_category1" value="法人のお客様">
 									<label for="contact_category1">法人のお客様</label>
-									<input type="radio" name="contact_category" id="contact_category2" value="1">
+									<input type="radio" name="contact_category" id="contact_category2" value="個人のお客様">
 									<label for="contact_category2">個人のお客様</label>
 								</td>
 							</tr>
@@ -114,6 +115,7 @@
 								<td>
 									<select name="contact_details" id="contact_details" class="w_sm">
 										<option value="">ご希望の内容をご選択ください。</option>
+										<option value="項目1">お問い合わせ内容1</option>
 									</select>
 									<span class="error" id="contact_details_error"></span>
 								</td>
@@ -124,17 +126,17 @@
 									<span class="mast">必須</span>
 								</th>
 								<td class="input_list">
-									<input type="radio" name="consultation_item" id="consultation_item1" value="1">
+									<input type="radio" name="consultation_item" id="consultation_item1" value="印刷について">
 									<label for="consultation_item1">印刷について</label>
-									<input type="radio" name="consultation_item" id="consultation_item2" value="2">
+									<input type="radio" name="consultation_item" id="consultation_item2" value="製本について">
 									<label for="consultation_item2">製本について</label>
-									<input type="radio" name="consultation_item" id="consultation_item3" value="3">
+									<input type="radio" name="consultation_item" id="consultation_item3" value="オンデマンド印刷について">
 									<label for="consultation_item3">オンデマンド印刷について</label>
-									<input type="radio" name="consultation_item" id="consultation_item4" value="4">
+									<input type="radio" name="consultation_item" id="consultation_item4" value="プリント相談について">
 									<label for="consultation_item4">プリント相談について</label>
-									<input type="radio" name="consultation_item" id="consultation_item5" value="5">
+									<input type="radio" name="consultation_item" id="consultation_item5" value="データ入稿について">
 									<label for="consultation_item5">データ入稿について</label>
-									<input type="radio" name="consultation_item" id="consultation_item6" value="6">
+									<input type="radio" name="consultation_item" id="consultation_item6" value="その他">
 									<label for="consultation_item6">その他</label>
 									<span class="error" id="consultation_item_error"></span>
 								</td>
@@ -266,9 +268,9 @@
 									<span>見返し</span>
 								</th>
 								<td>
-									<input type="radio" name="endpaper" id="endpaper1" value="1" checked disabled>
+									<input type="radio" name="endpaper" id="endpaper1" value="あり" checked disabled>
 									<label for="endpaper1">あり</label>
-									<input type="radio" name="endpaper" id="endpaper2" value="2" disabled>
+									<input type="radio" name="endpaper" id="endpaper2" value="なし" disabled>
 									<label for="endpaper2">なし</label>
 								</td>
 							</tr>
@@ -277,11 +279,11 @@
 									<span>ニス</span>
 								</th>
 								<td>
-									<input type="radio" name="varnish" id="varnish1" value="1" checked disabled>
+									<input type="radio" name="varnish" id="varnish1" value="光沢あり" checked disabled>
 									<label for="varnish1">光沢あり</label>
-									<input type="radio" name="varnish" id="varnish2" value="2" disabled>
+									<input type="radio" name="varnish" id="varnish2" value="マット（光沢なし）" disabled>
 									<label for="varnish2">マット（光沢なし）</label>
-									<input type="radio" name="varnish" id="varnish2" value="3" disabled>
+									<input type="radio" name="varnish" id="varnish2" value="なし" disabled>
 									<label for="varnish3">なし</label>
 								</td>
 							</tr>
@@ -290,11 +292,11 @@
 									<span>PP貼加工</span>
 								</th>
 								<td>
-									<input type="radio" name="processing" id="processing1" value="1" checked disabled>
+									<input type="radio" name="processing" id="processing1" value="光沢あり" checked disabled>
 									<label for="processing1">光沢あり</label>
-									<input type="radio" name="processing" id="processing2" value="2" disabled>
+									<input type="radio" name="processing" id="processing2" value="マット（光沢なし）" disabled>
 									<label for="processing2">マット（光沢なし）</label>
-									<input type="radio" name="processing" id="processing3" value="3" disabled>
+									<input type="radio" name="processing" id="processing3" value="なし" disabled>
 									<label for="processing3">なし</label>
 								</td>
 							</tr>
@@ -380,7 +382,7 @@
 									<span class="mast">必須</span>
 								</th>
 								<td class="input_list">
-									<input type="text" name="mail_address" class="w_md">
+									<input type="text" name="mail_address" class="w_md" id="mail_address">
 									<input type="text" name="mail_address_confirm" class="w_md">
 									<span class="error" id="mail_address_error"></span>
 									<span class="error" id="mail_address_confirm_error"></span>
@@ -412,14 +414,15 @@
 						アンケートにご協力ください<br />
 						弊社をお知りになったきっかけは・・
 					</p>
-					<input type="radio" name="enquete" value="1" id="enquete1">
+					<input type="radio" name="enquete" value="Web" id="enquete1">
 					<label for="enquete1">Web</label>
-					<input type="radio" name="enquete" value="2" id="enquete2">
+					<input type="radio" name="enquete" value="チラシ" id="enquete2">
 					<label for="enquete2">チラシ</label>
-					<input type="radio" name="enquete" value="3" id="enquete3">
+					<input type="radio" name="enquete" value="ご紹介" id="enquete3">
 					<label for="enquete3">ご紹介</label>
-					<input type="radio" name="enquete" value="4" id="enquete4">
+					<input type="radio" name="enquete" value="その他" id="enquete4">
 					<label for="enquete4">その他</label>
+					<p><span class="error" id="enquete_error"></span></p>
 				</div>
 				<div class="privacy_area">
 					<p>当社の<a href="../privacy/index.html">個人情報の取扱い及び利用目的</a>に同意の上、内容を送信してください。</p>
@@ -431,6 +434,7 @@
 					</div>
 					<input type="checkbox" name="privacy_consent" value="1" id="privacy_consent">
 					<label for="privacy_consent">同意する</label>
+					<p><span class="error" id="privacy_consent_error"></span></p>
 				</div>
 				<div class="button_area">
 					<input type="submit" value="確認" id="submit" class="btn">
@@ -518,6 +522,8 @@
 </footer>
 
 	<script type="text/javascript">
+		var validate_rule = rule1;
+
 		$(document).ready(function(){
 			var windowsize = window.matchMedia('screen and (max-width:767px)');
 			function checkBreakPoint(windowsize) {
@@ -534,53 +540,14 @@
 				$(this).toggleClass('open');
 				$(this).addClass('close');
 			});
-		});
-
-		$(document).on('change', '[name=contact_type]', function(){
-			$('.quotation').toggleClass('hidden');
-			$('.inquiry').toggleClass('hidden');
-
-			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
-				$('.enquete_area').removeClass('hidden');
-				$('.quotation').find('input, select').prop('disabled', true);
-				$('.inquiry').find('input, select').prop('disabled', false);
-			}else{
-				$('.enquete_area').addClass('hidden');
-				$('.quotation').find('input, select').prop('disabled', false);
-				$('.inquiry').find('input, select').prop('disabled', true);
-			}
-		});
-
-		$(document).ready(function() {
-			let form_data = document.getElementById('contact_form');
-			content_type = form_data.elements['contast_type'];
-			let type = content_type.value;
 
 			$("#contact_form").validate({
-				rules: {
-					contact_type: {
-						required: true
-					},
-					message: {
-
-					},
-					mail_address: {
-						required: true,
-						email: true
-					},
-					telephone_number: {
-						required: true,
-						tel: true
-					},
-					fax_number: {
-
-					},
-					privacy_consent: {
-
-					}
-				},
+				rules: validate_rule,
 				messages: {
-					contact_type: "お問い合わせ種類を選択してください。",
+					contact_type: {
+						required: "お問い合わせ種類を選択してください。",
+						range: "お問い合わせ種類に不正な値が入力されています。"
+					},
 					mail_address: {
 						required: "メールアドレスを入力してください。",
 						email: "入力されたメールアドレスに間違いがあります。"
@@ -597,8 +564,80 @@
 						case "contact_type":
 							error.insertAfter($('#contact_type_error'));
 							break;
+						case "contact_details":
+							error.insertAfter($('#contact_details_error'));
+							break;
+						case "consultation_item":
+							error.insertAfter($('#consultation_item_error'));
+							break;
+						case "contact_details":
+							error.insertAfter($('#contact_details_error'));
+							break;
+						case "budget":
+							error.insertAfter($('#budget_error'));
+							break;
+						case "num":
+							error.insertAfter($('#num_error'));
+							break;
+						case "size":
+							error.insertAfter($('#size_error'));
+							break;
+						case "deformed_size":
+							error.insertAfter($('#deformed_size_error'));
+							break;
+						case "page_count":
+							error.insertAfter($('#page_count_error'));
+							break;
+						case "cover_color_num":
+							error.insertAfter($('#cover_color_num_error'));
+							break;
+						case "color_num":
+							error.insertAfter($('#color_num_error'));
+							break;
+						case "binding_style":
+							error.insertAfter($('#binding_style_error'));
+							break;
+						case "cover_paper":
+							error.insertAfter($('#cover_paper_error'));
+							break;
+						case "cover_color":
+							error.insertAfter($('#cover_color_error'));
+							break;
+						case "book_paper":
+							error.insertAfter($('#book_paper_error'));
+							break;
+						case "frontispiece":
+							error.insertAfter($('#frontispiece_error'));
+							break;
+						case "frontispiece_color":
+							error.insertAfter($('#frontispiece_color_error'));
+							break;
+						case "endpaper":
+							error.insertAfter($('#endpaper_error'));
+							break;
+						case "varnish":
+							error.insertAfter($('#varnish_error'));
+							break;
+						case "processing":
+							error.insertAfter($('#processing_error'));
+							break;
+						case "manuscript_type":
+							error.insertAfter($('#manuscript_type_error'));
+							break;
+						case "os_type":
+							error.insertAfter($('#os_type_error'));
+							break;
+						case "application":
+							error.insertAfter($('#application_error'));
+							break;
 						case "message":
 							error.insertAfter($('#message_error'));
+							break;
+						case "company_name":
+							error.insertAfter($('#company_name_error'));
+							break;
+						case "name":
+							error.insertAfter($('#name_error'));
 							break;
 						case "mail_address":
 							error.insertAfter($('#mail_address_error'));
@@ -616,6 +655,24 @@
 
 				}
 			});
+		});
+
+		$(document).on('change', '[name=contact_type]', function(){
+			$('.quotation').toggleClass('hidden');
+			$('.inquiry').toggleClass('hidden');
+
+			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
+				$('.enquete_area').removeClass('hidden');
+				$('.quotation').find('input, select').prop('disabled', true);
+				$('.inquiry').find('input, select').prop('disabled', false);
+
+				validate_rule = rule1;
+			}else{
+				$('.enquete_area').addClass('hidden');
+				$('.quotation').find('input, select').prop('disabled', false);
+				$('.inquiry').find('input, select').prop('disabled', true);
+				validate_rule = rule2;
+			}
 		});
 
 	</script>

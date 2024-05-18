@@ -702,7 +702,7 @@ body{
 
 @media screen and (max-width:1350px){
 	#sub_contents_area #title_area h1{
-		margin-left: 30px;
+		padding-left: 30px;
 	}
 }
 
@@ -1027,7 +1027,9 @@ body{
 	text-align: center;
 	margin: 100px 0;
 }
-
+#sub_contents_area * {
+	box-sizing: border-box;
+}
 /* #sub_contents_area form */
 #sub_contents_area span.mast {
 	content: "必須";
@@ -1036,6 +1038,10 @@ body{
 	color: #ffffff;
 	padding: 5px 10px;
 	margin: 0 15px;
+}
+#sub_contents_area label.error {
+	color: #ff0000;
+	display: inline-block;
 }
 #sub_contents_area .hidden {
 	display: none;
@@ -1056,6 +1062,7 @@ body{
 	border-radius: 0.25rem;
 	padding: 0.5rem 0.25rem;
 	margin-right: 10px;
+	box-sizing: border-box;
 }
 #sub_contents_area form textarea {
 	height: 10rem;
