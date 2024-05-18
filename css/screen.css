@@ -1030,7 +1030,9 @@ body{
 #sub_contents_area * {
 	box-sizing: border-box;
 }
-/* #sub_contents_area form */
+
+/* contact */
+
 #sub_contents_area span.mast {
 	content: "必須";
 	display: inline-block;
@@ -1200,4 +1202,8 @@ body{
 #sub_contents_area .confirm_area table tr th {
 	font-weight: normal;
 	text-align: left;
+}
+/* complete */
+#sub_contents_area .thanks_area {
+	margin-bottom: 20px;
 }

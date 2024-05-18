@@ -176,6 +176,207 @@
 				<br />
 				送信いただきました内容は以下の通りです。
 			</div>
+			<div class="confirm_area">
+				<table class="confirm_inquiry no_border">
+					<tr>
+						<th>お問い合わせ種類：</th>
+						<td>
+							<?php echo $_POST['contact_type'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>お問い合わせ区分：</th>
+						<td>
+							<?php echo $_POST['contact_category'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>お問い合わせ内容：</th>
+						<td>
+							<?php echo $_POST['contact_details'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>相談したい項目：</th>
+						<td>
+							<?php echo $_POST['consultation_item'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>ご予算：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['budget']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>その他：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['message']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>会社名（氏名）：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['company_name']) ?>
+						</td>
+					</tr>
+				</table>
+
+				<table class="confirm_quotation no_border">
+					<tr>
+						<th>お問い合わせ種類：</th>
+						<td>
+							<?php echo $_POST['contact_type'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>部数：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['num']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>サイズ：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['size']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>大判及び変形サイズ：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['deformed_size']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>ページ数：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['page_count']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>表紙色数：</th>
+						<td>
+							<?php echo $_POST['cover_color_num'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>本文色数：</th>
+						<td>
+							<?php echo $_POST['color_num'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>製本体裁：</th>
+						<td>
+							<?php echo $_POST['binding_style'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>表紙用紙：</th>
+						<td>
+							<?php echo $_POST['cover_paper'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>表紙紙色：</th>
+						<td>
+							<?php echo $_POST['cover_color'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>本文用紙：</th>
+						<td>
+							<?php echo $_POST['book_paper'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>中扉：</th>
+						<td>
+							<?php echo $_POST['frontispiece'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>中扉紙色：</th>
+						<td>
+							<?php echo $_POST['frontispiece_color'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>見返し：</th>
+						<td>
+							<?php echo $_POST['endpaper'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>ニス：</th>
+						<td>
+							<?php echo $_POST['varnish'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>PP貼加工：</th>
+						<td>
+							<?php echo $_POST['processing'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>原稿種別：</th>
+						<td>
+							<?php echo $_POST['manuscript_type'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>OS：</th>
+						<td>
+							<?php echo $_POST['os_type'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>使用アプリケーション：</th>
+						<td>
+							<?php echo $_POST['application'] ?>
+						</td>
+					</tr>
+					<tr>
+						<th>その他：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['message']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>氏名：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['name']) ?>
+						</td>
+					</tr>
+				</table>
+				<table class="no_border">
+					<tr>
+						<th>住所：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['address']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>メールアドレス：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['mail_address']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>お電話番号：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['telephone_number']) ?>
+						</td>
+					</tr>
+					<tr>
+						<th>FAX番号：</th>
+						<td>
+							<?php echo htmlspecialchars($_POST['fax_number']) ?>
+						</td>
+					</tr>
+				</table>
+			</div>
 			<div class="button_area">
 				<a href="../index.html" class="btn">戻る</a>
 			</div>
@@ -278,6 +479,12 @@
 				$(this).addClass('close');
 			});
 
+			var type = "<?php echo $_POST['contact_type'] ?>";
+			if(type == 'お問い合わせ'){
+				$('.confirm_quotation').addClass('hidden');
+			}else{
+				$('.confirm_inquiry').addClass('hidden');
+			}
 		});
 
 	</script>
