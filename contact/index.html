@@ -79,7 +79,7 @@
 	<section>
 		<div>
 			<h2>メッセージ</h2>
-			<form method="POST" action="./confirm.php"name="contact_form" id="contact_form" autocomplete="off">
+			<form method="POST" action="./confirm.php" name="contact_form" id="contact_form" autocomplete="off">
 				<div class="form_area">
 					<table class="form_table">
 						<tbody>
@@ -364,7 +364,7 @@
 								</th>
 								<td>
 									<input type="text" name="name" class="w_lg" disabled>
-									<span class="error" id="cname_error"></span>
+									<span class="error" id="name_error"></span>
 								</td>
 							</tr>
 
@@ -437,7 +437,7 @@
 					<p><span class="error" id="privacy_consent_error"></span></p>
 				</div>
 				<div class="button_area">
-					<input type="submit" value="確認" id="submit" class="btn">
+					<button type="button" id="submit_btn" class="btn">確認</button>
 				</div>
 			</form>
 		</div>
@@ -522,8 +522,6 @@
 </footer>
 
 	<script type="text/javascript">
-		var validate_rule = rule1;
-
 		$(document).ready(function(){
 			var windowsize = window.matchMedia('screen and (max-width:767px)');
 			function checkBreakPoint(windowsize) {
@@ -540,20 +538,24 @@
 				$(this).toggleClass('open');
 				$(this).addClass('close');
 			});
+		});
 
+		$(document).on('click', '#submit_btn', function(){
+			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
+				var validate_rule = rule1;
+			}else{
+				var validate_rule = rule2;
+			}
 			$("#contact_form").validate({
 				rules: validate_rule,
 				messages: {
 					contact_type: {
-						required: "お問い合わせ種類を選択してください。",
 						range: "お問い合わせ種類に不正な値が入力されています。"
 					},
 					mail_address: {
-						required: "メールアドレスを入力してください。",
 						email: "入力されたメールアドレスに間違いがあります。"
 					},
 					telephone_number: {
-						required: "電話番号を入力してください。",
 						tel: "電話番号に間違いがあります。"
 					},
 				},
@@ -652,26 +654,24 @@
 							error.insertAfter($('#privacy_consent_error'));
 							break;
 					}
-
 				}
 			});
+			$('#contact_form').trigger('submit');
 		});
 
 		$(document).on('change', '[name=contact_type]', function(){
 			$('.quotation').toggleClass('hidden');
 			$('.inquiry').toggleClass('hidden');
+			$('label.error').remove();
 
 			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
 				$('.enquete_area').removeClass('hidden');
 				$('.quotation').find('input, select').prop('disabled', true);
 				$('.inquiry').find('input, select').prop('disabled', false);
-
-				validate_rule = rule1;
 			}else{
 				$('.enquete_area').addClass('hidden');
 				$('.quotation').find('input, select').prop('disabled', false);
 				$('.inquiry').find('input, select').prop('disabled', true);
-				validate_rule = rule2;
 			}
 		});
 
