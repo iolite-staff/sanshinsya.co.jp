@@ -11,16 +11,13 @@ $.extend($.validator.messages, {
 // お問い合わせバリデーションルール
 let rule1 = {
     contact_type: {
-        required: true,
-        // range: [1, 2]
+        required: true
     },
     contact_details: {
-        required: true,
-        // range: [1, 2]
+        required: true
     },
     consultation_item: {
-        required: true,
-        // range: [1, 6]
+        required: true
     },
     budget: {
         digits: true
@@ -32,7 +29,7 @@ let rule1 = {
         required: true,
         email: true
     },
-    mail_address_confirm:{
+    mail_address_confirm: {
         required: true,
         equalTo: '#mail_address'
     },
@@ -55,79 +52,61 @@ let rule1 = {
 // お見積りバリデーションルール
 let rule2 = {
     contact_type: {
-        required: true,
-        // range: [1, 2]
+        required: true
     },
     num: {
         digits: true
     },
     size: {
         digits: true
-        // range: [1, 2]
     },
     deformed_size: {
         digits: true
-        // range: [1, 2]
     },
     page_count: {
         digits: true
-        // range: [1, 2]
     },
     cover_color_num: {
         digits: true
-        // range: [1, 2]
     },
     color_num: {
         digits: true
-        // range: [1, 2]
     },
     binding_style: {
         digits: true
-        // range: [1, 2]
     },
     cover_paper: {
         digits: true
-        // range: [1, 2]
     },
     cover_color: {
         digits: true
-        // range: [1, 2]
     },
     book_paper: {
         digits: true
-        // range: [1, 2]
     },
     frontispiece: {
         digits: true
-        // range: [1, 2]
     },
     frontispiece_color: {
         digits: true
-        // range: [1, 2]
     },
     endpaper: {
         digits: true
-        // range: [1, 2]
     },
     varnish: {
         digits: true
-        // range: [1, 2]
     },
     processing: {
         digits: true
-        // range: [1, 2]
     },
     manuscript_type: {
         digits: true
-        // range: [1, 2]
     },
     os_type: {
         digits: true
-        // range: [1, 2]
     },
     application: {
         digits: true
-        // range: [1, 2]
     },
     message: {
     },
@@ -154,6 +133,5 @@ let rule2 = {
         step: 1
     },
     enquete: {
-        // range: [1, 4]
     }
 };
