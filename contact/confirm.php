@@ -1,3 +1,23 @@
+<?php
+	error_reporting(0);
+	foreach($_POST as $key=>$value) {
+		$_POST[$key] = htmlspecialchars($value,ENT_QUOTES);
+	}
+
+	session_start();
+	if(!empty($_SESSION['input']) && $_SESSION['input'] === true){
+		//セッションの削除
+		unset($_SESSION['input']);
+	}else{
+		$url = "./" ;
+		header("Location: ".$url);
+		exit;
+	}
+	// セッションの書き込み
+	session_start();
+	$_SESSION['page'] = TRUE;
+ ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -112,22 +132,22 @@
 						<tr>
 							<th>ご予算：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['budget']) ?>
-								<input type="hidden" name="budget" value="<?php echo htmlspecialchars($_POST['budget']) ?>">
+								<?php echo $_POST['budget'] ?>
+								<input type="hidden" name="budget" value="<?php echo $_POST['budget'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>その他：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['message']) ?>
-								<input type="hidden" name="message" value="<?php echo htmlspecialchars($_POST['message']) ?>">
+								<?php echo $_POST['message'] ?>
+								<input type="hidden" name="message" value="<?php echo $_POST['message'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>会社名（氏名）：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['company_name']) ?>
-								<input type="hidden" name="company_name" value="<?php echo htmlspecialchars($_POST['company_name']) ?>">
+								<?php echo $_POST['company_name'] ?>
+								<input type="hidden" name="company_name" value="<?php echo $_POST['company_name'] ?>">
 							</td>
 						</tr>
 					</table>
@@ -143,29 +163,29 @@
 						<tr>
 							<th>部数：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['num']) ?>
-								<input type="hidden" name="num" value="<?php echo htmlspecialchars($_POST['num']) ?>">
+								<?php echo $_POST['num'] ?>
+								<input type="hidden" name="num" value="<?php echo $_POST['num'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>サイズ：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['size']) ?>
-								<input type="hidden" name="size" value="<?php echo htmlspecialchars($_POST['size']) ?>">
+								<?php echo $_POST['size'] ?>
+								<input type="hidden" name="size" value="<?php echo $_POST['size'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>大判及び変形サイズ：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['deformed_size']) ?>
-								<input type="hidden" name="deformed_size" value="<?php echo htmlspecialchars($_POST['deformed_size']) ?>">
+								<?php echo $_POST['deformed_size'] ?>
+								<input type="hidden" name="deformed_size" value="<?php echo $_POST['deformed_size'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>ページ数：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['page_count']) ?>
-								<input type="hidden" name="page_count" value="<?php echo htmlspecialchars($_POST['page_count']) ?>">
+								<?php echo $_POST['page_count'] ?>
+								<input type="hidden" name="page_count" value="<?php echo $_POST['page_count'] ?>">
 							</td>
 						</tr>
 						<tr>
@@ -269,15 +289,15 @@
 						<tr>
 							<th>その他：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['message']) ?>
-								<input type="hidden" name="message" value="<?php echo htmlspecialchars($_POST['message']) ?>">
+								<?php echo nl2br($_POST['message']); ?>
+								<input type="hidden" name="message" value="<?php echo nl2br($_POST['message']); ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>氏名：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['name']) ?>
-								<input type="hidden" name="name" value="<?php echo htmlspecialchars($_POST['name']) ?>">
+								<?php echo $_POST['name'] ?>
+								<input type="hidden" name="name" value="<?php echo $_POST['name'] ?>">
 							</td>
 						</tr>
 					</table>
@@ -285,29 +305,29 @@
 						<tr>
 							<th>住所：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['address']) ?>
-								<input type="hidden" name="address" value="<?php echo htmlspecialchars($_POST['address']) ?>">
+								<?php echo $_POST['address'] ?>
+								<input type="hidden" name="address" value="<?php echo $_POST['address'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>メールアドレス：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['mail_address']) ?>
-								<input type="hidden" name="mail_address" value="<?php echo htmlspecialchars($_POST['mail_address']) ?>">
+								<?php echo $_POST['mail_address'] ?>
+								<input type="hidden" name="mail_address" value="<?php echo $_POST['mail_address'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>お電話番号：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['telephone_number']) ?>
-								<input type="hidden" name="telephone_number" value="<?php echo htmlspecialchars($_POST['telephone_number']) ?>">
+								<?php echo $_POST['telephone_number'] ?>
+								<input type="hidden" name="telephone_number" value="<?php echo $_POST['telephone_number'] ?>">
 							</td>
 						</tr>
 						<tr>
 							<th>FAX番号：</th>
 							<td>
-								<?php echo htmlspecialchars($_POST['fax_number']) ?>
-								<input type="hidden" name="fax_number" value="<?php echo htmlspecialchars($_POST['fax_number']) ?>">
+								<?php echo $_POST['fax_number'] ?>
+								<input type="hidden" name="fax_number" value="<?php echo $_POST['fax_number'] ?>">
 							</td>
 						</tr>
 					</table>

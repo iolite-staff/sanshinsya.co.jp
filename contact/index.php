@@ -1,3 +1,8 @@
+<?php
+	// セッションの書き込み
+	session_start();
+	$_SESSION['input']= TRUE;
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -437,7 +442,7 @@
 					<p><span class="error" id="privacy_consent_error"></span></p>
 				</div>
 				<div class="button_area">
-					<button type="button" id="submit_btn" class="btn">確認</button>
+					<input type="submit" class="btn" value="確認">
 				</div>
 			</form>
 		</div>
@@ -538,16 +543,9 @@
 				$(this).toggleClass('open');
 				$(this).addClass('close');
 			});
-		});
 
-		$(document).on('click', '#submit_btn', function(){
-			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
-				var validate_rule = rule1;
-			}else{
-				var validate_rule = rule2;
-			}
 			$("#contact_form").validate({
-				rules: validate_rule,
+				rules: rule1,
 				messages: {
 					contact_type: {
 						range: "お問い合わせ種類に不正な値が入力されています。"
@@ -659,7 +657,6 @@
 					}
 				}
 			});
-			$('#contact_form').trigger('submit');
 		});
 
 		$(document).on('change', '[name=contact_type]', function(){

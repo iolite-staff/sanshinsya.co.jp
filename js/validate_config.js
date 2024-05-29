@@ -14,45 +14,25 @@ let rule1 = {
         required: true
     },
     contact_details: {
-        required: true
+        required: {
+            depends: function(){
+                return $('input[name=contact_type]:eq(0)').prop('checked');
+            }
+        }
     },
     consultation_item: {
-        required: true
+        required: {
+            depends: function(){
+                return $('input[name=contact_type]:eq(0)').prop('checked');
+            }
+        }
     },
     budget: {
-        digits: true
-    },
-    company_name: {
-        required: true
-    },
-    mail_address: {
-        required: true,
-        email: true
-    },
-    mail_address_confirm: {
-        required: true,
-        equalTo: '#mail_address'
-    },
-    telephone_number: {
-        required: true,
-        tel: true
-    },
-    fax_number: {
-        tel: true
-    },
-    privacy_consent: {
-        required: true,
-        step: 1
-    },
-    enquete: {
-        range: [1, 4]
-    },
-};
-
-// お見積りバリデーションルール
-let rule2 = {
-    contact_type: {
-        required: true
+        digits: {
+            depends: function(){
+                return $('input[name=contact_type]:eq(0)').prop('checked');
+            }
+        }
     },
     num: {
         digits: true
@@ -108,17 +88,25 @@ let rule2 = {
     application: {
         digits: true
     },
-    message: {
+    company_name: {
+        required: {
+            depends: function(){
+                return $('input[name=contact_type]:eq(0)').prop('checked');
+            }
+        }
     },
     name: {
-        required: true
+        required: {
+            depends: function(){
+                return $('input[name=contact_type]:eq(1)').prop('checked');
+            }
+        }
     },
     mail_address: {
         required: true,
         email: true
     },
-    mail_address_confirm:{
-        required: true,
+    mail_address_confirm: {
         equalTo: '#mail_address'
     },
     telephone_number: {
@@ -133,5 +121,6 @@ let rule2 = {
         step: 1
     },
     enquete: {
-    }
+        range: [1, 4]
+    },
 };
