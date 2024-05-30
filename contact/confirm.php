@@ -1,7 +1,13 @@
 <?php
 	error_reporting(0);
 	foreach($_POST as $key=>$value) {
-		$_POST[$key] = htmlspecialchars($value,ENT_QUOTES);
+		if(is_array($_POST[$key])){
+			foreach ($_POST[$key] as $value_key => $value_text) {
+				$_POST[$key][$value_key] = htmlspecialchars($value_text,ENT_QUOTES);
+			}
+		}else{
+			$_POST[$key] = htmlspecialchars($value,ENT_QUOTES);
+		}
 	}
 
 	session_start();
@@ -100,7 +106,7 @@
 			<h2>確認画面</h2>
 			<form method="POST" action="./complete.php" >
 				<div class="confirm_area">
-					<table class="confirm_inquiry no_border">
+					<table class="confirm_table confirm_inquiry no_border">
 						<tr>
 							<th>お問い合わせ種類：</th>
 							<td>
@@ -124,9 +130,11 @@
 						</tr>
 						<tr>
 							<th>相談したい項目：</th>
-							<td>
-								<?php echo $_POST['consultation_item'] ?>
-								<input type="hidden" name="consultation_item" value="<?php echo $_POST['consultation_item'] ?>">
+							<td class="input_list">
+								<?php foreach ($_POST['consultation_item'] as $key => $value) { ?>
+									<span><?php echo $value ?></span>
+									<input type="hidden" name="consultation_item[]" value="<?php echo $value ?>">
+								<?php } ?>
 							</td>
 						</tr>
 						<tr>
@@ -139,7 +147,7 @@
 						<tr>
 							<th>その他：</th>
 							<td>
-								<?php echo $_POST['message'] ?>
+								<?php echo nl2br($_POST['message']) ?>
 								<input type="hidden" name="message" value="<?php echo $_POST['message'] ?>">
 							</td>
 						</tr>
@@ -152,7 +160,7 @@
 						</tr>
 					</table>
 
-					<table class="confirm_quotation no_border">
+					<table class="confirm_table confirm_quotation no_border">
 						<tr>
 							<th>お問い合わせ種類：</th>
 							<td>

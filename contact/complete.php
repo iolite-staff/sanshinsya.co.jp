@@ -1,32 +1,43 @@
 <?php
 	error_reporting(0);
 
+	foreach($_POST as $key=>$value) {
+		if(is_array($_POST[$key])){
+			foreach ($_POST[$key] as $value_key => $value_text) {
+				$_POST[$key][$value_key] = htmlspecialchars($value_text,ENT_QUOTES);
+			}
+		}else{
+			$_POST[$key] = htmlspecialchars($value,ENT_QUOTES);
+		}
+	}
 	session_start();
 	if(!empty($_SESSION['page']) && $_SESSION['page'] === TRUE){
 		//セッションの削除
 		unset($_SESSION['page']);
 		require_once('./qdmail.php');
 		// 問い合わせフォーム内容送信先メールアドレス
-		// $mailto = '';
+		// $mailto = '本番用';
 		$mailto =  'staff@iolite.co.jp';
 
 		//メール問い合わせ者メールアドレス
 		$mailfrom = $_POST['mail_address'];
 
 		//メールタイトル（管理者用）
-		$admin_subject = "株式会社三進社 お問い合わせがありました";
+		$admin_subject = "【テスト】株式会社三進社 お問い合わせがありました";
 
 		//メールタイトル（お問い合わせ送信者用）
-		$sender_subject = "株式会社三進社 お問い合わせ";
+		$sender_subject = "【テスト】株式会社三進社 お問い合わせ";
 
 		//問い合わせ内容生成
 		if($_POST['contact_type'] == "お問い合わせ"){
+
+			$consultation_items = implode('、',$_POST['consultation_item']);
 
 			$content = <<< EOF
 			お問い合わせ種類: {$_POST['contact_type']}
 			お問い合わせ区分: {$_POST['contact_category']}
 			お問い合わせ内容: {$_POST['contact_details']}
-			相談したい項目: {$_POST['consultation_item']}
+			相談したい項目: {$consultation_items}
 			ご予算: {$_POST['budget']}
 			その他:
 			{$_POST['message']}
@@ -62,7 +73,7 @@
 			OS: {$_POST['os_type']}
 			使用アプリケーション: {$_POST['application']}
 			その他:
-			{$_POST['name']}
+			{$_POST['message']}
 
 			氏名: {$_POST['name']}
 			住所: {$_POST['address']}
@@ -188,7 +199,7 @@
 				送信いただきました内容は以下の通りです。
 			</div>
 			<div class="confirm_area">
-				<table class="confirm_inquiry no_border">
+				<table class="confirm_table confirm_inquiry no_border">
 					<tr>
 						<th>お問い合わせ種類：</th>
 						<td>
@@ -209,31 +220,33 @@
 					</tr>
 					<tr>
 						<th>相談したい項目：</th>
-						<td>
-							<?php echo $_POST['consultation_item'] ?>
+						<td class="input_list">
+							<?php foreach ($_POST['consultation_item'] as $key => $value) { ?>
+								<span><?php echo $value ?></span>
+							<?php } ?>
 						</td>
 					</tr>
 					<tr>
 						<th>ご予算：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['budget']) ?>
+							<?php echo $_POST['budget'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>その他：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['message']) ?>
+							<?php echo nl2br($_POST['message']); ?>
 						</td>
 					</tr>
 					<tr>
 						<th>会社名（氏名）：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['company_name']) ?>
+							<?php echo $_POST['company_name'] ?>
 						</td>
 					</tr>
 				</table>
 
-				<table class="confirm_quotation no_border">
+				<table class="confirm_table confirm_quotation no_border">
 					<tr>
 						<th>お問い合わせ種類：</th>
 						<td>
@@ -243,25 +256,25 @@
 					<tr>
 						<th>部数：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['num']) ?>
+							<?php echo $_POST['num'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>サイズ：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['size']) ?>
+							<?php echo $_POST['size'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>大判及び変形サイズ：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['deformed_size']) ?>
+							<?php echo $_POST['deformed_size'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>ページ数：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['page_count']) ?>
+							<?php echo $_POST['page_count'] ?>
 						</td>
 					</tr>
 					<tr>
@@ -351,13 +364,13 @@
 					<tr>
 						<th>その他：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['message']) ?>
+							<?php echo nl2br($_POST['message']) ?>
 						</td>
 					</tr>
 					<tr>
 						<th>氏名：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['name']) ?>
+							<?php echo $_POST['name'] ?>
 						</td>
 					</tr>
 				</table>
@@ -365,25 +378,25 @@
 					<tr>
 						<th>住所：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['address']) ?>
+							<?php echo $_POST['address'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>メールアドレス：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['mail_address']) ?>
+							<?php echo $_POST['mail_address'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>お電話番号：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['telephone_number']) ?>
+							<?php echo $_POST['telephone_number'] ?>
 						</td>
 					</tr>
 					<tr>
 						<th>FAX番号：</th>
 						<td>
-							<?php echo htmlspecialchars($_POST['fax_number']) ?>
+							<?php echo $_POST['fax_number'] ?>
 						</td>
 					</tr>
 				</table>

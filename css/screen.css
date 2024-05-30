@@ -1051,8 +1051,8 @@ body{
 #sub_contents_area form label {
 	position: relative;
 }
-#sub_contents_area .form_area .form_table .input_list > label,
-#sub_contents_area .form_area .form_table .input_list > input {
+#sub_contents_area .form_area .form_table .input_list > span,
+#sub_contents_area .form_area .form_table .input_list > input[type="text"] {
 	display: block;
 	margin-bottom: 1rem;
 	vertical-align: middle;
@@ -1070,6 +1070,9 @@ body{
 	height: 10rem;
 	line-height: 1.25rem;
 	resize: none;
+}
+#sub_contents_area .form_area .form_table .input_list > input[type="radio"] + label {
+	display: inline-block;
 }
 #sub_contents_area form input[type="radio"] {
 	position: absolute;
@@ -1114,7 +1117,7 @@ body{
 #sub_contents_area form input[type="radio"]:checked + label::after {
 	opacity: 1;
 }
-#sub_contents_area .privacy_area input[type="checkbox"] {
+#sub_contents_area input[type="checkbox"] {
 	width: 17px;
 	height: 17px;
 	margin: 0 5px;
@@ -1198,10 +1201,20 @@ body{
 	background-color: rgba(115,111,111,0.05);
 	margin-bottom: 40px;
 }
+#sub_contents_area .confirm_area table tr th,
+#sub_contents_area .confirm_area table tr td {
+	vertical-align: baseline;
+	padding: 0.25rem 0;
+}
 #sub_contents_area .confirm_area table tr th {
 	font-weight: normal;
 	text-align: left;
 	white-space: nowrap;
+}
+#sub_contents_area .confirm_area .confirm_table .input_list > span {
+	display: block;
+	margin-bottom: 0.25rem;
+	vertical-align: middle;
 }
 /* complete */
 #sub_contents_area .thanks_area {

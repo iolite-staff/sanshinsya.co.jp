@@ -131,18 +131,31 @@
 									<span class="mast">必須</span>
 								</th>
 								<td class="input_list">
-									<input type="radio" name="consultation_item" id="consultation_item1" value="印刷について">
-									<label for="consultation_item1">印刷について</label>
-									<input type="radio" name="consultation_item" id="consultation_item2" value="製本について">
-									<label for="consultation_item2">製本について</label>
-									<input type="radio" name="consultation_item" id="consultation_item3" value="オンデマンド印刷について">
-									<label for="consultation_item3">オンデマンド印刷について</label>
-									<input type="radio" name="consultation_item" id="consultation_item4" value="プリント相談について">
-									<label for="consultation_item4">プリント相談について</label>
-									<input type="radio" name="consultation_item" id="consultation_item5" value="データ入稿について">
-									<label for="consultation_item5">データ入稿について</label>
-									<input type="radio" name="consultation_item" id="consultation_item6" value="その他">
-									<label for="consultation_item6">その他</label>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item1" value="印刷について">
+										<label for="consultation_item1">印刷について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item2" value="製本について">
+										<label for="consultation_item2">製本について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item3" value="オンデマンド印刷について">
+										<label for="consultation_item3">オンデマンド印刷について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item4" value="プリント相談について">
+										<label for="consultation_item4">プリント相談について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item5" value="データ入稿について">
+										<label for="consultation_item5">データ入稿について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item6" value="その他">
+										<label for="consultation_item6">その他</label>
+									</span>
+									<span>
 									<span class="error" id="consultation_item_error"></span>
 								</td>
 							</tr>
@@ -288,7 +301,7 @@
 									<label for="varnish1">光沢あり</label>
 									<input type="radio" name="varnish" id="varnish2" value="マット（光沢なし）" disabled>
 									<label for="varnish2">マット（光沢なし）</label>
-									<input type="radio" name="varnish" id="varnish2" value="なし" disabled>
+									<input type="radio" name="varnish" id="varnish3" value="なし" disabled>
 									<label for="varnish3">なし</label>
 								</td>
 							</tr>
