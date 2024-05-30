@@ -435,7 +435,6 @@ body header nav ul li ul.menu_inner{
 }
 #sub_contents_area .confirm_area table tr td {
 	margin-bottom: 1rem;
-	border-left: 5px solid transparent;
 }
 #sub_contents_area table.form_table tbody tr td.input_list > span label {
 	display: inline-block;
