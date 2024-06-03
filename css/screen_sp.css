@@ -479,3 +479,14 @@ h1 .sp_none {
 	padding: 20px;
 	margin: 0;
 }
+/* facilities */
+#sub_contents_area #factory div div.factory_detail>div>div{
+	width: 100%;
+}
+#sub_contents_area #factory div div.facilities>div{
+	width: 100%;
+    display: block;
+}
+#sub_contents_area #factory div div.facilities{
+	width: 100%;
+}
