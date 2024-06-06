@@ -371,6 +371,22 @@ body header nav ul li ul.menu_inner{
 	height: auto;
 }
 
+/* print_service */
+#sub_contents_area #reason ol{
+	padding: 0;
+}
+#sub_contents_area #reason ol li{
+	margin-bottom: 1rem;
+}
+#sub_contents_area #print_service01 .step_box {
+	width: 100%;
+	margin: 0 auto 80px;
+}
+#sub_contents_area #print_service01 .step_box:nth-child(n+2)::before {
+	transform: rotate(180deg);
+	top: -50px;
+	left: calc(50% - 20px);
+}
 /* #sub_contents_area form */
 #sub_contents_area .form_area,
 #sub_contents_area .enquete_area {

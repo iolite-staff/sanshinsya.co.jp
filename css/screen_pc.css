@@ -354,6 +354,12 @@ body>footer ul.bnr .bg02{
 	height: 283px;
 }
 
+/* print_service */
+#sub_contents_area #print_service01 .step_box {
+	width: 45%;
+	margin: 0 auto 60px;
+}
+
 /* #sub_contents_area form */
 #sub_contents_area .form_area,
 #sub_contents_area .enquete_area {
@@ -437,4 +443,3 @@ body>footer ul.bnr .bg02{
 		width: unset;
 	}
 }
-

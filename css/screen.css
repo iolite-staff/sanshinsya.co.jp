@@ -813,11 +813,11 @@ body{
 
 /* print_service */
 
-#sub_contents_area section h3{
+#sub_contents_area.print_service  section h3{
 	text-align: center;
 	font-size: 24px;
 }
-#sub_contents_area section h4{
+#sub_contents_area.print_service section h4{
 	font-size: 21px;
 	margin: 0;
 }
@@ -855,7 +855,7 @@ body{
 	background-color: #f5faf7;
 }
 
-#sub_contents_area #print_service01 div{
+#sub_contents_area #print_service01 div > div{
 	text-align: center;
 	margin: 60px auto;
 }
@@ -874,14 +874,14 @@ body{
 #sub_contents_area #print_service01 .step_box:nth-child(n+2)::before {
 	content: '';
 	background: #00B350;
-	width: 30px;
+	width: 40px;
 	height: calc(tan(30deg) * 60px / 2);
 	clip-path: polygon(50% 0, 100% 100%, 0 100%);
 	transform: rotate(90deg);
 	display: inline-block;
 	position: absolute;
 	top: 50%;
-	left: -8%;
+	right: 100%;
 }
 #sub_contents_area #print_service01 .step_box .inner_box {
 	width: 100%;
