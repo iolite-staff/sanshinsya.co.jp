@@ -506,3 +506,24 @@ h1 .sp_none {
 #sub_contents_area #factory div div.facilities{
 	width: 100%;
 }
+
+/* policy */
+#sub_contents_area #ink div.ink_intro div.ink_detail_text {
+    width: 100%; 
+}
+#sub_contents_area #ink div.ink_intro div.ink_detail_img {
+    width: 100%;
+}
+#sub_contents_area #ink div.ink_intro div.ink_detail {
+	display: block;
+}
+#sub_contents_area section>div {
+    padding: 80px 0 40px;
+}
+
+#sub_contents_area #ink div.sustainable {
+    background-position: 74%;
+}
+#sub_contents_area #policy_message div div {
+    padding: 0 0 50px;
+}
