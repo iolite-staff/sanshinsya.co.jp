@@ -52,18 +52,17 @@ body header nav ul li ul.menu_inner {
 	height: auto;
 	position: fixed;
 	text-align: center;
-	top: 65px;
+	top: 63px;
+	display: block;
+    box-sizing: border-box;
+	height: auto;
 }
 
 body header nav ul li:hover ul.menu_inner {
-    top: 55px;
     z-index: 100; 
     opacity: 1;
     transition: opacity 0.3s;
 	text-align: center;
-	display: block;
-    box-sizing: border-box;
-	height: auto;
 }
 
 body header nav ul li ul.menu_inner li a:hover{
