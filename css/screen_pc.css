@@ -50,13 +50,12 @@ body header nav ul li ul.menu_inner {
     z-index: -100;
     opacity: 0;
 	height: auto;
-	position: fixed;
+	position: absolute;
 	text-align: center;
-	padding-top: 15px;
+	top: 40px;
 }
 
 body header nav ul li:hover ul.menu_inner {
-    top: 55px;
     z-index: 100; 
     opacity: 1;
     transition: opacity 0.3s;
