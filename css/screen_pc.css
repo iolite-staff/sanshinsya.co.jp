@@ -52,6 +52,7 @@ body header nav ul li ul.menu_inner {
 	height: auto;
 	position: fixed;
 	text-align: center;
+	padding-top: 15px;
 }
 
 body header nav ul li:hover ul.menu_inner {
@@ -62,7 +63,6 @@ body header nav ul li:hover ul.menu_inner {
 	text-align: center;
 	display: block;
     box-sizing: border-box;
-    padding-top: 15px;
 	height: auto;
 }
 
