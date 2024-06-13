@@ -95,7 +95,7 @@
 		<div class="inner">
 			<ul>
 				<li><a href="../index.html">HOME</a></li>
-				<li><a href="./index.html">お問い合わせ・お見積り</a></li>
+				<li><a href="./">お問い合わせ・お見積り</a></li>
 				<li><span>確認画面</span></li>
 			</ul>
 		</div>

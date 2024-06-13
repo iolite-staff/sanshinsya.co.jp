@@ -7,7 +7,7 @@
 				$_POST[$key][$value_key] = htmlspecialchars($value_text,ENT_QUOTES);
 			}
 		}else{
-			$_POST[$key] = htmlspecialchars($value,ENT_QUOTES);
+			$_POST[$key] = htmlspecialchars(str_replace('<br />', '', $value),ENT_QUOTES);
 		}
 	}
 	session_start();
@@ -179,7 +179,7 @@
 		<div class="inner">
 			<ul>
 				<li><a href="../index.html">HOME</a></li>
-				<li><a href="./index.html">お問い合わせ・お見積り</a></li>
+				<li><a href="./">お問い合わせ・お見積り</a></li>
 				<li><span>完了画面</span></li>
 			</ul>
 		</div>

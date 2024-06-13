@@ -294,9 +294,22 @@ body header nav ul li ul.menu_inner{
 	right: 0;
 }
 
-
 #sub_contents_area #sp_service ul.item li div a{
 	margin-top: 0;
+}
+
+/* print_service */
+#sub_contents_area #reason,
+#sub_contents_area #print_service01,
+#sub_contents_area #print_service02,
+#sub_contents_area #print_service03 {
+	margin-bottom: 40px;
+}
+#sub_contents_area #reason > div,
+#sub_contents_area #print_service01 > div,
+#sub_contents_area #print_service02 > div,
+#sub_contents_area #print_service03 > div {
+	padding: 40px 10px 0;
 }
 #sub_contents_area #print_service01 ul{
 	padding: 0;
@@ -370,8 +383,11 @@ body header nav ul li ul.menu_inner{
 	width: 100%;
 	height: auto;
 }
+#sub_contents_area #print_service03 div.other_service_contact .contact_document div{
+	width: 100%;
+	padding: 10px;
+}
 
-/* print_service */
 #sub_contents_area #reason ol{
 	padding: 0;
 }
@@ -509,7 +525,7 @@ h1 .sp_none {
 
 /* policy */
 #sub_contents_area #ink div.ink_intro div.ink_detail_text {
-    width: 100%; 
+    width: 100%;
 }
 #sub_contents_area #ink div.ink_intro div.ink_detail_img {
     width: 100%;
