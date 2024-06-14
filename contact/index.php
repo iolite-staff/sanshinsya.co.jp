@@ -34,16 +34,16 @@
         <ul>
 			<li>
 				<a href="../company/">企業情報</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_1">
 					<li><a href="../company/policy/">こだわり</a></li>
-					<li><a href="../company/csr/">CSR活動及び<br>コンプライアンス</a></li>
+					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
 					<li><a href="../company/facility/">工場・設備一覧</a></li>
 				</ul>
 			</li>
 			<li>
 				<a href="../print_service/">印刷サービス</a>
-				<ul class="menu_inner">
-					<li><a href="../print_service/production/">制作</a></li>
+				<ul class="menu_inner menu_inner_2">
+					
 					<li><a href="../print_service/prepress/">製版</a></li>
 					<li><a href="../print_service/print/">印刷</a></li>
 					<li><a href="../print_service/bookbinding/">製本</a></li>
@@ -51,7 +51,7 @@
 			</li>
 			<li>
 				<a href="../sp_service/">セールスプロモーション</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_3">
 					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
@@ -511,13 +511,13 @@
 				<li><a href="../company/">企業情報</a>
 					<ul>
 						<li><a href="../company/policy/">こだわり</a></li>
-						<li><a href="../company/csr/">CSR活動及びコンプライアンス</a></li>
+						<li><a href="../company/csr/" class="small">CSR活動及びコンプライアンス</a></li>
 						<li><a href="../company/facility/">工場・設備一覧</a></li>
 					</ul>
 				</li>
 				<li><a href="../print_service/">印刷サービス</a>
 					<ul>
-						<li><a href="../print_service/production/">制作</a></li>
+						
 						<li><a href="../print_service/prepress/">製版</a></li>
 						<li><a href="../print_service/print/">印刷</a></li>
 						<li><a href="../print_service/bookbinding/">製本</a></li>
