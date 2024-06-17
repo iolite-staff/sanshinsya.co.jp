@@ -120,7 +120,8 @@
 								<td>
 									<select name="contact_details" id="contact_details" class="w_sm">
 										<option value="">ご希望の内容をご選択ください。</option>
-										<option value="項目1">お問い合わせ内容1</option>
+										<option value="お問い合わせ">お問い合わせ</option>
+										<option value="資料請求">資料請求</option>
 									</select>
 									<span class="error" id="contact_details_error"></span>
 								</td>
@@ -247,16 +248,6 @@
 								</th>
 								<td>
 									<select name="binding_style" class="w_md" disabled>
-										<option value="">--</option>
-									</select>
-								</td>
-							</tr>
-							<tr class="quotation hidden">
-								<th>
-									<span>表紙用紙</span>
-								</th>
-								<td>
-									<select name="cover_paper" class="w_md" disabled>
 										<option value="ペラ（チラシ、ポスター）">ペラ（チラシ、ポスター）</option>
 										<option value="二つ折">二つ折</option>
 										<option value="三つ折">三つ折</option>
@@ -267,10 +258,10 @@
 							</tr>
 							<tr class="quotation hidden">
 								<th>
-									<span>表紙紙色</span>
+									<span>表紙用紙</span>
 								</th>
 								<td>
-									<select name="cover_color" class="w_md" disabled>
+									<select name="cover_paper" class="w_md" disabled>
 										<option value="レザック　175kg">レザック　175kg</option>
 										<option value="色上質　特厚">色上質　特厚</option>
 										<option value="色上質　最厚">色上質　最厚</option>
@@ -284,6 +275,14 @@
 										<option value="アートポスト　200kg">アートポスト　200kg</option>
 										<option value="その他">その他</option>
 									</select>
+								</td>
+							</tr>
+							<tr class="quotation hidden">
+								<th>
+									<span>表紙紙色</span>
+								</th>
+								<td>
+									<input type="text" name="cover_color" class="w_md" disabled>
 								</td>
 							</tr>
 							<tr class="quotation hidden">

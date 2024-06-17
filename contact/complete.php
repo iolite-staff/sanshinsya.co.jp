@@ -22,11 +22,21 @@
 		//メール問い合わせ者メールアドレス
 		$mailfrom = $_POST['mail_address'];
 
+
+
 		//メールタイトル（管理者用）
-		$admin_subject = "【テスト】株式会社三進社 お問い合わせがありました";
+		if ($_POST['contact_type'] == "お問い合わせ") {
+			$admin_subject = "WEBフォームよりお問い合わせ";
+		} else {
+			$admin_subject = "WEBフォーム見積依頼";
+		}
 
 		//メールタイトル（お問い合わせ送信者用）
-		$sender_subject = "【テスト】株式会社三進社 お問い合わせ";
+		if ($_POST['contact_type'] == "お問い合わせ") {
+			$sender_subject = "【株式会社三進社】 お問い合わせを承りました。（自動返信）";
+		} else {
+			$sender_subject = "【株式会社三進社】 お見積依頼を承りました。（自動返信）";
+		}
 
 		//問い合わせ内容生成
 		if($_POST['contact_type'] == "お問い合わせ"){
