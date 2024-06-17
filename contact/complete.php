@@ -1,5 +1,5 @@
 <?php
-	error_reporting(0);
+	error_reporting(E_ALL); 
 
 	foreach($_POST as $key=>$value) {
 		if(is_array($_POST[$key])){
@@ -89,6 +89,7 @@
 			ご住所: {$_POST['address']}
 			お電話番号: {$_POST['telephone_number']}
 			FAX番号: {$_POST['fax_number']}
+
 			EOF;
 		}
 
@@ -101,8 +102,23 @@
 
 		//メール内容（お問い合わせ送信者用）
 		$sender_content = <<< EOF
-		
-		{$_POST['name']}様
+
+		EOF;
+
+		// Check if $_POST['name'] is empty
+		if (!empty($_POST['name'])) {
+			$sender_content .= <<< EOF
+			{$_POST['name']}様
+
+		EOF;
+		} else {
+			$sender_content .= <<< EOF
+			{$_POST['company_name']} 様
+
+		EOF;
+		}
+
+		$sender_content .= <<< EOF
 
 		この度はお問い合わせありがとうございます。
 		後ほど担当者からご回答を差し上げますので、今しばらくお待ちください。
@@ -111,14 +127,14 @@
 
 		今後とも株式会社三進社をよろしくお願いいたします。
 
-		───────────────────────────────────
+		────────────────────────────────────
 		株式会社　三　進　社
 		〒135-0042
 		東京都江東区木場5-11-13
 		TEL/03-5621-3439　FAX/03-5621-3849
 		info@sanshinsya.co.jp
 		https://www.sanshin-sya.co.jp/
-		───────────────────────────────────
+		────────────────────────────────────
 		EOF;
 
 		//管理者にメール
@@ -260,7 +276,7 @@
 					</tr>
 					<tr>
 						<th>その他：</th>
-						<td>
+						<td style="word-break: break-all; padding-right: 5px;">
 							<?php echo nl2br($_POST['message']); ?>
 						</td>
 					</tr>
@@ -389,7 +405,7 @@
 					</tr>
 					<tr>
 						<th>その他：</th>
-						<td>
+						<td style="word-break: break-all; padding-right: 5px;">
 							<?php echo nl2br($_POST['message']) ?>
 						</td>
 					</tr>

@@ -146,7 +146,7 @@
 						</tr>
 						<tr>
 							<th>その他：</th>
-							<td>
+							<td style="word-break: break-all; padding-right: 5px;">
 								<?php echo nl2br($_POST['message']) ?>
 								<input type="hidden" name="message" value="<?php echo $_POST['message'] ?>">
 							</td>
@@ -336,6 +336,13 @@
 							<td>
 								<?php echo $_POST['fax_number'] ?>
 								<input type="hidden" name="fax_number" value="<?php echo $_POST['fax_number'] ?>">
+							</td>
+						</tr>
+						<tr>
+							<th>アンケート：</th>
+							<td>
+								<?php echo $_POST['enquete'] ?>
+								<input type="hidden" name="enquete" value="<?php echo $_POST['enquete'] ?>">
 							</td>
 						</tr>
 					</table>
