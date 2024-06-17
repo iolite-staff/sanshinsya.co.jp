@@ -16,7 +16,7 @@
 		unset($_SESSION['page']);
 		require_once('./qdmail.php');
 		// 問い合わせフォーム内容送信先メールアドレス
-		// $mailto = '本番用';
+		// $mailto = 'info@sanshinsya.co.jp';
 		$mailto =  'staff@iolite.co.jp';
 
 		//メール問い合わせ者メールアドレス
@@ -44,7 +44,6 @@
 			$consultation_items = implode('、',$_POST['consultation_item']);
 
 			$content = <<< EOF
-			お問い合わせ種類: {$_POST['contact_type']}
 			お問い合わせ区分: {$_POST['contact_category']}
 			お問い合わせ内容: {$_POST['contact_details']}
 			相談したい項目: {$consultation_items}
@@ -58,16 +57,16 @@
 			お電話番号: {$_POST['telephone_number']}
 			FAX番号: {$_POST['fax_number']}
 
+			アンケート：{$_POST['enquete']}
+
 			EOF;
 		}else{
 
 			$content = <<< EOF
-			お問い合わせ種類: {$_POST['contact_type']}
 			部数: {$_POST['num']}
 			サイズ: {$_POST['size']}
 			大判及び変形サイズ: {$_POST['deformed_size']}
 			ページ数: {$_POST['page_count']}
-
 			表紙色数: {$_POST['cover_color_num']}
 			本文色数: {$_POST['color_num']}
 			製本体裁: {$_POST['binding_style']}
@@ -86,8 +85,8 @@
 			{$_POST['message']}
 
 			氏名: {$_POST['name']}
-			住所: {$_POST['address']}
 			メールアドレス: {$_POST['mail_address']}
+			ご住所: {$_POST['address']}
 			お電話番号: {$_POST['telephone_number']}
 			FAX番号: {$_POST['fax_number']}
 			EOF;
@@ -95,14 +94,31 @@
 
 		//メール内容（管理者用）
 		$admin_content = <<< EOF
+		下記のお問い合わせが入っております。
+
 		{$content}
 		EOF;
 
 		//メール内容（お問い合わせ送信者用）
 		$sender_content = <<< EOF
-		ありがとうございます。メッセージは送信されました。
+		
+		{$_POST['name']}様
+
+		この度はお問い合わせありがとうございます。
+		後ほど担当者からご回答を差し上げますので、今しばらくお待ちください。
+		------------------------------------------------------------
 		{$content}
 
+		今後とも株式会社三進社をよろしくお願いいたします。
+
+		───────────────────────────────────
+		株式会社　三　進　社
+		〒135-0042
+		東京都江東区木場5-11-13
+		TEL/03-5621-3439　FAX/03-5621-3849
+		info@sanshinsya.co.jp
+		https://www.sanshin-sya.co.jp/
+		───────────────────────────────────
 		EOF;
 
 		//管理者にメール
