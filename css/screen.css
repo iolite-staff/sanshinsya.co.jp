@@ -1374,7 +1374,7 @@ a.privacy {
 }
 
 #sub_contents_area .contents_title_border{
-	border-left: 8px solid #009944;
+	border-left: 6px solid #49EF9F;
 	padding-left: 15px;
 }
 #sub_contents_area #print_service03 div.other_sevice_area div.other_sevice p{
@@ -1539,6 +1539,31 @@ nav.inner_link ul li:not(:last-child){
 }
 #sub_contents_area #factory div div.facilities{
 	width: 85%;
+	margin: auto;
+}
+
+#sub_contents_area #privacy_policy ol li{
+	list-style: lower-alpha;
+}
+#sub_contents_area #privacy_policy p.right{
+	text-align: right !important;
+}
+#sub_contents_area #privacy_policy p.left{
+	text-align: left !important;
+	margin: auto;
+}
+
+
+#sub_contents_area #privacy_policy div.center p{
+	text-align: center;
+}
+#sub_contents_area #privacy_policy div>div{
+	margin: 70px 0;
+}
+#sub_contents_area #privacy_policy div.box{
+	border: 2px solid #49EF9F;
+	padding: 15px;
+	width: 80%;
 	margin: auto;
 }
 

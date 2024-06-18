@@ -217,6 +217,13 @@ body>footer ul.bnr .bg02{
 	font-weight:300;
 }
 
+br.sp{
+	display: block;
+}
+span.pc{
+	display: none;
+}
+
 /* sp_nav */
 
 body header nav ul li ul.menu_inner{
@@ -542,4 +549,7 @@ h1 .sp_none {
 }
 #sub_contents_area #policy_message div div {
     padding: 0 0 50px;
+}
+#sub_contents_area #privacy_policy p.left{
+	width: 95%;
 }
