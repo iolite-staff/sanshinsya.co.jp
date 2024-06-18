@@ -52,7 +52,7 @@
 			<li>
 				<a href="../sp_service/">セールスプロモーション</a>
 				<ul class="menu_inner menu_inner_3">
-					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
+					<li><a href="../sp_service/tools/" class="small">各種プロモーションツール</a></li>
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
 			</li>
