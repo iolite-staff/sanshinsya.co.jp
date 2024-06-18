@@ -483,6 +483,11 @@ body{
 	width: 100%;
 }
 
+a.privacy {
+	color: #fff;
+	font-size: 14px;
+}
+
 /* sp_action */
 
 .active_resize:hover{
@@ -1368,7 +1373,7 @@ body{
     margin: 60px 0 0 0;
 }
 
-#sub_contents_area .contents_title{
+#sub_contents_area .contents_title_border{
 	border-left: 8px solid #009944;
 	padding-left: 15px;
 }
