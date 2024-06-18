@@ -83,7 +83,6 @@
 
 	<section>
 		<div>
-			<h2>メッセージ</h2>
 			<form method="POST" action="./confirm.php" name="contact_form" id="contact_form" autocomplete="off">
 				<div class="form_area">
 					<table class="form_table">
