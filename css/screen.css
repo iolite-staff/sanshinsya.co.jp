@@ -483,6 +483,11 @@ body{
 	width: 100%;
 }
 
+a.privacy {
+	color: #fff;
+	font-size: 14px;
+}
+
 /* sp_action */
 
 .active_resize:hover{
