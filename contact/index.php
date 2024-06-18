@@ -34,16 +34,16 @@
         <ul>
 			<li>
 				<a href="../company/">企業情報</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_1">
 					<li><a href="../company/policy/">こだわり</a></li>
-					<li><a href="../company/csr/">CSR活動及び<br>コンプライアンス</a></li>
+					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
 					<li><a href="../company/facility/">工場・設備一覧</a></li>
 				</ul>
 			</li>
 			<li>
 				<a href="../print_service/">印刷サービス</a>
-				<ul class="menu_inner">
-					<li><a href="../print_service/production/">制作</a></li>
+				<ul class="menu_inner menu_inner_2">
+					
 					<li><a href="../print_service/prepress/">製版</a></li>
 					<li><a href="../print_service/print/">印刷</a></li>
 					<li><a href="../print_service/bookbinding/">製本</a></li>
@@ -51,7 +51,7 @@
 			</li>
 			<li>
 				<a href="../sp_service/">セールスプロモーション</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_3">
 					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
@@ -120,7 +120,8 @@
 								<td>
 									<select name="contact_details" id="contact_details" class="w_sm">
 										<option value="">ご希望の内容をご選択ください。</option>
-										<option value="項目1">お問い合わせ内容1</option>
+										<option value="お問い合わせ">お問い合わせ</option>
+										<option value="資料請求">資料請求</option>
 									</select>
 									<span class="error" id="contact_details_error"></span>
 								</td>
@@ -182,7 +183,16 @@
 									<span>サイズ</span>
 								</th>
 								<td>
-									<input type="text" name="size" class="w_tn" disabled>
+									<select name="size" class="w_tn" disabled>
+										<option value="A6">A6</option>
+										<option value="A5">A5</option>
+										<option value="A4">A4</option>
+										<option value="A3">A3</option>
+										<option value="B6">B6</option>
+										<option value="B5">B5</option>
+										<option value="B4">B4</option>
+										<option value="その他">その他</option>
+									</select>
 								</td>
 							</tr>
 							<tr class="quotation hidden">
@@ -207,7 +217,11 @@
 								</th>
 								<td>
 									<select name="cover_color_num" class="w_tn" disabled>
-										<option value="">--</option>
+										<option value="1C / 0C">1C / 0C</option>
+										<option value="1C / 1C">1C / 1C</option>
+										<option value="4C / 0C">4C / 0C</option>
+										<option value="4C / 1C">4C / 1C</option>
+										<option value="4C / 4C">4C / 4C</option>
 									</select>
 								</td>
 							</tr>
@@ -217,7 +231,14 @@
 								</th>
 								<td>
 									<select name="color_num" class="w_md" disabled>
-										<option value="">--</option>
+										<option value="1C 片面">1C 片面</option>
+										<option value="1C 両面">1C 両面</option>
+										<option value="2C 片面">2C 片面</option>
+										<option value="2C 両面">2C 両面</option>
+										<option value="3C 片面">3C 片面</option>
+										<option value="3C 両面">3C 両面</option>
+										<option value="プロセス 4C 片面">プロセス 4C 片面</option>
+										<option value="プロセス 4C 両面">プロセス 4C 両面</option>
 									</select>
 								</td>
 							</tr>
@@ -227,7 +248,11 @@
 								</th>
 								<td>
 									<select name="binding_style" class="w_md" disabled>
-										<option value="">--</option>
+										<option value="ペラ（チラシ、ポスター）">ペラ（チラシ、ポスター）</option>
+										<option value="二つ折">二つ折</option>
+										<option value="三つ折">三つ折</option>
+										<option value="中綴じ">中綴じ</option>
+										<option value="無線クルミ">無線クルミ</option>
 									</select>
 								</td>
 							</tr>
@@ -237,7 +262,18 @@
 								</th>
 								<td>
 									<select name="cover_paper" class="w_md" disabled>
-										 <option value="">--</option>
+										<option value="レザック　175kg">レザック　175kg</option>
+										<option value="色上質　特厚">色上質　特厚</option>
+										<option value="色上質　最厚">色上質　最厚</option>
+										<option value="上質紙　110kg">上質紙　110kg</option>
+										<option value="上質紙　135kg">上質紙　135kg</option>
+										<option value="コート紙　90kg">コート紙　90kg</option>
+										<option value="コート紙　110kg">コート紙　110kg</option>
+										<option value="マットコート紙　110kg">マットコート紙　110kg</option>
+										<option value="マットコート紙　135kg">マットコート紙　135kg</option>
+										<option value="アートポスト　180kg">アートポスト　180kg</option>
+										<option value="アートポスト　200kg">アートポスト　200kg</option>
+										<option value="その他">その他</option>
 									</select>
 								</td>
 							</tr>
@@ -246,9 +282,7 @@
 									<span>表紙紙色</span>
 								</th>
 								<td>
-									<select name="cover_color" class="w_md" disabled>
-										 <option value="">--</option>
-									</select>
+									<input type="text" name="cover_color" class="w_md" disabled>
 								</td>
 							</tr>
 							<tr class="quotation hidden">
@@ -257,7 +291,16 @@
 								</th>
 								<td>
 									<select name="book_paper" class="w_md" disabled>
-										 <option value="">--</option>
+										<option value="上質紙　55kg">上質紙　55kg</option>
+										<option value="上質紙　70kg">上質紙　70kg</option>
+										<option value="上質紙　90kg">上質紙　90kg</option>
+										<option value="コート紙　90kg">コート紙　90kg</option>
+										<option value="コート紙　110kg">コート紙　110kg</option>
+										<option value="マットコート紙　73kg">マットコート紙　73kg</option>
+										<option value="マットコート紙　90kg">マットコート紙　90kg</option>
+										<option value="マットコート紙　110kg">マットコート紙　110kg</option>
+										<option value="マットコート紙　135kg">マットコート紙　135kg</option>
+										<option value="その他">その他</option>
 									</select>
 								</td>
 							</tr>
@@ -267,7 +310,12 @@
 								</th>
 								<td>
 									<select name="frontispiece" class="w_md" disabled>
-										 <option value="">--</option>
+										<option value="色上質　中厚 印刷有">色上質　中厚 印刷有</option>
+										<option value="色上質　中厚 印刷無">色上質　中厚 印刷無</option>
+										<option value="色上質　厚口 印刷有">色上質　厚口 印刷有</option>
+										<option value="色上質　厚口 印刷無">色上質　厚口 印刷無</option>
+										<option value="その他の紙 印刷有">その他の紙 印刷有</option>
+										<option value="その他の紙 印刷無">その他の紙 印刷無</option>
 									</select>
 								</td>
 							</tr>
@@ -276,9 +324,7 @@
 									<span>中扉紙色</span>
 								</th>
 								<td>
-									<select name="frontispiece_color" class="w_md" disabled>
-										 <option value="">--</option>
-									</select>
+									<input type="text" name="frontispiece_color" class="w_md" disabled>
 								</td>
 							</tr>
 							<tr class="quotation hidden">
@@ -324,7 +370,9 @@
 								</th>
 								<td>
 									<select name="manuscript_type" class="w_tn" disabled>
-										 <option value="">--</option>
+										<option value="紙原稿">紙原稿</option>
+										<option value="データ">データ</option>
+										<option value="その他">その他</option>
 									</select>
 								</td>
 							</tr>
@@ -334,7 +382,11 @@
 								</th>
 								<td>
 									<select name="os_type" class="w_tn" disabled>
-										 <option value="">--</option>
+										<option value="Windows 2000">Windows 2000</option>
+										<option value="Windows XP">Windows XP</option>
+										<option value="MacOS 9以前">MacOS 9以前</option>
+										<option value="MacOS X">MacOS X</option>
+										<option value="その他">その他</option>
 									</select>
 								</td>
 							</tr>
@@ -344,7 +396,14 @@
 								</th>
 								<td>
 									<select name="application" class="w_tn" disabled>
-										 <option value="">--</option>
+										<option value="Word">Word</option>
+										<option value="Excel">Excel</option>
+										<option value="PowerPoint">PowerPoint</option>
+										<option value="Photoshop">Photoshop</option>
+										<option value="Illustrator">Illustrator</option>
+										<option value="InDesign">InDesign</option>
+										<option value="QuarkXPress">QuarkXPress</option>
+										<option value="その他">その他</option>
 									</select>
 								</td>
 							</tr>
@@ -511,13 +570,13 @@
 				<li><a href="../company/">企業情報</a>
 					<ul>
 						<li><a href="../company/policy/">こだわり</a></li>
-						<li><a href="../company/csr/">CSR活動及びコンプライアンス</a></li>
+						<li><a href="../company/csr/" class="small">CSR活動及びコンプライアンス</a></li>
 						<li><a href="../company/facility/">工場・設備一覧</a></li>
 					</ul>
 				</li>
 				<li><a href="../print_service/">印刷サービス</a>
 					<ul>
-						<li><a href="../print_service/production/">制作</a></li>
+						
 						<li><a href="../print_service/prepress/">製版</a></li>
 						<li><a href="../print_service/print/">印刷</a></li>
 						<li><a href="../print_service/bookbinding/">製本</a></li>
