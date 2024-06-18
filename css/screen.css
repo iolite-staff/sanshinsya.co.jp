@@ -756,7 +756,7 @@ body{
 	border-bottom: 2px solid #009944;
 	margin: 0 0 40px 0;
 	padding-bottom: 20px;
-	text-align: center;
+
 }
 
 
@@ -1536,3 +1536,4 @@ nav.inner_link ul li:not(:last-child){
 	width: 85%;
 	margin: auto;
 }
+
