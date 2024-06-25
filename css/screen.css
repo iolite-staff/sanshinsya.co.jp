@@ -760,6 +760,21 @@ body{
 }
 
 
+#sub_contents_area section div div h3{
+	font-size: 24px;
+	border-left: 7px solid #83D37A;
+	margin: 0 0 40px 0;
+	padding-left: 15px;
+}
+
+#sub_contents_area>section>p{
+	width: 100%;
+	text-align: center;
+	margin: 100px 0;
+}
+#sub_contents_area * {
+	box-sizing: border-box;
+}
 /* sp */
 
 #sub_contents_area #sp_message{
@@ -1125,14 +1140,60 @@ body{
 	width: 250px;
 }
 
-
-#sub_contents_area>section>p{
-	width: 100%;
-	text-align: center;
-	margin: 100px 0;
+/* prepress */
+#sub_contents_area .prepress_content::after {
+	content: '';
+	clear: both;
+	display: inline-block;
 }
-#sub_contents_area * {
-	box-sizing: border-box;
+#sub_contents_area .prepress_content #commit {
+	width: 100%;
+}
+#sub_contents_area .prepress_content #commit > div {
+	display: inline-block;
+	vertical-align: top;
+}
+#sub_contents_area .prepress_content #commit .left > p:first-child {
+	font-size: 0;
+}
+#sub_contents_area .prepress_content #commit .left {
+	width: 70%;
+}
+#sub_contents_area .prepress_content #commit .left p {
+	text-align: left;
+	font-size: 1rem;
+}
+#sub_contents_area .prepress_content #commit .left p span {
+	display: inline-block;
+	margin: 0;
+	padding: 1rem 1.5rem;
+	border: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+#sub_contents_area .prepress_content #commit .left p span.blue {
+	background-color: #9295E5;
+}
+#sub_contents_area .prepress_content #commit .left p span.green {
+	background-color: #88D7B1;
+}
+#sub_contents_area .prepress_content .right{
+	width: 28%;
+}
+#sub_contents_area .prepress_content .right img{
+	width: 100%;
+	height: auto;
+}
+#sub_contents_area .prepress_content p:first-child {
+	text-align: center;
+	margin: 0 auto 40px;
+}
+#sub_contents_area .prepress_content .stress{
+	background-color: #139255;
+	font-size: 24px;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	margin-right: 0.25rem;
 }
 
 /* contact */
