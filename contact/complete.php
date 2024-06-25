@@ -1,5 +1,5 @@
 <?php
-	error_reporting(0);
+	error_reporting(0); 
 
 	foreach($_POST as $key=>$value) {
 		if(is_array($_POST[$key])){
@@ -16,17 +16,27 @@
 		unset($_SESSION['page']);
 		require_once('./qdmail.php');
 		// 問い合わせフォーム内容送信先メールアドレス
-		// $mailto = '本番用';
-		$mailto =  'staff@iolite.co.jp';
+		$mailto = 'info@sanshinsya.co.jp';
+		//$mailto =  'staff@iolite.co.jp';
 
 		//メール問い合わせ者メールアドレス
 		$mailfrom = $_POST['mail_address'];
 
+
+
 		//メールタイトル（管理者用）
-		$admin_subject = "【テスト】株式会社三進社 お問い合わせがありました";
+		if ($_POST['contact_type'] == "お問い合わせ") {
+			$admin_subject = "WEBフォームよりお問い合わせ";
+		} else {
+			$admin_subject = "WEBフォーム見積依頼";
+		}
 
 		//メールタイトル（お問い合わせ送信者用）
-		$sender_subject = "【テスト】株式会社三進社 お問い合わせ";
+		if ($_POST['contact_type'] == "お問い合わせ") {
+			$sender_subject = "【株式会社三進社】 お問い合わせを承りました。（自動返信）";
+		} else {
+			$sender_subject = "【株式会社三進社】 お見積依頼を承りました。（自動返信）";
+		}
 
 		//問い合わせ内容生成
 		if($_POST['contact_type'] == "お問い合わせ"){
@@ -34,7 +44,6 @@
 			$consultation_items = implode('、',$_POST['consultation_item']);
 
 			$content = <<< EOF
-			お問い合わせ種類: {$_POST['contact_type']}
 			お問い合わせ区分: {$_POST['contact_category']}
 			お問い合わせ内容: {$_POST['contact_details']}
 			相談したい項目: {$consultation_items}
@@ -48,16 +57,16 @@
 			お電話番号: {$_POST['telephone_number']}
 			FAX番号: {$_POST['fax_number']}
 
+			アンケート：{$_POST['enquete']}
+
 			EOF;
 		}else{
 
 			$content = <<< EOF
-			お問い合わせ種類: {$_POST['contact_type']}
 			部数: {$_POST['num']}
 			サイズ: {$_POST['size']}
 			大判及び変形サイズ: {$_POST['deformed_size']}
 			ページ数: {$_POST['page_count']}
-
 			表紙色数: {$_POST['cover_color_num']}
 			本文色数: {$_POST['color_num']}
 			製本体裁: {$_POST['binding_style']}
@@ -76,23 +85,56 @@
 			{$_POST['message']}
 
 			氏名: {$_POST['name']}
-			住所: {$_POST['address']}
 			メールアドレス: {$_POST['mail_address']}
+			ご住所: {$_POST['address']}
 			お電話番号: {$_POST['telephone_number']}
 			FAX番号: {$_POST['fax_number']}
+
 			EOF;
 		}
 
 		//メール内容（管理者用）
 		$admin_content = <<< EOF
+		下記のお問い合わせが入っております。
+
 		{$content}
 		EOF;
 
 		//メール内容（お問い合わせ送信者用）
 		$sender_content = <<< EOF
-		ありがとうございます。メッセージは送信されました。
+
+		EOF;
+
+		// Check if $_POST['name'] is empty
+		if (!empty($_POST['name'])) {
+			$sender_content .= <<< EOF
+			{$_POST['name']}様
+
+		EOF;
+		} else {
+			$sender_content .= <<< EOF
+			{$_POST['company_name']} 様
+
+		EOF;
+		}
+
+		$sender_content .= <<< EOF
+
+		この度はお問い合わせありがとうございます。
+		後ほど担当者からご回答を差し上げますので、今しばらくお待ちください。
+		------------------------------------------------------------
 		{$content}
 
+		今後とも株式会社三進社をよろしくお願いいたします。
+
+		────────────────────────────────────
+		株式会社　三　進　社
+		〒135-0042
+		東京都江東区木場5-11-13
+		TEL/03-5621-3439　FAX/03-5621-3849
+		info@sanshinsya.co.jp
+		https://www.sanshin-sya.co.jp/
+		────────────────────────────────────
 		EOF;
 
 		//管理者にメール
@@ -139,14 +181,14 @@
 				<a href="../company/">企業情報</a>
 				<ul class="menu_inner">
 					<li><a href="../company/policy/">こだわり</a></li>
-					<li><a href="../company/csr/">CSR活動及び<br>コンプライアンス</a></li>
+					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
 					<li><a href="../company/facility/">工場・設備一覧</a></li>
 				</ul>
 			</li>
 			<li>
 				<a href="../print_service/">印刷サービス</a>
 				<ul class="menu_inner">
-					<li><a href="../print_service/production/">制作</a></li>
+					
 					<li><a href="../print_service/prepress/">製版</a></li>
 					<li><a href="../print_service/print/">印刷</a></li>
 					<li><a href="../print_service/bookbinding/">製本</a></li>
@@ -234,7 +276,7 @@
 					</tr>
 					<tr>
 						<th>その他：</th>
-						<td>
+						<td style="word-break: break-all; padding-right: 5px;">
 							<?php echo nl2br($_POST['message']); ?>
 						</td>
 					</tr>
@@ -363,7 +405,7 @@
 					</tr>
 					<tr>
 						<th>その他：</th>
-						<td>
+						<td style="word-break: break-all; padding-right: 5px;">
 							<?php echo nl2br($_POST['message']) ?>
 						</td>
 					</tr>
@@ -444,13 +486,13 @@
 				<li><a href="../company/">企業情報</a>
 					<ul>
 						<li><a href="../company/policy/">こだわり</a></li>
-						<li><a href="../company/csr/">CSR活動及びコンプライアンス</a></li>
+						<li><a href="../company/csr/" class="small">CSR活動及びコンプライアンス</a></li>
 						<li><a href="../company/facility/">工場・設備一覧</a></li>
 					</ul>
 				</li>
 				<li><a href="../print_service/">印刷サービス</a>
 					<ul>
-						<li><a href="../print_service/production/">制作</a></li>
+						
 						<li><a href="../print_service/prepress/">製版</a></li>
 						<li><a href="../print_service/print/">印刷</a></li>
 						<li><a href="../print_service/bookbinding/">製本</a></li>
@@ -481,7 +523,7 @@
 			</table>
 		</div>
 	</div>
-	<a href="../privacy/">プライバシーポリシー</a>
+	<a href="../privacy/" class="privacy" class="privacy">プライバシーポリシー</a>
 	<small>&copy; 2024 株式会社三進社  All Right Reserved.</small>
 </footer>
 

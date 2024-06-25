@@ -53,16 +53,16 @@
         <ul>
 			<li>
 				<a href="../company/">企業情報</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_1">
 					<li><a href="../company/policy/">こだわり</a></li>
-					<li><a href="../company/csr/">CSR活動及び<br>コンプライアンス</a></li>
+					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
 					<li><a href="../company/facility/">工場・設備一覧</a></li>
 				</ul>
 			</li>
 			<li>
 				<a href="../print_service/">印刷サービス</a>
-				<ul class="menu_inner">
-					<li><a href="../print_service/production/">制作</a></li>
+				<ul class="menu_inner menu_inner_2">
+					
 					<li><a href="../print_service/prepress/">製版</a></li>
 					<li><a href="../print_service/print/">印刷</a></li>
 					<li><a href="../print_service/bookbinding/">製本</a></li>
@@ -70,7 +70,7 @@
 			</li>
 			<li>
 				<a href="../sp_service/">セールスプロモーション</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_3">
 					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
@@ -146,7 +146,7 @@
 						</tr>
 						<tr>
 							<th>その他：</th>
-							<td>
+							<td style="word-break: break-all; padding-right: 5px;">
 								<?php echo nl2br($_POST['message']) ?>
 								<input type="hidden" name="message" value="<?php echo $_POST['message'] ?>">
 							</td>
@@ -338,6 +338,13 @@
 								<input type="hidden" name="fax_number" value="<?php echo $_POST['fax_number'] ?>">
 							</td>
 						</tr>
+						<tr>
+							<th>アンケート：</th>
+							<td>
+								<?php echo $_POST['enquete'] ?>
+								<input type="hidden" name="enquete" value="<?php echo $_POST['enquete'] ?>">
+							</td>
+						</tr>
 					</table>
 				</div>
 				<div class="button_area">
@@ -384,13 +391,13 @@
 				<li><a href="../company/">企業情報</a>
 					<ul>
 						<li><a href="../company/policy/">こだわり</a></li>
-						<li><a href="../company/csr/">CSR活動及びコンプライアンス</a></li>
+						<li><a href="../company/csr/" class="small">CSR活動及びコンプライアンス</a></li>
 						<li><a href="../company/facility/">工場・設備一覧</a></li>
 					</ul>
 				</li>
 				<li><a href="../print_service/">印刷サービス</a>
 					<ul>
-						<li><a href="../print_service/production/">制作</a></li>
+						
 						<li><a href="../print_service/prepress/">製版</a></li>
 						<li><a href="../print_service/print/">印刷</a></li>
 						<li><a href="../print_service/bookbinding/">製本</a></li>
@@ -421,7 +428,7 @@
 			</table>
 		</div>
 	</div>
-	<a href="../privacy/">プライバシーポリシー</a>
+	<a href="../privacy/" class="privacy" class="privacy">プライバシーポリシー</a>
 	<small>&copy; 2024 株式会社三進社  All Right Reserved.</small>
 </footer>
 
