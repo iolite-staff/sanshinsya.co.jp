@@ -523,7 +523,7 @@
 			</table>
 		</div>
 	</div>
-	<a href="../privacy/" class="privacy" class="privacy">プライバシーポリシー</a>
+	<a href="../privacy/" class="privacy" class="privacy">個人情報保護方針</a>
 	<small>&copy; 2024 株式会社三進社  All Right Reserved.</small>
 </footer>
 
