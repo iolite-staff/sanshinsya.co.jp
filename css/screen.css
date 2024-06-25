@@ -1154,15 +1154,21 @@ a.privacy {
 #sub_contents_area .prepress_content #commit {
 	width: 100%;
 }
-#sub_contents_area .prepress_content #commit > div {
+#sub_contents_area .prepress_content > div {
+	margin-bottom: 100px;
+}
+#sub_contents_area .prepress_content > div > div {
 	display: inline-block;
 	vertical-align: top;
 }
 #sub_contents_area .prepress_content #commit .left > p:first-child {
 	font-size: 0;
 }
-#sub_contents_area .prepress_content #commit .left {
-	width: 70%;
+#sub_contents_area .prepress_content > div > div p,
+#sub_contents_area .prepress_content > div > .right p,
+#sub_contents_area .prepress_content > div > .half_left p,
+#sub_contents_area .prepress_content > div > .half_right p {
+	text-align: left;line-height: 1.75rem;
 }
 #sub_contents_area .prepress_content #commit .left p {
 	text-align: left;
@@ -1170,11 +1176,12 @@ a.privacy {
 }
 #sub_contents_area .prepress_content #commit .left p span {
 	display: inline-block;
-	margin: 0;
+	margin: 0 0 0.25rem;
 	padding: 1rem 1.5rem;
 	border: none;
 	font-size: 1.25rem;
 	font-weight: bold;
+	color: #fff;
 }
 #sub_contents_area .prepress_content #commit .left p span.blue {
 	background-color: #9295E5;
@@ -1182,16 +1189,27 @@ a.privacy {
 #sub_contents_area .prepress_content #commit .left p span.green {
 	background-color: #88D7B1;
 }
-#sub_contents_area .prepress_content .right{
-	width: 28%;
-}
-#sub_contents_area .prepress_content .right img{
+#sub_contents_area .prepress_content > div img,
+#sub_contents_area .prepress_content > div img{
 	width: 100%;
 	height: auto;
 }
-#sub_contents_area .prepress_content p:first-child {
+#sub_contents_area .prepress_content > div table tr th,
+#sub_contents_area .prepress_content > div table tr td {
+	padding: 0.25rem 0.75rem;
+}
+#sub_contents_area .prepress_content > div table tr th {
+	color: #fff;
+	background-color: #0b8643;
+	text-align: left;
+	font-weight: normal;
+}
+#sub_contents_area .prepress_content > div table tr td{
+	padding-bottom: 0.5rem;
+}
+#sub_contents_area .prepress_content >  p:first-child {
 	text-align: center;
-	margin: 0 auto 40px;
+	margin: 0 auto 80px;
 }
 #sub_contents_area .prepress_content .stress{
 	background-color: #139255;
@@ -1627,4 +1645,3 @@ nav.inner_link ul li:not(:last-child){
 	width: 80%;
 	margin: auto;
 }
-

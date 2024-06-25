@@ -410,6 +410,32 @@ body header nav ul li ul.menu_inner{
 	top: -50px;
 	left: calc(50% - 20px);
 }
+/* prepress */
+#sub_contents_area .prepress_content .left,
+#sub_contents_area .prepress_content .right,
+#sub_contents_area .prepress_content .half_left,
+#sub_contents_area .prepress_content .half_right {
+	width: 100%;
+}
+#sub_contents_area .prepress_content .left,
+#sub_contents_area .prepress_content .half_left {
+	margin-bottom: 20px;
+}
+#sub_contents_area .prepress_content > p:first-child {
+	line-height: 2.5rem;
+}
+#sub_contents_area .prepress_content #commit .left p span.blue {
+	width: 98%;
+	text-align: center;
+}
+#sub_contents_area .prepress_content > div table tr th,
+#sub_contents_area .prepress_content > div table tr td {
+	width: 100%;
+	display: block;
+}
+#sub_contents_area .prepress_content > div table tr th {
+	margin-top: 10px;
+}
 /* #sub_contents_area form */
 #sub_contents_area .form_area,
 #sub_contents_area .enquete_area {
