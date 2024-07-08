@@ -950,7 +950,7 @@ a.privacy {
 	opacity: 0.7;
 	transition: all 0.25s;
 }
-#sub_contents_area #print_service01 .step_box .inner_box a.step_link::after{
+#sub_contents_area #print_service01 .step_box .inner_box a.step_a::after{
 	content: "詳しく見る";
 	padding: 0.5rem 1rem;
 	position: absolute;
