@@ -1603,6 +1603,9 @@ a.privacy {
  	padding-left: 1em;
 	text-indent: -1em;
 }
+#sub_contents_area #privacy_policy .allindent3{
+	padding-left: 3em;
+}
 #sub_contents_area #privacy_policy .signarea{
 	text-align: right;
 }

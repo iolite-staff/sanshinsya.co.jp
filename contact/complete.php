@@ -45,7 +45,6 @@
 
 			$content = <<< EOF
 			お問い合わせ区分: {$_POST['contact_category']}
-			お問い合わせ内容: {$_POST['contact_details']}
 			相談したい項目: {$consultation_items}
 			ご予算: {$_POST['budget']}
 			その他:
@@ -252,12 +251,6 @@
 						<th>お問い合わせ区分：</th>
 						<td>
 							<?php echo $_POST['contact_category'] ?>
-						</td>
-					</tr>
-					<tr style="display:none;">
-						<th>お問い合わせ内容：</th>
-						<td>
-							<?php echo $_POST['contact_details'] ?>
 						</td>
 					</tr>
 					<tr>

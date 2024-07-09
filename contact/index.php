@@ -111,20 +111,6 @@
 									<label for="contact_category2">個人のお客様</label>
 								</td>
 							</tr>
-							<tr class="quotation hidden">
-								<th>
-									<span>お問い合わせ内容</span>
-									<span class="mast">必須</span>
-								</th>
-								<td>
-									<select name="contact_details" id="contact_details" class="w_sm">
-										<option value="">ご希望の内容をご選択ください。</option>
-										<option value="お問い合わせ" selected>お問い合わせ</option>
-										<option value="資料請求">資料請求</option>
-									</select>
-									<span class="error" id="contact_details_error"></span>
-								</td>
-							</tr>
 							<tr class="inquiry">
 								<th class="white_normal">
 									<span>相談したい項目を選択（複数可）</span>
@@ -708,14 +694,8 @@ PMS管理室<br />
 						case "contact_type":
 							error.insertAfter($('#contact_type_error'));
 							break;
-						case "contact_details":
-							error.insertAfter($('#contact_details_error'));
-							break;
 						case "consultation_item":
 							error.insertAfter($('#consultation_item_error'));
-							break;
-						case "contact_details":
-							error.insertAfter($('#contact_details_error'));
 							break;
 						case "budget":
 							error.insertAfter($('#budget_error'));
