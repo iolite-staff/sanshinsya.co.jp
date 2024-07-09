@@ -1592,6 +1592,27 @@ a.privacy {
     padding: 0px 18px;
     font-size: 18px;
 }
+#hogobunsho p{
+	margin:0;
+	padding: 0;
+}
+#sub_contents_area #privacy_policy h2.center{
+	text-align: center;
+}
+#sub_contents_area #privacy_policy .indent{
+ 	padding-left: 1em;
+	text-indent: -1em;
+}
+#sub_contents_area #privacy_policy .signarea{
+	text-align: right;
+}
+#sub_contents_area #privacy_policy .signtext{
+	padding-right: 2em;
+	text-align:center;
+	margin-left:auto;
+	width:250px;
+}
+
 
 /* facilities */
 
@@ -1665,4 +1686,12 @@ nav.inner_link ul li:not(:last-child){
 	padding: 15px;
 	width: 80%;
 	margin: auto;
+}
+#sub_contents_area #privacy_policy div.center p.contacterea{
+	width:80%;
+	text-align: left;
+	padding:6px;
+	margin-left:auto;
+	margin-right:auto;
+	border:#000 solid 1px;
 }
