@@ -834,6 +834,18 @@ a.privacy {
 	padding: 20px;
 	background-color:#dff3e8;
 }
+#company_summary table{
+	width:100%;
+}
+#company_summary .leftblock{
+	text-align: left;
+	float:left;margin-right:36px;width:20%;
+	border-top:#000 solid 1px;
+}
+#company_summary .rightblock{
+	float:left;width:70%;
+	border-top:#000 solid 1px;
+}
 
 /* print_service */
 
@@ -1238,6 +1250,12 @@ a.privacy {
 }
 #sub_contents_area form label {
 	position: relative;
+}
+#sub_contents_area .form_area .form_table .input_list_left{
+	padding-right: 0;
+}
+#sub_contents_area .form_area .form_table .input_list_right{
+	width:50%;
 }
 #sub_contents_area .form_area .form_table .input_list > span,
 #sub_contents_area .form_area .form_table .input_list > input[type="text"] {
