@@ -121,7 +121,7 @@
 								<input type="hidden" name="contact_category" value="<?php echo $_POST['contact_category'] ?>">
 							</td>
 						</tr>
-						<tr>
+						<tr style="display:none;">
 							<th>お問い合わせ内容：</th>
 							<td>
 								<?php echo $_POST['contact_details'] ?>

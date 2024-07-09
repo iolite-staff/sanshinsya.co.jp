@@ -119,7 +119,7 @@
 								<td>
 									<select name="contact_details" id="contact_details" class="w_sm">
 										<option value="">ご希望の内容をご選択ください。</option>
-										<option value="お問い合わせ">お問い合わせ</option>
+										<option value="お問い合わせ" selected>お問い合わせ</option>
 										<option value="資料請求">資料請求</option>
 									</select>
 									<span class="error" id="contact_details_error"></span>
@@ -160,24 +160,24 @@
 								</td>
 								<td class="input_list input_list_right">
 									<span>
-										<input type="checkbox" name="consultation_item[]" id="consultation_item1" value="SPツールについて">
-										<label for="consultation_item1">SPツールについて</label>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item7" value="SPツールについて">
+										<label for="consultation_item7">SPツールについて</label>
 									</span>
 									<span>
-										<input type="checkbox" name="consultation_item[]" id="consultation_item2" value="合紙・抜きについて">
-										<label for="consultation_item2">合紙・抜きについて</label>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item8" value="合紙・抜きについて">
+										<label for="consultation_item8">合紙・抜きについて</label>
 									</span>
 									<span>
-										<input type="checkbox" name="consultation_item[]" id="consultation_item3" value="組立加工・セット梱包・アッセンブリについて">
-										<label for="consultation_item3">組立加工・セット梱包・アッセンブリについて</label>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item9" value="組立加工・セット梱包・アッセンブリについて">
+										<label for="consultation_item9">組立加工・セット梱包・アッセンブリについて</label>
 									</span>
 									<span>
-										<input type="checkbox" name="consultation_item[]" id="consultation_item4" value="物流・保管について">
-										<label for="consultation_item4">物流・保管について</label>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item10" value="物流・保管について">
+										<label for="consultation_item10">物流・保管について</label>
 									</span>
 									<span>
-										<input type="checkbox" name="consultation_item[]" id="consultation_item5" value="大判シート出力・加工について">
-										<label for="consultation_item5">大判シート出力・加工について</label>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item11" value="大判シート出力・加工について">
+										<label for="consultation_item11">大判シート出力・加工について</label>
 									</span>
 									<span>
 									<span class="error" id="consultation_item_error"></span>
@@ -575,6 +575,7 @@
 <br />
 5. 個人情報の取扱い及び個人情報保護に関するに苦情及び相談窓口について<br />
 　個人情報に関する取扱い、苦情及び相談につきましては、下記にご連絡をお願い致します。<br />
+<br />
 株式会社三進社<br />
 PMS管理室<br />
 <a href="mailto:sss_pv@sanshinsya.co.jp">sss_pv@sanshinsya.co.jp</a><br />
