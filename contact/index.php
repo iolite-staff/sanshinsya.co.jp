@@ -92,7 +92,7 @@
 									<span>お問い合わせ種類</span>
 									<span class="mast">必須</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="radio" name="contact_type" id="contact_type1" value="お問い合わせ" checked>
 									<label for="contact_type1">お問い合わせ</label>
 									<input type="radio" name="contact_type" id="contact_type2" value="お見積り">
@@ -104,14 +104,14 @@
 								<th>
 									<span>お問い合わせ区分</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="radio" name="contact_category" id="contact_category1" value="法人のお客様">
 									<label for="contact_category1">法人のお客様</label>
 									<input type="radio" name="contact_category" id="contact_category2" value="個人のお客様">
 									<label for="contact_category2">個人のお客様</label>
 								</td>
 							</tr>
-							<tr class="inquiry" style="display:none;">
+							<tr class="quotation hidden">
 								<th>
 									<span>お問い合わせ内容</span>
 									<span class="mast">必須</span>
@@ -130,7 +130,7 @@
 									<span>相談したい項目を選択（複数可）</span>
 									<span class="mast">必須</span>
 								</th>
-								<td class="input_list">
+								<td class="input_list input_list_left">
 									<span>
 										<input type="checkbox" name="consultation_item[]" id="consultation_item1" value="印刷について">
 										<label for="consultation_item1">印刷について</label>
@@ -158,12 +158,36 @@
 									<span>
 									<span class="error" id="consultation_item_error"></span>
 								</td>
+								<td class="input_list input_list_right">
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item1" value="SPツールについて">
+										<label for="consultation_item1">SPツールについて</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item2" value="合紙・抜きについて">
+										<label for="consultation_item2">合紙・抜きについて</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item3" value="組立加工・セット梱包・アッセンブリについて">
+										<label for="consultation_item3">組立加工・セット梱包・アッセンブリについて</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item4" value="物流・保管について">
+										<label for="consultation_item4">物流・保管について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item5" value="大判シート出力・加工について">
+										<label for="consultation_item5">大判シート出力・加工について</label>
+									</span>
+									<span>
+									<span class="error" id="consultation_item_error"></span>
+								</td>
 							</tr>
 							<tr class="inquiry">
 								<th>
 									<span>ご予算</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="text" name="budget" id="budget" class="w_sm"><label for="budget">円</label>
 									<span class="error" id="budget_error"></span>
 								</td>
@@ -408,7 +432,7 @@
 							</tr>
 
 							<tr class="no_border">
-								<td colspan="2">
+								<td colspan="3">
 									<p>
 										その他：ご希望の納期、仕様などご自由にお書きください。<br />
 										※お手持ちのデータについてのご質問は、できるだけ詳しくご記入下さい。
@@ -417,7 +441,7 @@
 							</tr>
 							<tr>
 								<th></th>
-								<td>
+								<td colspan="2">
 									<textarea name="message" class="w_lg"></textarea>
 								</td>
 							</tr>
@@ -427,7 +451,7 @@
 									<span>会社名（氏名）</span>
 									<span class="mast">必須</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="text" name="company_name" class="w_lg">
 									<span class="error" id="company_name_error"></span>
 								</td>
@@ -438,7 +462,7 @@
 									<span>氏名</span>
 									<span class="mast">必須</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="text" name="name" class="w_lg" disabled>
 									<span class="error" id="name_error"></span>
 								</td>
@@ -448,7 +472,7 @@
 								<th>
 									<span>住所</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="text" name="address" class="w_lg">
 								</td>
 							</tr>
@@ -457,7 +481,7 @@
 									<span>メールアドレス</span>
 									<span class="mast">必須</span>
 								</th>
-								<td class="input_list">
+								<td colspan="2" class="input_list">
 									<input type="text" name="mail_address" class="w_md" id="mail_address">
 									<input type="text" name="mail_address_confirm" class="w_md">
 									<span class="error" id="mail_address_error"></span>
@@ -469,7 +493,7 @@
 									<span>お電話番号</span>
 									<span class="mast">必須</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="text" name="telephone_number" class="w_sm">
 									<span class="error" id="telephone_number_error"></span>
 								</td>
@@ -478,7 +502,7 @@
 								<th>
 									<span>FAX番号</span>
 								</th>
-								<td>
+								<td colspan="2">
 									<input type="text" name="fax_number" class="w_sm">
 								</td>
 							</tr>

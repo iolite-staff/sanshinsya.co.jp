@@ -840,11 +840,14 @@ a.privacy {
 #company_summary .leftblock{
 	text-align: left;
 	float:left;margin-right:36px;width:20%;
-	border-top:#000 solid 1px;
+	border-top:#0b8643 solid 1px;
 }
 #company_summary .rightblock{
 	float:left;width:70%;
-	border-top:#000 solid 1px;
+	border-top:#0b8643 solid 1px;
+}
+#company_summary .noneborder{
+	border-top:#0b8643 solid 0px;
 }
 
 /* print_service */
