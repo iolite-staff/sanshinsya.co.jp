@@ -553,3 +553,37 @@ body>footer ul.bnr .bg02{
 		width: unset;
 	}
 }
+
+
+
+@media only screen and (max-width:910px){
+body>header nav ul{
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	text-align:center;
+	font-size:15px;
+	background-color:#009944;
+	position:absolute;
+	top:70px;
+	left:0;
+	z-index: 11;
+	transition: 0.2s;
+}
+
+body>header nav ul li{
+	background-color:#009944;
+	border-bottom:1px dotted #fafafa;
+}
+
+body>header nav ul li a{
+	display:block;
+	padding:10px;
+}
+
+body>header nav ul li a:link,
+body>header nav ul li a:visited{
+	color:#fff;
+}
+}
