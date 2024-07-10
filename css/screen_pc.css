@@ -307,11 +307,11 @@ body>footer ul.bnr .bg02{
 	}
 }
 
-
-#nav_sp{
-	display: none;
+@media only screen and (min-width:911px){
+	#nav_sp{
+		display: none;
+	}
 }
-
 
 /* sub contents */
 
