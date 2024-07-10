@@ -555,7 +555,7 @@ body>footer ul.bnr .bg02{
 }
 
 
-
+/* PC mini window */
 @media only screen and (max-width:910px){
 body>header nav ul{
 	width:100%;
@@ -585,5 +585,11 @@ body>header nav ul li a{
 body>header nav ul li a:link,
 body>header nav ul li a:visited{
 	color:#fff;
+}
+body>header>nav>ul>li {
+    float: none;
+}
+body header nav ul li:hover ul.menu_inner {
+	display: none;
 }
 }
