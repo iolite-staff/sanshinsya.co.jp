@@ -1597,7 +1597,7 @@ a.privacy {
 	padding: 0;
 }
 #privacy_policy{
-	margin-top:80px;
+	padding-top:80px;
 }
 #sub_contents_area #privacy_policy h2.center{
 	text-align: center;
