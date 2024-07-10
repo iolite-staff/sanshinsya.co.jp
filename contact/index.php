@@ -37,7 +37,7 @@
 				<ul class="menu_inner menu_inner_1">
 					<li><a href="../company/policy/">こだわり</a></li>
 					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
-					<li><a href="../company/facility/">工場・設備一覧</a></li>
+					<li><a href="../company/facility/">事業所一覧</a></li>
 				</ul>
 			</li>
 			<li>
@@ -616,7 +616,7 @@ PMS管理室<br />
 					<ul>
 						<li><a href="../company/policy/">こだわり</a></li>
 						<li><a href="../company/csr/" class="small">CSR活動及びコンプライアンス</a></li>
-						<li><a href="../company/facility/">工場・設備一覧</a></li>
+						<li><a href="../company/facility/">事業所一覧</a></li>
 					</ul>
 				</li>
 				<li><a href="../print_service/">印刷サービス</a>

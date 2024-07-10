@@ -1722,6 +1722,35 @@ nav.inner_link ul li:not(:last-child){
 	#nav_sp.close span:nth-child(3){
 		transition-duration:0.5s;
 	}
+	body>header nav ul{
+		width:100%;
+		margin:0;
+		padding:0;
+		list-style-type:none;
+		text-align:center;
+		font-size:15px;
+		background-color:#009944;
+		position:absolute;
+		top:70px;
+		left:0;
+		z-index: 11;
+		transition: 0.2s;
+	}
+	
+	body>header nav ul li{
+		border-bottom:1px dotted #fafafa;
+	}
+	
+	body>header nav ul li a{
+		display:block;
+		padding:10px;
+	}
+	
+	body>header nav ul li a:link,
+	body>header nav ul li a:visited{
+		color:#fff;
+	}
+	
 }
 
 
@@ -1772,4 +1801,20 @@ nav.inner_link ul li:not(:last-child){
 	margin-left:auto;
 	margin-right:auto;
 	border:#000 solid 1px;
+}
+
+/* prepress */
+
+#machine01 table{
+	border-collapse: collapse;
+	border: 1px solid #a5a7a7;
+}
+#machine01 table tr th{
+	border-top: 1px solid #a5a7a7;
+	border-left: 1px solid #a5a7a7;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+#machine01 table td{
+	border: 1px solid #a5a7a7;
 }
