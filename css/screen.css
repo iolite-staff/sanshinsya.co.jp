@@ -1596,6 +1596,9 @@ a.privacy {
 	margin:0;
 	padding: 0;
 }
+#privacy_policy{
+	margin-top:80px;
+}
 #sub_contents_area #privacy_policy h2.center{
 	text-align: center;
 }
@@ -1615,6 +1618,22 @@ a.privacy {
 	margin-left:auto;
 	width:250px;
 }
+#sub_contents_area #privacy_policy>div{
+	padding: 0px 10% 40px;
+}
+#sub_contents_area #privacy_policy h2{
+	font-size:28px;
+	font-weight:900;
+}
+#sub_contents_area #privacy_policy h3{
+	font-size:24px;
+	font-weight:600;
+}
+#sub_contents_area #privacy_policy .contents_title_border{
+	border-left: 6px solid #28AE5E;
+	padding-left: 15px;
+}
+
 
 
 /* facilities */
@@ -1685,7 +1704,7 @@ nav.inner_link ul li:not(:last-child){
 	margin: 70px 0;
 }
 #sub_contents_area #privacy_policy div.box{
-	border: 2px solid #49EF9F;
+	border: 2px solid #28AE5E;
 	padding: 15px;
 	width: 80%;
 	margin: auto;
