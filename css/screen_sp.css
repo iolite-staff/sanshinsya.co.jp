@@ -20,7 +20,7 @@ body>header>a img{
 	width:200px;
 	vertical-align:bottom;
 }
-
+/*
 body>header nav ul{
 	width:100%;
 	margin:0;
@@ -49,7 +49,7 @@ body>header nav ul li a:link,
 body>header nav ul li a:visited{
 	color:#fff;
 }
-
+*/
 body>footer{
 	margin:0;
 	padding:0 0 20px;
