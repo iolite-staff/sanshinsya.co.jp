@@ -658,7 +658,7 @@ PMS管理室<br />
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var windowsize = window.matchMedia('screen and (max-width:767px)');
+			var windowsize = window.matchMedia('screen and (max-width:910px)');
 			function checkBreakPoint(windowsize) {
 				if (windowsize.matches) {
 					$('body>header>nav').css({'display':'none'});
