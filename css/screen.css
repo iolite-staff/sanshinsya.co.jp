@@ -783,6 +783,10 @@ a.privacy {
 #sub_contents_area * {
 	box-sizing: border-box;
 }
+
+#ink div.ink_detail_features ul{
+	padding-right: 30px;
+}
 /* sp */
 
 #sub_contents_area #sp_message{
@@ -1537,11 +1541,11 @@ a.privacy {
 }
 #sub_contents_area #policy_message h2{
 	border: none;
-	margin: 0 0 0 10%;
+	margin: 0 0 0 7%;
 	text-align: left;
 }
 #sub_contents_area #policy_message p{
-	width: 65%;
+	width: 75%;
     text-align: left;
 	margin: auto;
 }
