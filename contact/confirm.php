@@ -55,7 +55,7 @@
 				<a href="../company/">企業情報</a>
 				<ul class="menu_inner menu_inner_1">
 					<li><a href="../company/policy/">こだわり</a></li>
-					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
+					<li><a href="../company/csr/" class="small">CSR活動及び<br class="pc">コンプライアンス</a></li>
 					<li><a href="../company/facility/">事業所一覧</a></li>
 				</ul>
 			</li>
@@ -71,7 +71,7 @@
 			<li>
 				<a href="../sp_service/">セールスプロモーション</a>
 				<ul class="menu_inner menu_inner_3">
-					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
+					<li><a href="../sp_service/tools/" class="small">各種プロモーションツール</a></li>
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
 			</li>
@@ -120,7 +120,14 @@
 								<?php echo $_POST['contact_category'] ?>
 								<input type="hidden" name="contact_category" value="<?php echo $_POST['contact_category'] ?>">
 							</td>
-						</tr>
+						</tr><!--
+						<tr>
+							<th>お問い合わせ内容：</th>
+							<td>
+								<?php echo $_POST['contact_details'] ?>
+								<input type="hidden" name="contact_details" value="<?php echo $_POST['contact_details'] ?>">
+							</td>
+						</tr>-->
 						<tr>
 							<th>相談したい項目：</th>
 							<td class="input_list">
@@ -427,7 +434,7 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var windowsize = window.matchMedia('screen and (max-width:910px)');
+			var windowsize = window.matchMedia('screen and (max-width:767px)');
 			function checkBreakPoint(windowsize) {
 				if (windowsize.matches) {
 					$('body>header>nav').css({'display':'none'});
