@@ -670,65 +670,18 @@
 			});
 
 			$("#contact_form").validate({
+				rules: rule1,
 				messages: {
-					'consultation_item[]': {
-						required: "選択してください。"
-					},
-					company_name: {
-						required: "入力してください。"
-					},
-					name: {
-						required: "入力してください。"
+					contact_type: {
+						range: "お問い合わせ種類に不正な値が入力されています。"
 					},
 					mail_address: {
-						required: "入力してください。",
 						email: "入力されたメールアドレスに間違いがあります。"
 					},
-					mail_address_confirm: {
-						required: "入力してください。",
-						email: "入力されたメールアドレスに間違いがあります。",
-						equalTo: "入力した値が一致しません。"
-					},
 					telephone_number: {
-						required: "入力してください。",
-						number : "電話番号に間違いがあります。",
-						minlength: "電話番号に間違いがあります。"
+						tel: "電話番号に間違いがあります。"
 					},
-					privacy_consent: {
-						required: "同意が必要です。"
-					}
 				},
-				rules: {
-					'consultation_item[]': {
-						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お問い合わせ") { return true;} else {return false;}}}
-					},
-					company_name: {
-						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お問い合わせ") { return true;} else {return false;}}}
-					},
-					name: {
-						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お見積り") { return true;} else {return false;}}}
-					},
-					
-					telephone_number: {
-						required: true,
-						number : true
-						 },
-  					mail_address: {
-						required: true,
-						email: true
-					  },
-  					mail_address_confirm: {
-						required: true,
-						email: true,
-						equalTo: "#mail_address"
-					  },
-					privacy_consent: {
-						required: true
-					}
-
-},
-
-
 				errorPlacement: function(error, element) {
 					$('.response-output').addClass('text_visible');
 					$('.response-output').removeClass('response-output');
@@ -736,7 +689,7 @@
 						case "contact_type":
 							error.insertAfter($('#contact_type_error'));
 							break;
-						case "consultation_item[]":
+						case "consultation_item":
 							error.insertAfter($('#consultation_item_error'));
 							break;
 						case "budget":
@@ -823,7 +776,7 @@
 					}
 				}
 			});
-});
+		});
 
 		$(document).on('change', '[name=contact_type]', function(){
 			$('.quotation').toggleClass('hidden');
