@@ -16,8 +16,9 @@
 		unset($_SESSION['page']);
 		require_once('./qdmail.php');
 		// 問い合わせフォーム内容送信先メールアドレス
-		$mailto = 'info@sanshinsya.co.jp';
+		//$mailto = 'info@sanshinsya.co.jp';
 		//$mailto =  'staff@iolite.co.jp';
+		$mailto =  'yuma.takemura@iolite.co.jp';
 
 		//メール問い合わせ者メールアドレス
 		$mailfrom = $_POST['mail_address'];

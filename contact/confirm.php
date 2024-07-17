@@ -10,19 +10,7 @@
 		}
 	}
 
-	session_start();
-	if(!empty($_SESSION['input']) && $_SESSION['input'] === true){
-		//セッションの削除
-		unset($_SESSION['input']);
-	}else{
-		$url = "./" ;
-		header("Location: ".$url);
-		exit;
-	}
-	// セッションの書き込み
-	session_start();
-	$_SESSION['page'] = TRUE;
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -348,6 +336,7 @@
 					</table>
 				</div>
 				<div class="button_area">
+					<input onclick="javascript:history.back();" value="戻る" type="button" id="back" class="btn">
 					<input type="submit" value="送信" class="btn">
 				</div>
 			</form>
