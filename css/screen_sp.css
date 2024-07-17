@@ -20,6 +20,18 @@ body>header>a img{
 	width:200px;
 	vertical-align:bottom;
 }
+
+body>header nav ul li>ul.menu_inner{
+	display: block;
+	position: relative;
+	background: #fff;
+	top: 0;
+}
+body>header nav ul li>ul.menu_inner li a{
+	color: #009944;
+	border-bottom: 1px dotted #009944;
+}
+
 /*
 body>header nav ul{
 	width:100%;
@@ -291,6 +303,14 @@ body header nav ul li ul.menu_inner{
 #greeting .greeting_text p{
 	text-align: center;
 }
+#home_sp_area ul.item li h3, #sub_contents_area #sp_service ul.item li h3 {
+    font-size: 16px;
+}
+@media screen and (max-width: 327px){
+	#sp_message{
+		height: 125px !important;
+	}
+}
 #sub_contents_area #greeting .greeting_data{
 	position: absolute;
 	bottom: -45px;
@@ -375,6 +395,15 @@ body header nav ul li ul.menu_inner{
 #sub_contents_area #print_service02 div.strong_point{
     margin: 80px 0 100px 0;
 }
+#sub_contents_area .input_list .left_column{
+	float:none;
+	width: 100%;
+}
+#sub_contents_area .input_list .right_column{
+	float:none;
+	width: 100%;
+}
+
 #sub_contents_area #print_service02 div.strong_point div{
 	padding: 0px 20px 25px;
 	margin: 0;
@@ -578,4 +607,22 @@ h1 .sp_none {
 }
 #sub_contents_area #privacy_policy p.left{
 	width: 95%;
+}
+
+@media screen and (max-width:535px) {
+
+	#sub_contents_area div nav.inner_link ul{
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 0 20px;
+	}
+	
+	#sub_contents_area div nav.inner_link ul li{
+		text-align: center;
+		width: 120px;
+		margin: 10px 0;
+		border-right: none;
+		border-bottom: 1px rgb(189, 189, 189) solid;
+		padding: 0;
+	}
 }

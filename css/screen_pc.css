@@ -43,26 +43,37 @@ body header nav ul li a{
 	font-weight: 400;
 }
 
-body header nav ul li ul.menu_inner {
-    height: 0;
-    background: white;
-    padding: 0;
-    z-index: -100;
-    opacity: 0;
-	height: auto;
-	position: absolute;
-	text-align: center;
-	top: 40px;
+/*   */
+@media screen and (min-width: 911px){
+	body header nav ul li ul.menu_inner {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #fff; 
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}	
 }
 
-body header nav ul li:hover ul.menu_inner {
-    z-index: 100;
-    opacity: 1;
-    transition: opacity 0.3s;
-	text-align: center;
+
+nav ul li:hover ul.menu_inner {
 	display: block;
-    box-sizing: border-box;
-	height: auto;
+}
+
+nav ul li ul.menu_inner li a {
+	text-decoration: none;
+	color: #009944;
+}
+
+nav ul li ul.menu_inner li a:hover {
+	background-color: #ddd;
+}
+
+/*   */
+body header nav ul li ul.menu_inner li{
+	text-align: center;
 }
 
 body header nav ul li ul.menu_inner li a:hover{
@@ -71,17 +82,29 @@ body header nav ul li ul.menu_inner li a:hover{
     transition: 0.3s;
 }
 
-body header nav ul li ul.menu_inner_1{
-	transform: translateX(-41px);
-	width: 175px;
-}
-body header nav ul li ul.menu_inner_2{
-	transform: translateX(-15px);
-	width: 150px;
-}
-body header nav ul li ul.menu_inner_3{
-	transform: translateX(-15px);
-	width: 225px;
+@media only screen and (min-width:911px){
+	#nav_sp{
+		display: none;
+	}
+	body>header>nav>ul>li:not(:last-child) {
+		border-right: 0.5px solid #7c7c7c;
+	}
+	body header nav ul li ul.menu_inner_1{
+		transform: translateX(-29px);
+		width: 175px;
+	}
+
+	body>header>nav>ul>li {
+		float: left;
+		position: relative;
+		padding: 5px 15px;
+	}
+	body header nav ul li ul.menu_inner_2{
+		width: 150px;
+	}
+	body header nav ul li ul.menu_inner_3{
+		width: 225px;
+	}
 }
 
 body header nav ul li ul.menu_inner li {
@@ -96,10 +119,15 @@ body header nav ul li ul.menu_inner li a{
 body header nav ul li ul.menu_inner li a.small{
 	font-size: 13px;
 }
+
 body>header>nav>ul>li {
     float: left;
     position: relative;
+}
+@media screen and (min-width: 911px){
+	body>header>nav>ul>li {
     padding: 5px 15px;
+	}
 }
 
 body>header>nav>ul>li>a {
@@ -310,6 +338,25 @@ body>footer ul.bnr .bg02{
 @media only screen and (min-width:911px){
 	#nav_sp{
 		display: none;
+	}
+	body>header>nav>ul>li:not(:last-child) {
+		border-right: 0.5px solid #7c7c7c;
+	}
+	body header nav ul li ul.menu_inner_1{
+		transform: translateX(-29px);
+		width: 175px;
+	}
+
+	body>header>nav>ul>li {
+		float: left;
+		position: relative;
+		padding: 5px 15px;
+	}
+	body header nav ul li ul.menu_inner_2{
+		width: 150px;
+	}
+	body header nav ul li ul.menu_inner_3{
+		width: 225px;
 	}
 }
 
@@ -557,39 +604,43 @@ body>footer ul.bnr .bg02{
 
 /* PC mini window */
 @media only screen and (max-width:910px){
-body>header nav ul{
-	width:100%;
-	margin:0;
-	padding:0;
-	list-style-type:none;
-	text-align:center;
-	font-size:15px;
-	background-color:#009944;
-	position:absolute;
-	top:70px;
-	left:0;
-	z-index: 11;
-	transition: 0.2s;
-}
+	nav br.pc{
+		display: none;
+	}
+	body>header nav ul{
+		width:100%;
+		margin:0;
+		padding:0;
+		list-style-type:none;
+		text-align:center;
+		font-size:15px;
+		background-color:#009944;
+		position:absolute;
+		top:70px;
+		left:0;
+		z-index: 11;
+		transition: 0.2s;
+	}
+	body>header nav ul li>ul.menu_inner{
+		display: block;
+		position: relative;
+		background: #fff;
+		top: 0;
+	}
+	body>header nav ul li>ul.menu_inner li a{
+		color: #009944;
+		border-bottom: 1px dotted #009944;
+	}
+	body>header nav ul li a{
+		display:block;
+		padding:10px;
+	}
 
-body>header nav ul li{
-	background-color:#009944;
-	border-bottom:1px dotted #fafafa;
-}
-
-body>header nav ul li a{
-	display:block;
-	padding:10px;
-}
-
-body>header nav ul li a:link,
-body>header nav ul li a:visited{
-	color:#fff;
-}
-body>header>nav>ul>li {
-    float: none;
-}
-body header nav ul li:hover ul.menu_inner {
-	display: none;
-}
+	body>header nav ul li a:link,
+	body>header nav ul li a:visited{
+		color:#fff;
+	}
+	body>header>nav>ul>li {
+		float: none;
+	}
 }
