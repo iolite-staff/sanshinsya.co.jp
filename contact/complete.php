@@ -10,10 +10,7 @@
 			$_POST[$key] = htmlspecialchars(str_replace('<br />', '', $value),ENT_QUOTES);
 		}
 	}
-	session_start();
-	if(!empty($_SESSION['page']) && $_SESSION['page'] === TRUE){
-		//セッションの削除
-		unset($_SESSION['page']);
+
 		require_once('./qdmail.php');
 		// 問い合わせフォーム内容送信先メールアドレス
 		//$mailto = 'info@sanshinsya.co.jp';
@@ -142,11 +139,7 @@
 
 		//お問い合わせ送信者にメール
 		qd_send_mail( 'text' , $mailfrom , $sender_subject , $sender_content , $mailto );
-	}else{
-		$url = "./";
-		header("Location: ".$url);
-		exit;
-	}
+
 
 ?>
 <!DOCTYPE html>
