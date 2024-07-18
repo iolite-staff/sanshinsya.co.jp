@@ -951,6 +951,73 @@ a.privacy {
 #company_summary .noneborder{
 	border-top:#0b8643 solid 0px;
 }
+/* --------- csr certification -------- */
+#certification_area br.float_clear,#csr_area br.float_clear {clear: both;}
+#certification_area .certification,#csr_area .certification {
+	border-bottom: #aaa solid 1px;
+	padding-bottom:36px;
+	margin-bottom:36px;
+}
+#certification_area .certification_h3,#csr_area .certification_h3 {
+	padding:0 0 12px 0;
+	border-bottom:1px solid #aaa;
+}
+#certification_area p.csrtext,#csr_area p.csrtext {
+	width:80%;
+	margin:0 auto;
+}
+#certification_area .certification_title img.blockicon,#csr_area .csr_title img.blockicon {
+	float:left;
+	margin: 0 32px 0 32px;
+}
+#certification_area .certification_title h4,#csr_area .csr_title h4 {
+	margin:16px;
+	height: 64px;
+	font-size:xx-large;
+}
+#certification_area .certification_content,#csr_area .certification_content {
+	display:flex;
+	align-items: center;
+	width:80%;
+	margin:0 auto;
+}
+#certification_area .certification_title span,#csr_area .csr_title span {
+	display: block;
+}
+#certification_area .certification_title span.sub_text,#csr_area .certification_title span.sub_text {
+	font-size:medium;
+}
+#certification_area .certification_img,#csr_area .certification_img {
+	padding:0 20px 0 0;
+	margin:0 0 0 0;
+	float: left;
+	width:370px;
+	text-align: right;
+}
+#csr_area .certification_img .sponsorimg1{
+	text-align: right;
+	padding-right: 20px;
+	width:370px;
+}
+#csr_area .certification_img .sponsorimg2{
+	text-align: right;
+	padding-right: 20px;
+	width:370px;
+}
+#certification_area p.certification_text,#csr_area p.certification_text {
+	flex:1;
+	padding:0 0 0 20px;
+	margin:0 0 0 0;
+	border-left:#aaa solid 1px;
+}
+#sub_contents_area section#certification_area {
+	margin: 0 auto 0px;
+}
+#sub_contents_area section#csr_area>div{
+	padding-top:0;
+}
+
+
 
 /* print_service */
 

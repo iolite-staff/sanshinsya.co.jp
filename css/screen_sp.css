@@ -324,6 +324,39 @@ body header nav ul li ul.menu_inner{
 #sub_contents_area #sp_service ul.item li div a{
 	margin-top: 0;
 }
+/* --------- csr certification -------- */
+#certification_area .certification_content,#csr_area .certification_content{
+	display:block;
+	width: 100%;
+	padding:0;
+	margin:0;
+}
+#certification_area .certification_title img.blockicon,#csr_area .csr_title img.blockicon {
+	float:left;
+	margin: 0 12px 0 0;
+}
+#certification_area .certification_title h4,#csr_area .csr_title h4 {
+	margin:0px;
+	font-size:x-large;
+}
+#certification_area .certification_title span.sub_text,#csr_area .certification_title span.sub_text {
+	font-size:medium;
+}
+#certification_area .certification_img,#csr_area .certification_img{
+	padding:0;
+	margin:0;
+	float: none;
+	text-align: center;
+	width: 100%;
+}
+#certification_area p.certification_text,#csr_area p.certification_text{
+	border-left:none;
+	padding:16px 0 0 0;
+	margin:0;
+}
+#sub_contents_area section#csr_area>div{
+	padding-top:0;
+}
 
 /* print_service */
 #sub_contents_area #reason,
