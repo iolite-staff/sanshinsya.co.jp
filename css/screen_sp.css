@@ -642,6 +642,70 @@ h1 .sp_none {
 	width: 95%;
 }
 
+
+/* student_form ********************************************/
+#sub_contents_area #student_form h2{
+	border:none;
+	margin: 54px 0 0 0;
+	padding:0 0 6px 12px;
+}
+#sub_contents_area #student_form table.form_table tbody tr th {
+	width:auto;
+	text-align: left;
+	vertical-align: middle;
+	padding: 10px 0;
+	margin-right: 10px;
+	display: block;
+	float:left;
+}
+#sub_contents_area #student_form table.form_table tbody tr td{
+	padding: 10px 0;
+	clear: both;
+}
+#sub_contents_area #student_form table.form_table tbody tr td.tdmast {
+	width:80px;
+	padding-left:0;
+	padding-right:0;
+	margin:0;
+	text-align: center;
+	display: block;
+	float:left;
+	clear:none;
+}
+#sub_contents_area #student_form table.form_table tbody tr td.tdmast span.mast{
+	margin:0;
+}
+#sub_contents_area #student_form table.form_table tbody tr td span.error{
+	margin:0;
+}
+
+/* student_form input ****/
+#sub_contents_area #student_form input{
+	margin:0 12px;
+	display:inline;
+	vertical-align: middle;
+	float: none;
+}
+#sub_contents_area #student_form input.input_xsmall{
+	width:2em;
+}
+#sub_contents_area #student_form input.input_small{
+	width:5em;
+}
+#sub_contents_area #student_form input.input_middle{
+	width:10em;
+}
+#sub_contents_area #student_form input.input_large{
+	width:20em;
+}
+#sub_contents_area #student_form input.input_xlarge{
+	width:80%;
+}
+#sub_contents_area #student_form label{
+    margin-right: 0;
+}
+.smartphone_hidden{display: none;}
+
 @media screen and (max-width:535px) {
 
 	#sub_contents_area div nav.inner_link ul{

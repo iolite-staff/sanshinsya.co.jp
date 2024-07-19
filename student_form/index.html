@@ -6,7 +6,7 @@
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <meta name="format-detection" content="telephone=no, email=no, address=no">
-<title>学生専用申込みフォーム｜株式会社三進社</title>
+<title>学生専用申し込みフォーム｜株式会社三進社</title>
 <link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
 <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="../css/screen_sp.css">
 <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="../css/screen_pc.css">
@@ -15,6 +15,8 @@
 <link rel="icon" type="image/png" href="../favicon-.png" sizes="16x16">
 <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
 <script type="text/javascript" src="../lib/jquery/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.validate.js"></script>
+<script type="text/javascript" src="../js/validate_config.js"></script>
 </head>
 <body>
 <header>
@@ -24,10 +26,10 @@
 		</a>
 	</h1>
 	<nav>
-		<ul>
+        <ul>
 			<li>
 				<a href="../company/">企業情報</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_1">
 					<li><a href="../company/policy/">こだわり</a></li>
 					<li><a href="../company/csr/" class="small">CSR活動及び<br>コンプライアンス</a></li>
 					<li><a href="../company/facility/">事業所一覧</a></li>
@@ -35,21 +37,21 @@
 			</li>
 			<li>
 				<a href="../print_service/">印刷サービス</a>
-				<ul class="menu_inner">
+				<ul class="menu_inner menu_inner_2">
 					
 					<li><a href="../print_service/prepress/">製版</a></li>
 					<li><a href="../print_service/print/">印刷</a></li>
-					<li><a href="../print_service/bookbinding/"></a></li>
+					<li><a href="../print_service/bookbinding/">製本</a></li>
 				</ul>
 			</li>
 			<li>
 				<a href="../sp_service/">セールスプロモーション</a>
-				<ul class="menu_inner">
-					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
+				<ul class="menu_inner menu_inner_3">
+					<li><a href="../sp_service/tools/" class="small">各種プロモーションツール</a></li>
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
 			</li>
-			<li><a href="../contact/">お問い合わせ</a></li>
+			<li><a href="#">お問い合わせ</a></li>
 		</ul>
 	</nav>
 
@@ -61,36 +63,296 @@
 
 	<div id="title_area">
 		<h1>
-			学生専用申込みフォーム
+			学生専用申し込みフォーム
 		</h1>
 	</div>
-	
+
 	<div id="bread">
 		<div class="inner">
 			<ul>
-				<li><a href="../index.html">HOME</a></li>
-				<li><span>学生専用申込みフォーム</span></li>
+				<li><a href="../">HOME</a></li>
+				<li><span>学生専用申し込みフォーム</span></li>
 			</ul>
 		</div>
 	</div>
 
-	<section>
-        <p>工事中...</p>
+	<section id="student_form">
+		<div>
+			<form method="POST" action="./confirm.php" name="contact_form" id="contact_form" autocomplete="off">
+				<div class="form_area">
+					<table class="form_table">
+						<tbody>
+							<tr>
+								<th><span>お名前</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									　性<input type="text" name="input_" id="input_" class="input_middle"><br class="smartphone_br" />　名<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>フリガナ</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									セイ<input type="text" name="input_" id="input_" class="input_middle"><br class="smartphone_br" />メイ<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>学年</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_xsmall">年
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>電話番号</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>メールアドレス</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_xlarge">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>品名</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_xlarge">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>ページ数</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_small">ページ
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>部数</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_small">部
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>納品日</span></th>
+								<td class="tdmast">&nbsp;</td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle"><br class="smartphone_br"><br class="smartphone_br">
+									（時間帯：
+									<input type="radio" name="radio_delitime" id="radio_delitime1" value="指定なし" checked><label for="radio_delitime1">指定なし</label>
+									<input type="radio" name="radio_delitime" id="radio_delitime2" value="午前"><label for="radio_delitime2">午前</label>
+									<input type="radio" name="radio_delitime" id="radio_delitime3" value="午後"><label for="radio_delitime3">午後</label>）着希望<br />
+									※弊社に原稿が届いてから納品まで５日前後かかります、詳しくはお問い合わせください。
+								</td>
+							</tr>
+							<tr>
+								<th><span>表紙の色</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>色扉の有無</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="radio" name="radio_tobiracheck" id="radio_tobiracheck1" value="有" checked><label for="radio_tobiracheck1">有</label>（
+									<input type="text" name="input_" id="input_" class="input_small">）枚　
+									<input type="radio" name="radio_tobiracheck" id="radio_tobiracheck2" value="無"><label for="radio_tobiracheck2">無</label>
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>色扉の色</span></th>
+								<td class="tdmast">&nbsp;</td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h2>商品発送先</h2>
+					<table class="form_table">
+						<tbody>
+							<tr>
+								<th><span>郵便番号</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>住所</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_xlarge">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>宛名</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h2>請求書送付先</h2>
+					<table class="form_table">
+						<tbody>
+							<tr>
+								<th><span>宛名</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>住所</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_xlarge">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>宛名</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_middle">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+							<tr>
+								<th><span>電話番号</span></th>
+								<td class="tdmast"><span class="mast">必須</span></td>
+								<td class="input_list">
+									<input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">
+									<span class="error" id="error_"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="enquete_area">
+					<p>
+						送信する前に、この画面を保存または印刷してください。<br />
+						送信後、その内容を三進社へFAXまたはメールを送信してくださいますようお願い申し上げます。<br />
+						送信先：xxxxxxxxxxx@sanshinsya.co.jp
+					</p>
+				</div>
+				<div class="privacy_area">
+					<p>当社の<a href="../privacy/index.html">個人情報の取扱い及び利用目的</a>に同意の上、内容を送信してください。</p>
+					<div class="scroll_message">
+						<p>《当社の個人情報の取扱い》</p>
+					<p class="indent">1.当社は、お客様から個人情報を委託された場合や本人から取得する場合について、個人情報の取扱いに関する法令、 国が定める指針その他の規範を遵守いたします。</p>
+									<br />
+									<p>2. 個人情報の利用目的について</p>
+									<p>&#9312; お客様から受託する印刷製本業務</p>
+									<p class="allindent3">&bull; 各種名簿、会報誌の印刷、製本、発送</p>
+									<p class="allindent3">&bull; 名刺、はがきの印刷業務</p>
+									<p class="allindent3">&bull; その他印刷製本に関わる業務</p>
+									<p>&#9313; 当社が本人から取得する場合</p>
+									<p class="allindent3">&bull; 当社事業に関してのお問い合わせ、苦情、相談の内容に回答するため</p>
+									<p class="allindent3">&bull; 当社の採用選考のため</p>
+									<p class="allindent3">&bull; 当社従業者の雇用管理のため</p>
+									<br />
+									<p>利用目的の範囲内で業務委託契約を締結している協力会社へ個人情報の取扱いを委託することがあります。また、皆様から取得した個人情報の利用目的を変更する場合、利用目的の達成に必要な範囲を超えて個人情報を利用する場合は、変更された利用目的をご本人に通知し、本人の同意をいただきます。</p>
+									<br />
+									<p>3. 個人情報の開示等について</p>
+									<p> 当社は、本人から保有個人データについて利用目的の通知、開示、内容の訂正・追加・削除、利用の停止、消去及び第三者への提供の停止、第三者提供記録の開示(以下、「開示等」という。)の求めがあった場合には、本人または代理人であることを確認の上、遅滞なく対応しますとともに、次のとおりその手続きを定めます。</p>
+									<p>&#9312; 申し出先</p>
+									<p class="allindent3">開示等の求めは、下記を窓口とし、メールにて請求していただきます。</p>
+									<p class="allindent3">個人情報に関するお問い合わせ先:PMS管理室 sss_pv@sanshinsya.co.jp</p>
+									<p>&#9313; 開示等の求めに際して提出していただく書類等</p>
+									<p class="allindent3">所定の「保有個人データ開示等請求害」に必要事項を記入の上、提出していただきます。</p>
+									<p>&#9314; 本人または代理人の確認方法</p>
+									<p class="allindent3">&bull; 当社が保有するご本人の個人情報をもって、総合的に判断させていただきます。</p>
+									<p class="allindent3">&bull; 法定代理人の場合は、戸籍謄本等を提出していただきます。</p>
+									<p class="allindent3">&bull; 委任代理人の場合は、委任状を提出していただきます。</p>
+									<p>&#9315; 回答方法には以下の方法がありますので選択していただきます。</p>
+									<p class="allindent3">1. 本人(又は代理人)の住所宛に、追跡できる郵送方法にて回答。</p>
+									<p class="allindent3">2.電子メールでの回答。</p>
+									<p>&#9316; 利用目的の通知及び開示に関する手数料とお支払方法</p>
+									<p class="allindent3">1回の請求ごとに1200円の(税込)の手数料をお振り込みいただきます。</p>
+									<br />
+									<p>4. 保有個人データの安全管理のために講じている措置</p>
+									<p>【組織的安全管理措置】</p>
+									<p class="allindent3">&bull; 個人情報保護管理者を設置し、個人情報保護の安全管理に関する従業者の責任と権限を明確に規定します。</p>
+									<p class="allindent3">&bull; 個人情報の取り扱い状況の運用点検や監査などを定期的に実施します。</p>
+									<p class="allindent3">&bull; 個人情報の取り扱いを委託する場合は個人情報保護の基準を満たす事業者を選定して、契約書の締結などによって個人情報保護を担保します。</p>
+									<p>【人的安全管理措置】</p>
+									<p class="allindent3">&bull; 個人情報保護の安全管理に関する必要な教育研修を従業者に定期的に実施します。</p>
+									<p class="allindent3">&bull; 就業規則や誓約書にて秘密保持義務の履行を担保します。</p>
+									<p>【物理的安全管理措置】</p>
+									<p class="allindent3">&bull; 従業者の入退室管理及び電子機器の持ち込みや制限など権限を有しない従業者などによる個人情報への不正アクセスを防止するための措置を講じます。</p>
+									<p class="allindent3">&bull; 電子媒体や書類などの盗難・紛失などを防止するための措置を講じます。</p>
+									<p>【技術的安全管理措置】</p>
+									<p class="allindent3">&bull; 個人情報を取り扱う情報システムヘの不正アクセス又は不正ソフトウェアから保護する仕組みを導入します。</p>
+									<p class="allindent3">&bull; 情報システムヘのアクセス制御を実施し、担当者及び取り扱う個人情報データベース等の範囲を限定します。</p>
+									<p class="allindent3">&bull; 情報システムのアクセスログを取得して定期的な確認を実施します。</p>
+									<br />
+									
+									<p> 5. 個人情報の取扱い及び個人情報保護に関するに苦情及び相談窓口について<br />
+									個人情報に関する取扱い、苦情及び相談につきましては、下記にご連絡をお願い致します。</p>
+									<br />
+									<p>
+									　　株式会社三進社<br />
+									　　PMS管理室<br />
+									　　<a href="mailto:sss_pv@sanshinsya.co.jp">sss_pv@sanshinsya.co.jp</a><br />
+									　　〒141-0031 東京都品川区西五反田4-28-13<br />
+								</p>
+						</div>
+					<input type="checkbox" name="privacy_consent" value="1" id="privacy_consent">
+					<label for="privacy_consent">同意する</label>
+					<p><span class="error" id="privacy_consent_error"></span></p>
+				</div>
+				<div class="button_area">
+					<input type="submit" class="btn" value="確認">
+				</div>
+			</form>
+		</div>
     </section>
 
 </article>
 <footer>
 	<ul class="bnr">
 		<li class="bg01">
-			<a href="../contact/">
+			<a href="#">
 				<p>お問い合わせ・お見積り</p>
 			</a>
 		</li>
 		<li class="bg02">
-			<a href="#">
+			<a href="./#">
 				<p>学生専用申込みフォーム</p>
 			</a>
 		</li>
+<!--
+		<li class="bg02">
+			<a href="../student_form/">
+				<p>学生専用申込みフォーム</p>
+			</a>
+		</li>
+-->
 	</ul>
 	<div id="footer_nav_area">
 		<div class="upload">
@@ -127,8 +389,11 @@
 					</ul>
 				</li>
 
-				<li><a href="../contact/">お問い合わせ</a></li>
-				<li><a href="#">学生専用申込みフォーム</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+				<li><a href="../pdf/application_form.pdf" target="_blank">学生専用申込みフォーム</a></li>
+<!--
+				<li><a href="../student_form/">学生専用申込みフォーム</a></li>
+-->
 			</ul>
 		</div>
 		<div class="address">
@@ -163,7 +428,179 @@
 				$(this).toggleClass('open');
 				$(this).addClass('close');
 			});
+
+			$("#contact_form").validate({
+				messages: {
+					'consultation_item[]': {
+						required: "選択してください。"
+					},
+					company_name: {
+						required: "入力してください。"
+					},
+					name: {
+						required: "入力してください。"
+					},
+					mail_address: {
+						required: "入力してください。",
+						email: "入力されたメールアドレスに間違いがあります。"
+					},
+					mail_address_confirm: {
+						required: "入力してください。",
+						email: "入力されたメールアドレスに間違いがあります。",
+						equalTo: "入力した値が一致しません。"
+					},
+					telephone_number: {
+						required: "入力してください。",
+						number : "電話番号に間違いがあります。",
+						minlength: "電話番号に間違いがあります。"
+					},
+					privacy_consent: {
+						required: "同意が必要です。"
+					}
+				},
+				rules: {
+					'consultation_item[]': {
+						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お問い合わせ") { return true;} else {return false;}}}
+					},
+					company_name: {
+						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お問い合わせ") { return true;} else {return false;}}}
+					},
+					name: {
+						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お見積り") { return true;} else {return false;}}}
+					},
+					
+					telephone_number: {
+						required: true,
+						number : true
+						 },
+  					mail_address: {
+						required: true,
+						email: true
+					  },
+  					mail_address_confirm: {
+						required: true,
+						email: true,
+						equalTo: "#mail_address"
+					  },
+					privacy_consent: {
+						required: true
+					}
+
+},
+
+
+				errorPlacement: function(error, element) {
+					$('.response-output').addClass('text_visible');
+					$('.response-output').removeClass('response-output');
+					switch(element.attr('name')){
+						case "contact_type":
+							error.insertAfter($('#contact_type_error'));
+							break;
+						case "consultation_item[]":
+							error.insertAfter($('#consultation_item_error'));
+							break;
+						case "budget":
+							error.insertAfter($('#budget_error'));
+							break;
+						case "num":
+							error.insertAfter($('#num_error'));
+							break;
+						case "size":
+							error.insertAfter($('#size_error'));
+							break;
+						case "deformed_size":
+							error.insertAfter($('#deformed_size_error'));
+							break;
+						case "page_count":
+							error.insertAfter($('#page_count_error'));
+							break;
+						case "cover_color_num":
+							error.insertAfter($('#cover_color_num_error'));
+							break;
+						case "color_num":
+							error.insertAfter($('#color_num_error'));
+							break;
+						case "binding_style":
+							error.insertAfter($('#binding_style_error'));
+							break;
+						case "cover_paper":
+							error.insertAfter($('#cover_paper_error'));
+							break;
+						case "cover_color":
+							error.insertAfter($('#cover_color_error'));
+							break;
+						case "book_paper":
+							error.insertAfter($('#book_paper_error'));
+							break;
+						case "frontispiece":
+							error.insertAfter($('#frontispiece_error'));
+							break;
+						case "frontispiece_color":
+							error.insertAfter($('#frontispiece_color_error'));
+							break;
+						case "endpaper":
+							error.insertAfter($('#endpaper_error'));
+							break;
+						case "varnish":
+							error.insertAfter($('#varnish_error'));
+							break;
+						case "processing":
+							error.insertAfter($('#processing_error'));
+							break;
+						case "manuscript_type":
+							error.insertAfter($('#manuscript_type_error'));
+							break;
+						case "os_type":
+							error.insertAfter($('#os_type_error'));
+							break;
+						case "application":
+							error.insertAfter($('#application_error'));
+							break;
+						case "message":
+							error.insertAfter($('#message_error'));
+							break;
+						case "company_name":
+							error.insertAfter($('#company_name_error'));
+							break;
+						case "name":
+							error.insertAfter($('#name_error'));
+							break;
+						case "mail_address":
+							error.insertAfter($('#mail_address_error'));
+							break;
+						case "mail_address_confirm":
+							error.insertAfter($('#mail_address_confirm_error'));
+							break;
+						case "telephone_number":
+							error.insertAfter($('#telephone_number_error'));
+							break;
+						case "fax_number":
+							error.insertAfter($('#fax_number_error'));
+							break;
+						case "privacy_consent":
+							error.insertAfter($('#privacy_consent_error'));
+							break;
+					}
+				}
+			});
+});
+
+		$(document).on('change', '[name=contact_type]', function(){
+			$('.quotation').toggleClass('hidden');
+			$('.inquiry').toggleClass('hidden');
+			$('label.error').remove();
+
+			if ($('input[name=contact_type]:eq(0)').prop('checked')) {
+				$('.enquete_area').removeClass('hidden');
+				$('.quotation').find('input, select').prop('disabled', true);
+				$('.inquiry').find('input, select').prop('disabled', false);
+			}else{
+				$('.enquete_area').addClass('hidden');
+				$('.quotation').find('input, select').prop('disabled', false);
+				$('.inquiry').find('input, select').prop('disabled', true);
+			}
 		});
+
 	</script>
 </body>
 </html>
