@@ -1030,6 +1030,190 @@ a.privacy {
 	margin: 0;
 }
 
+/*汎用クラス*/
+.flex_center {
+	width:100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	gap: 1%;
+	}
+/*印刷サービス　選ばれる理由*/
+#sub_contents_area section#print_service_reason>div{
+	padding:80px 0 40px;
+}
+#sub_contents_area section#print_service_reason h2{
+	margin-right:12%; margin-left:12%;
+}
+#sub_contents_area #print_service_reason .select_reason_frame{
+	width:240px;height:230px;
+}
+#sub_contents_area #print_service_reason .select_reason_contents{
+	background-size: cover;
+	position: relative;
+	width:240px;
+	height:180px;
+}
+#sub_contents_area #print_service_reason .select_reason_bg1{
+	background-image: url(../print_service/img/print_service_selectreason1.jpg);
+}
+#sub_contents_area #print_service_reason .select_reason_bg2{
+	background-image: url(../print_service/img/print_service_selectreason2.jpg);
+}
+#sub_contents_area #print_service_reason .select_reason_bg3{
+	background-image: url(../print_service/img/print_service_selectreason3.jpg);
+}
+#sub_contents_area #print_service_reason .select_reason_bg4{
+	background-image: url(../print_service/img/print_service_selectreason4.jpg);
+}
+#sub_contents_area #print_service_reason .select_reason_num{
+	background-color: #0b8643;
+	width:56px;
+	height:56px;
+	position: absolute;
+	 top:0px; left:0px;
+	font-size:28px;
+	font-weight: bold;
+	color:#fff;
+	padding-top:5px;
+	padding-left:14px;
+	z-index: 1;
+}
+#sub_contents_area #print_service_reason .select_reason_wordsbg{
+	background-color: rgb(255 255 255 / 80%);
+	width:220px;
+	height:120px;
+	position: absolute;
+	 top:20px; left:0px;
+	padding-top:20px;
+	padding-left:20px;
+}
+#sub_contents_area #print_service_reason .reason_link{
+	width:100%; text-align:right;display: block;
+}
+
+/*印刷サービス　実績*/
+#print_service_jisseki h3{
+	text-align: center;
+}
+#print_service_jisseki p.center{
+	text-align: center;
+}
+#print_service_jisseki .service_pic{
+	margin-top:48px;
+	gap:12px;
+	row-gap: 12px;
+}
+#print_service_jisseki li{
+	list-style: none;
+	width: 200px;
+	text-align: center;
+}
+#print_service_jisseki li img{
+	width: 100%;
+}
+
+/*印刷サービス　ノウハウ*/
+#print_service_knowhow ul.item{
+	padding:0;
+	margin: 0 auto;
+	width:90%;
+	column-gap: 32px;
+	flex-wrap:nowrap;
+}
+#print_service_knowhow ul.item li {
+	list-style: none;
+	width: 80%;
+	max-width: 200px;
+}
+#print_service_knowhow ul.item li > div {
+	position: relative;
+	transition: 0.3s;
+	height: 170px;
+}
+
+#print_service_knowhow ul.item .bg01{
+	background-image: url(../print_service/img/produce.jpg);
+	background-size: cover;
+}
+#print_service_knowhow ul.item .bg02{
+	background-image: url(../print_service/img/Platemaking.jpg);
+	background-size: cover;
+}
+#print_service_knowhow ul.item .bg03{
+	background-image: url(../print_service/img/printing.jpg);
+	background-size: cover;
+}
+#print_service_knowhow ul.item .bg04{
+	background-image: url(../print_service/img/bookmaking.jpg);
+	background-size: cover;
+}
+#print_service_knowhow ul.item .bg05{
+	background-image: url(../print_service/img/packing.jpg);
+	background-size: cover;
+}
+/*#print_service_knowhow ul.item .bg01 a:hover{
+	background-color: RGBA(0,0,0,0.7) !important;
+	transition: 0.3s;
+}*/
+#print_service_knowhow ul.item .bg02 a:hover{
+	background-color: RGBA(0,0,0,0.7) !important;
+	transition: 0.3s;
+}
+#print_service_knowhow ul.item .bg03 a:hover{
+	background-color: RGBA(0,0,0,0.7) !important;
+	transition: 0.3s;
+}
+#print_service_knowhow ul.item .bg04 a:hover{
+	background-color: RGBA(0,0,0,0.7) !important;
+	transition: 0.3s;
+}
+#print_service_knowhow ul.item li .link{
+	background-color: RGBA(0,0,0,0.4) !important;
+	position:absolute;
+	font-size: 1.1em;
+	color:#fff;
+	text-align: center;
+	width:100%;
+	height:100%;
+	padding-top:49%;
+}
+#print_service_knowhow ul.item li .step5{
+	padding-top:37%;
+}
+#print_service_knowhow ul.item li .step{
+	position: absolute;
+    top: 5%;
+    left: 7%;
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: bolder;
+    margin: 0;
+	z-index: 1;
+}
+#print_service_knowhow ul.item  p.memo{
+	margin:0;
+	padding:10px;
+	font-size:14px;
+	border: #000 solid 1px;
+	border-top:none;
+	height:170px;
+}
+#print_service_knowhow ul.item li:not(:first-child) div::before{ /*矢印*/
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -10%;
+	transform: translate(-50%, -50%);
+	height: 50px;
+	width: 20px;
+	background-image: url(../print_service/img/arrow_2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+
 #sub_contents_area #print_service02{
 	background-color: #f5faf7;
 }
@@ -1046,7 +1230,7 @@ a.privacy {
 	width: 100%;
 	max-width: 1200px;
 	gap: 20px;
-
+	height:480px;
 }
 #sub_contents_area #print_service01 ul li{
 	list-style: none;
@@ -1071,6 +1255,10 @@ a.privacy {
     font-weight: bolder;
     margin: 0;
 }
+#sub_contents_area #print_service02 ul.item li p.memo{
+	top:230px
+}
+
 
 #sub_contents_area #print_service02 ul.item li.bg01{
 	background-image: url(../print_service/img/produce.jpg);
@@ -1791,4 +1979,18 @@ nav.inner_link ul li:not(:last-child){
 	width: 68px;
 	text-align: center;
 }*/
-
+#sub_contents_area #print_service02 ul.item li a{
+	border: 1px #000 solid;
+}
+#sub_contents_area #print_service02 ul.item li p.memo{
+	max-width: 200px;
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+    background: #fff;
+    padding: 7px;
+    border: 1px #000 solid;
+	top: 169px;
+	left: 0;
+	height: 130px;
+}
