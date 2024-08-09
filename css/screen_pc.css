@@ -702,4 +702,23 @@ body>footer ul.bnr .bg02{
 	body>header>nav>ul>li {
 		float: none;
 	}
+
+	/*印刷サービス***********/
+	#print_service_knowhow ul.item{
+		display:block;
+	}
+	#print_service_knowhow ul.item li{margin:0 auto;}
+	#print_service_knowhow ul.item p.memo{margin-bottom:50px;}
+	#print_service_knowhow ul.item li:not(:first-child) div::before{
+		content: "";
+		position: absolute;
+		top: -4%;
+		left: 50%;
+		height: 50px;
+		width: 40px;
+		background-image: url(../print_service/img/arrow_3.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
 }

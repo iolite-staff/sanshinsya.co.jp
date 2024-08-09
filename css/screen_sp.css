@@ -359,6 +359,9 @@ body header nav ul li ul.menu_inner{
 }
 
 /* print_service */
+#print_service_knowhow ul.item p.memo{margin-bottom:50px;}
+#print_service_knowhow ul.item li{margin:0 auto;}
+
 #sub_contents_area #reason,
 #sub_contents_area #print_service01,
 #sub_contents_area #print_service02,
@@ -404,8 +407,8 @@ body header nav ul li ul.menu_inner{
 #print_service_knowhow ul.item li:not(:first-child) div::before{
 	content: "";
 	position: absolute;
-	bottom: -30%;
-	left: 40%;
+	top: -4%;
+	left: 50%;
 	height: 50px;
 	width: 40px;
 	background-image: url(../print_service/img/arrow_3.png);

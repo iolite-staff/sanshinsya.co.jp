@@ -862,6 +862,13 @@ a.privacy {
     text-align: center;
     font-size: 24px;
 }
+#sub_contents_area #print_service03 h3.gosoudan{
+	border-bottom:#000 solid 1px;
+	font-size: 20px;
+	margin-left:10%;
+	margin-right:10%;
+}
+
 #sub_contents_area #print_service01 h4, 
 #sub_contents_area #print_service02 h4, 
 #sub_contents_area #print_service03 h4 {
@@ -1037,6 +1044,7 @@ a.privacy {
 	flex-wrap:wrap;
 	justify-content: center;
 	gap: 1%;
+	padding:0;
 	}
 /*印刷サービス　選ばれる理由*/
 #sub_contents_area section#print_service_reason>div{
@@ -1054,6 +1062,8 @@ a.privacy {
 	width:240px;
 	height:180px;
 }
+.margin_top_zero{margin-top:0 !important;}
+.margin_bottom_zero{margin-bottom:0 !important;}
 #sub_contents_area #print_service_reason .select_reason_bg1{
 	background-image: url(../print_service/img/print_service_selectreason1.jpg);
 }
@@ -1093,6 +1103,9 @@ a.privacy {
 }
 
 /*印刷サービス　実績*/
+#sub_contents_area section .print_service_jisseki{
+	padding-top:0;
+}
 #print_service_jisseki h3{
 	text-align: center;
 }
@@ -1114,6 +1127,9 @@ a.privacy {
 }
 
 /*印刷サービス　ノウハウ*/
+#print_service_knowhow h2{
+	font-size:18px;
+}
 #print_service_knowhow ul.item{
 	padding:0;
 	margin: 0 auto;
@@ -1216,6 +1232,7 @@ a.privacy {
 
 #sub_contents_area #print_service02{
 	background-color: #f5faf7;
+	padding-bottom: 60px;
 }
 
 #sub_contents_area #print_service01 div{
@@ -1693,7 +1710,7 @@ a.privacy {
 
 #sub_contents_area #print_service02 div.print_exsample div div{
     border: 0.5px solid #a5a5a5;
-    width: 350px;
+    width: 315px;
     background: #fff;
     align-items: center;
     min-height: 120px;
