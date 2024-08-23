@@ -344,6 +344,12 @@ body{
 	}
 }
 
+#home_saq_area .bgwhite{
+	margin-top:0;
+	padding-top:0;
+	background-color: #FFF;
+}
+
 #home_sp_area{
 	max-width:1800px;
 	margin:0 auto;
