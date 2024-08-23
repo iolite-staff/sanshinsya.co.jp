@@ -1024,6 +1024,12 @@ a.privacy {
 	padding-top:0;
 }
 
+#csr_area .certification_img .sponsorimg1,#csr_area .certification_img .sponsorimg2{
+	margin: auto;
+}
+#csr_area{
+	margin-bottom:30px;
+}
 
 
 /* print_service */

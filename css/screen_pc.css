@@ -703,6 +703,15 @@ body>footer ul.bnr .bg02{
 		float: none;
 	}
 
+	/*CSRコンプライアンス*****************/
+	#certification_area .certification_content, #csr_area .certification_content{
+		display:flex;
+		flex-direction: column;
+	}
+	#certification_area .certification_img, #csr_area .certification_img{
+		text-align: center;
+	}
+
 	/*印刷サービス***********/
 	#print_service_knowhow ul.item{
 		display:block;
