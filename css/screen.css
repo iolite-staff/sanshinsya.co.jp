@@ -1008,7 +1008,7 @@ a.privacy {
 	text-align: right;
 }
 #csr_area .certification_img .sponsorimg1{
-	text-align: right;
+	text-align: center;
 	padding-right: 20px;
 	width:370px;
 }
@@ -1017,12 +1017,16 @@ a.privacy {
 	padding-right: 20px;
 	width:370px;
 }
-#certification_area p.certification_text,#csr_area p.certification_text {
-	flex:1;
-	padding:0 0 0 20px;
-	margin:0 0 0 0;
-	border-left:#aaa solid 1px;
+@media screen and (min-width:911px){
+	#certification_area div.certification_text,
+	#csr_area div.certification_text {
+		flex:1;
+		padding:0 0 0 20px;
+		margin:0 0 0 0;
+		border-left:#aaa solid 1px;
+	}	
 }
+
 #sub_contents_area section#certification_area {
 	margin: 0 auto 0px;
 }
