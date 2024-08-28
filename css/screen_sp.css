@@ -359,8 +359,13 @@ body header nav ul li ul.menu_inner{
 }
 
 /* print_service */
-#print_service_knowhow ul.item p.memo{margin-bottom:50px;}
-#print_service_knowhow ul.item li{margin:0 auto;}
+#print_service_knowhow ul.item p.memo{
+	margin-bottom:50px;
+}
+
+#print_service_knowhow ul.item li{
+	margin:0 auto;
+}
 
 #sub_contents_area #reason,
 #sub_contents_area #print_service01,
@@ -415,7 +420,9 @@ body header nav ul li ul.menu_inner{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-
+#print_service_knowhow ul.item li .link{
+	padding-top: 37% !important;
+}
 
 
 #sub_contents_area #print_service02 div.comic_book div{
