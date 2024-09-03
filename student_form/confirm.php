@@ -290,7 +290,7 @@
 <footer>
 	<ul class="bnr">
 		<li class="bg01">
-			<a href="#">
+			<a href="../contact/">
 				<p>お問い合わせ・お見積り</p>
 			</a>
 		</li>
@@ -342,7 +342,7 @@
 					</ul>
 				</li>
 
-				<li><a href="#">お問い合わせ</a></li>
+				<li><a href="../contact/">お問い合わせ</a></li>
 				<li><a href="../pdf/application_form.pdf" target="_blank">学生専用申込みフォーム</a></li>
 <!--
 				<li><a href="../student_form/">学生専用申込みフォーム</a></li>

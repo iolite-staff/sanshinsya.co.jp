@@ -17,6 +17,7 @@
 <script type="text/javascript" src="../lib/jquery/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.validate.js"></script>
 <script type="text/javascript" src="../js/validate_config.js"></script>
+<script src="../lib/yubinbango.js" charset="UTF-8"></script>
 </head>
 <body>
 <header>
@@ -60,7 +61,6 @@
 </header>
 
 <article id="sub_contents_area">
-
 	<div id="title_area">
 		<h1>
 			学生専用申し込みフォーム
@@ -173,9 +173,9 @@
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
 									<input type="radio" name="door-need" id="door-need1" value="有" checked><label for="door-need1">有</label>（
-									<input type="text" name="door-num" id="door-need" class="input_small">）枚　
+									<input type="text" name="door-num" id="door-need" class="input_small" data-error_place="#error_door-num">）枚　
 									<input type="radio" name="door-need" id="door-need2" value="無"><label for="door-need2">無</label>
-									<span class="error" id="error_"></span>
+									<span class="error" id="error_door-num"></span>
 								</td>
 							</tr>
 							<tr>
@@ -189,13 +189,14 @@
 						</tbody>
 					</table>
 					<h2>商品発送先</h2>
-					<table class="form_table">
+					<table class="form_table h-adr">
 						<tbody>
 							<tr>
 								<th><span>郵便番号</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="postal-code" id="postal-code" class="input_middle" data-error_place="#error_postal-code" maxlength="8">
+									<input type="text" name="postal-code" id="postal-code" class="input_middle p-postal-code" data-error_place="#error_postal-code" maxlength="8">
+									<input type="button" value="自動住所入力" class="btn postal-search"></input><input type="hidden" class="p-country-name" value="Japan">
 									<span class="error" id="error_postal-code"></span>
 								</td>
 							</tr>
@@ -203,7 +204,7 @@
 								<th><span>住所</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="address" id="address" class="input_xlarge" data-error_place="#error_address">
+									<input type="text" name="address" id="address" class="input_xlarge p-region p-locality p-street-address p-extended-address" data-error_place="#error_address">
 									<span class="error" id="error_address"></span>
 								</td>
 							</tr>
@@ -218,13 +219,14 @@
 						</tbody>
 					</table>
 					<h2>請求書送付先</h2>
-					<table class="form_table">
+					<table class="form_table h-adr">
 						<tbody>
 							<tr>
 								<th><span>郵便番号</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="bill-postal-code" id="bill-postal-code" class="input_middle" data-error_place="#error_bill-postal-code" maxlength="8">
+									<input type="text" name="bill-postal-code" id="bill-postal-code" class="input_middle p-postal-code" data-error_place="#error_bill-postal-code" maxlength="8"></input>
+									<input type="button" value="自動住所入力" class="btn postal-search"></input><input type="hidden" class="p-country-name" value="Japan">
 									<span class="error" id="error_bill-postal-code"></span>
 								</td>
 							</tr>
@@ -232,7 +234,7 @@
 								<th><span>住所</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="bill-address" id="bill-address" class="input_xlarge" data-error_place="#error_bill-address">
+									<input type="text" name="bill-address" id="bill-address" class="input_xlarge p-region p-locality p-street-address p-extended-address" data-error_place="#error_bill-address">
 									<span class="error" id="error_bill-address"></span>
 								</td>
 							</tr>
@@ -341,7 +343,7 @@
 <footer>
 	<ul class="bnr">
 		<li class="bg01">
-			<a href="#">
+			<a href="../contact/">
 				<p>お問い合わせ・お見積り</p>
 			</a>
 		</li>
@@ -393,7 +395,7 @@
 					</ul>
 				</li>
 
-				<li><a href="#">お問い合わせ</a></li>
+				<li><a href="../contact/">お問い合わせ</a></li>
 				<li><a href="../pdf/application_form.pdf" target="_blank">学生専用申込みフォーム</a></li>
 <!--
 				<li><a href="../student_form/">学生専用申込みフォーム</a></li>
@@ -459,6 +461,9 @@ $(document).ready(function(){
 			'bill-tel2': { required: true, number : true },
 			'bill-tel3': { required: true, number : true },
 			'privacy_consent': { required: true },
+			'door-num': {
+						required: { depends: function(){ if ($('input[name="door-need"]:checked').val() == "有") { return true;} else {return false;}}}
+					},
 		},
 		messages: {
 			'family-name': { required: "性を入力してください。" },
@@ -481,11 +486,12 @@ $(document).ready(function(){
 			'recipient': { required: "宛名を入力してください。" },
 			'bill-postal-code': { required: "郵便番号を入力してください。", number : "半角数字で入力してください。", },
 			'bill-address': { required: "住所番号を入力してください。" },
-			'bill-recipient': { required: "宛名番号を入力してください。" },
+			'bill-recipient': { required: "宛名を入力してください。" },
 			'bill-tel1': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
 			'bill-tel2': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
 			'bill-tel3': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
 			'privacy_consent': { required: "同意が必要です。" },
+			'door-num': { required: "色扉の枚数を入力してください。" },
 		},
 		//spanでエラー文を出力
 		errorElement: "span",
@@ -517,7 +523,49 @@ $(document).ready(function(){
 				$('.inquiry').find('input, select').prop('disabled', true);
 			}
 		});
+//* 
+(function() {
+    //該当フォーム
+    var hadrlist = document.querySelectorAll(".h-adr"), 
+        cancelFlag = true;
 
+    //イベントをキャンセルするリスナ
+    var onKeyupCanceller = function(e) {
+        if(cancelFlag){
+            e.stopImmediatePropagation();
+        }
+        return false;
+    };
+
+    // 郵便番号の入力欄
+	hadrlist.forEach((hadr) => {
+    var postalcode = hadr.querySelectorAll(".p-postal-code"),
+        postalField = postalcode[postalcode.length - 1];
+
+    //通常の挙動をキャンセルできるようにイベントを追加
+    postalField.addEventListener("keyup", onKeyupCanceller, false);
+
+    //ボタンクリック時
+    var btn = hadr.querySelector(".postal-search");
+   		btn.addEventListener("click", function(e) {
+        	//キャンセルを解除
+        	cancelFlag = false;
+
+        	//発火
+        	let event;
+        	if (typeof Event === "function") {
+        	    event = new Event("keyup");
+        	} else {
+        	    event = document.createEvent("Event");
+        	    event.initEvent("keyup", true, true);
+        	}
+        	postalField.dispatchEvent(event);
+
+        	//キャンセルを戻す
+        	cancelFlag = true;
+    	});
+	});
+})();
 	</script>
 </body>
 </html>
