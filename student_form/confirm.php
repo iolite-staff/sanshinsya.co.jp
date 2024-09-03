@@ -295,17 +295,10 @@
 			</a>
 		</li>
 		<li class="bg02">
-			<a href="./#">
-				<p>学生専用申込みフォーム</p>
-			</a>
-		</li>
-<!--
-		<li class="bg02">
 			<a href="../student_form/">
 				<p>学生専用申込みフォーム</p>
 			</a>
 		</li>
--->
 	</ul>
 	<div id="footer_nav_area">
 		<div class="upload">
@@ -343,10 +336,7 @@
 				</li>
 
 				<li><a href="../contact/">お問い合わせ</a></li>
-				<li><a href="../pdf/application_form.pdf" target="_blank">学生専用申込みフォーム</a></li>
-<!--
 				<li><a href="../student_form/">学生専用申込みフォーム</a></li>
--->
 			</ul>
 		</div>
 		<div class="address">
