@@ -2029,3 +2029,26 @@ nav.inner_link ul li:not(:last-child){
 	left: 0;
 	height: 130px;
 }
+#student_form .form_table th,
+#student_form .form_table td{
+    vertical-align: middle !important;
+}
+
+
+.error{
+	color:#f00;
+}
+
+#sub_contents_area #student_form .confirm{
+	border-left: 6px solid #28AE5E !important;
+	margin-top:0px;
+	margin-bottom:20px;
+	padding-left: 15px;
+}
+
+#sub_contents_area #student_form .complete{
+	border-left: 6px solid #28AE5E !important;
+	margin-top:0p;
+	padding-left: 15px;
+}
+

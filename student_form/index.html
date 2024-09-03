@@ -51,7 +51,7 @@
 					<li><a href="../sp_service/management/">品質管理</a></li>
 				</ul>
 			</li>
-			<li><a href="#">お問い合わせ</a></li>
+			<li><a href="../contact/">お問い合わせ</a></li>
 		</ul>
 	</nav>
 
@@ -86,75 +86,77 @@
 								<th><span>お名前</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									　性<input type="text" name="input_" id="input_" class="input_middle"><br class="smartphone_br" />　名<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									　性<input type="text" name="family-name" id="family-name" class="input_middle" data-error_place="#error_name"><br class="smartphone_br" />　名<input type="text" name="given-name" id="given-name" class="input_middle" data-error_place="#error_name">
+									<span class="error" id="error_name"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>フリガナ</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									セイ<input type="text" name="input_" id="input_" class="input_middle"><br class="smartphone_br" />メイ<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									セイ<input type="text" name="family-name-furi" id="family-name-furi" class="input_middle" data-error_place="#error_name_furi"><br class="smartphone_br" />メイ<input type="text" name="given-name-furi" id="given-name-furi" class="input_middle" data-error_place="#error_name_furi">
+									<span class="error" id="error_name_furi"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>学年</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_xsmall">年
-									<span class="error" id="error_"></span>
+									<input type="text" name="age" id="age" class="input_xsmall" data-error_place="#error_age" maxlength="1">年
+									<span class="error" id="error_age"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>電話番号</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">
-									<span class="error" id="error_"></span>
+									<input type="text" name="tel1" id="tel1" class="input_small" data-error_place="#error_tel" maxlength="5">‐
+									<input type="text" name="tel2" id="tel2" class="input_small" data-error_place="#error_tel" maxlength="5">‐
+									<input type="text" name="tel3" id="tel3" class="input_small" data-error_place="#error_tel" maxlength="5">
+									<span class="error" id="error_tel"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>メールアドレス</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_xlarge">
-									<span class="error" id="error_"></span>
+									<input type="text" name="email" id="email" class="input_xlarge" data-error_place="#error_email">
+									<span class="error" id="error_email"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>品名</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_xlarge">
-									<span class="error" id="error_"></span>
+									<input type="text" name="product" id="product" class="input_xlarge" data-error_place="#error_product">
+									<span class="error" id="error_product"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>ページ数</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_small">ページ
-									<span class="error" id="error_"></span>
+									<input type="text" name="page" id="page" class="input_small" data-error_place="#error_page">ページ
+									<span class="error" id="error_page"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>部数</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_small">部
-									<span class="error" id="error_"></span>
+									<input type="text" name="busuu" id="busuu" class="input_small" data-error_place="#error_busuu">部
+									<span class="error" id="error_busuu"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>納品日</span></th>
 								<td class="tdmast">&nbsp;</td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle"><br class="smartphone_br"><br class="smartphone_br">
+									<input type="date" name="delivery" id="delivery" class="input_middle"><br class="smartphone_br"><br class="smartphone_br">
 									（時間帯：
-									<input type="radio" name="radio_delitime" id="radio_delitime1" value="指定なし" checked><label for="radio_delitime1">指定なし</label>
-									<input type="radio" name="radio_delitime" id="radio_delitime2" value="午前"><label for="radio_delitime2">午前</label>
-									<input type="radio" name="radio_delitime" id="radio_delitime3" value="午後"><label for="radio_delitime3">午後</label>）着希望<br />
+									<input type="radio" name="deliverytime" id="deliverytime1" value="指定なし" checked><label for="deliverytime1">指定なし</label>
+									<input type="radio" name="deliverytime" id="deliverytime2" value="午前"><label for="deliverytime2">午前</label>
+									<input type="radio" name="deliverytime" id="deliverytime3" value="午後"><label for="deliverytime3">午後</label>）着希望<br />
 									※弊社に原稿が届いてから納品まで５日前後かかります、詳しくはお問い合わせください。
 								</td>
 							</tr>
@@ -162,17 +164,17 @@
 								<th><span>表紙の色</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									<input type="text" name="cover" id="cover" class="input_middle" data-error_place="#error_cover">
+									<span class="error" id="error_cover"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>色扉の有無</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="radio" name="radio_tobiracheck" id="radio_tobiracheck1" value="有" checked><label for="radio_tobiracheck1">有</label>（
-									<input type="text" name="input_" id="input_" class="input_small">）枚　
-									<input type="radio" name="radio_tobiracheck" id="radio_tobiracheck2" value="無"><label for="radio_tobiracheck2">無</label>
+									<input type="radio" name="door-need" id="door-need1" value="有" checked><label for="door-need1">有</label>（
+									<input type="text" name="door-num" id="door-need" class="input_small">）枚　
+									<input type="radio" name="door-need" id="door-need2" value="無"><label for="door-need2">無</label>
 									<span class="error" id="error_"></span>
 								</td>
 							</tr>
@@ -180,8 +182,8 @@
 								<th><span>色扉の色</span></th>
 								<td class="tdmast">&nbsp;</td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									<input type="text" name="door-color" id="door-color" class="input_middle" data-error_place="#error_door-color">
+									<span class="error" id="error_door-color"></span>
 								</td>
 							</tr>
 						</tbody>
@@ -193,24 +195,24 @@
 								<th><span>郵便番号</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									<input type="text" name="postal-code" id="postal-code" class="input_middle" data-error_place="#error_postal-code" maxlength="8">
+									<span class="error" id="error_postal-code"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>住所</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_xlarge">
-									<span class="error" id="error_"></span>
+									<input type="text" name="address" id="address" class="input_xlarge" data-error_place="#error_address">
+									<span class="error" id="error_address"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>宛名</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									<input type="text" name="recipient" id="recipient" class="input_middle" data-error_place="#error_recipient">
+									<span class="error" id="error_recipient"></span>
 								</td>
 							</tr>
 						</tbody>
@@ -219,35 +221,37 @@
 					<table class="form_table">
 						<tbody>
 							<tr>
-								<th><span>宛名</span></th>
+								<th><span>郵便番号</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									<input type="text" name="bill-postal-code" id="bill-postal-code" class="input_middle" data-error_place="#error_bill-postal-code" maxlength="8">
+									<span class="error" id="error_bill-postal-code"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>住所</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_xlarge">
-									<span class="error" id="error_"></span>
+									<input type="text" name="bill-address" id="bill-address" class="input_xlarge" data-error_place="#error_bill-address">
+									<span class="error" id="error_bill-address"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>宛名</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_middle">
-									<span class="error" id="error_"></span>
+									<input type="text" name="bill-recipient" id="bill-recipient" class="input_middle" data-error_place="#error_bill-recipient">
+									<span class="error" id="error_bill-recipient"></span>
 								</td>
 							</tr>
 							<tr>
 								<th><span>電話番号</span></th>
 								<td class="tdmast"><span class="mast">必須</span></td>
 								<td class="input_list">
-									<input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">‐<br class="smartphone_br"><input type="text" name="input_" id="input_" class="input_small">
-									<span class="error" id="error_"></span>
+									<input type="text" name="bill-tel1" id="bill-tel1" class="input_small" data-error_place="#error_bill-tel" maxlength="5">‐
+									<input type="text" name="bill-tel2" id="bill-tel2" class="input_small" data-error_place="#error_bill-tel" maxlength="5">‐
+									<input type="text" name="bill-tel3" id="bill-tel3" class="input_small" data-error_place="#error_bill-tel" maxlength="5">
+									<span class="error" id="error_bill-tel"></span>
 								</td>
 							</tr>
 						</tbody>
@@ -322,9 +326,9 @@
 									　　〒141-0031 東京都品川区西五反田4-28-13<br />
 								</p>
 						</div>
-					<input type="checkbox" name="privacy_consent" value="1" id="privacy_consent">
+					<input type="checkbox" name="privacy_consent" value="1" id="privacy_consent" data-error_place="#error_privacy_consent">
 					<label for="privacy_consent">同意する</label>
-					<p><span class="error" id="privacy_consent_error"></span></p>
+					<p><span class="error" id="error_privacy_consent"></span></p>
 				</div>
 				<div class="button_area">
 					<input type="submit" class="btn" value="確認">
@@ -411,179 +415,92 @@
 	<small>&copy; 2024 株式会社三進社  All Right Reserved.</small>
 </footer>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var windowsize = window.matchMedia('screen and (max-width:910px)');
-			function checkBreakPoint(windowsize) {
-				if (windowsize.matches) {
-					$('body>header>nav').css({'display':'none'});
-				} else {
-					$('body>header>nav').css({'display':'block'});
-				}
-			}
-			windowsize.addListener(checkBreakPoint);
-			checkBreakPoint(windowsize);
-			$("#nav_sp").click(function () {
-				$("body>header>nav").slideToggle(300);
-				$(this).toggleClass('open');
-				$(this).addClass('close');
-			});
+<script type="text/javascript">
+$(document).ready(function(){
+	var windowsize = window.matchMedia('screen and (max-width:910px)');
+	function checkBreakPoint(windowsize) {
+		if (windowsize.matches) {
+			$('body>header>nav').css({'display':'none'});
+		} else {
+			$('body>header>nav').css({'display':'block'});
+		}
+	}
+	windowsize.addListener(checkBreakPoint);
+	checkBreakPoint(windowsize);
+	$("#nav_sp").click(function () {
+		$("body>header>nav").slideToggle(300);
+		$(this).toggleClass('open');
+		$(this).addClass('close');
+	});
 
-			$("#contact_form").validate({
-				messages: {
-					'consultation_item[]': {
-						required: "選択してください。"
-					},
-					company_name: {
-						required: "入力してください。"
-					},
-					name: {
-						required: "入力してください。"
-					},
-					mail_address: {
-						required: "入力してください。",
-						email: "入力されたメールアドレスに間違いがあります。"
-					},
-					mail_address_confirm: {
-						required: "入力してください。",
-						email: "入力されたメールアドレスに間違いがあります。",
-						equalTo: "入力した値が一致しません。"
-					},
-					telephone_number: {
-						required: "入力してください。",
-						number : "電話番号に間違いがあります。",
-						minlength: "電話番号に間違いがあります。"
-					},
-					privacy_consent: {
-						required: "同意が必要です。"
-					}
-				},
-				rules: {
-					'consultation_item[]': {
-						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お問い合わせ") { return true;} else {return false;}}}
-					},
-					company_name: {
-						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お問い合わせ") { return true;} else {return false;}}}
-					},
-					name: {
-						required: { depends: function(){ if ($('input[name="contact_type"]:checked').val() == "お見積り") { return true;} else {return false;}}}
-					},
-					
-					telephone_number: {
-						required: true,
-						number : true
-						 },
-  					mail_address: {
-						required: true,
-						email: true
-					  },
-  					mail_address_confirm: {
-						required: true,
-						email: true,
-						equalTo: "#mail_address"
-					  },
-					privacy_consent: {
-						required: true
-					}
+//* start バリデート ********************************************
+	$("#contact_form").validate({
+		rules: {
+			'family-name': { required: true },
+			'given-name': { required: true },
+			'family-name-furi': { required: true },
+			'given-name-furi': { required: true },
+			'age': { required: true, number : true },
+			'tel1': { required: true, number : true },
+			'tel2': { required: true, number : true },
+			'tel3': { required: true, number : true },
+			'email': { required: true, email : true },
+			'product': { required: true },
+			'page': { required: true, number : true },
+			'busuu': { required: true, number : true },
+			'cover': { required: true },
+			'postal-code': { required: true, number : true },
+			'address': { required: true },
+			'recipient': { required: true },
+			'bill-postal-code': { required: true, number : true },
+			'bill-address': { required: true },
+			'bill-recipient': { required: true },
+			'bill-tel1': { required: true, number : true },
+			'bill-tel2': { required: true, number : true },
+			'bill-tel3': { required: true, number : true },
+			'privacy_consent': { required: true },
+		},
+		messages: {
+			'family-name': { required: "性を入力してください。" },
+			'given-name': { required: "名を入力してください。" },
+			'family-name-furi': { required: "セイを入力してください。" },
+			'given-name-furi': { required: "メイを入力してください。" },
+			'age': { required: "学年を入力してください。", number : "半角数字で入力してください。", },
+			'tel1': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
+			'tel2': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
+			'tel3': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
+			'email': { required: "メールアドレスを入力してください。", email : "メールアドレスを確認してください。", },
+			'product': { required: "品名を入力してください。" },
+			'page': { required: "ページ数を入力してください。", number : "半角数字で入力してください。", },
+			'busuu': { required: "部数を入力してください。", number : "半角数字で入力してください。", },
+			'cover': { required: "表紙の色を入力してください。" },
+			'door-need': { required: "色扉の有無を入力してください。"　},
+			'door-color': { required: "色扉の色を入力してください。" },
+			'postal-code': { required: "郵便番号を入力してください。", number : "半角数字で入力してください。", },
+			'address': { required: "住所を入力してください。" },
+			'recipient': { required: "宛名を入力してください。" },
+			'bill-postal-code': { required: "郵便番号を入力してください。", number : "半角数字で入力してください。", },
+			'bill-address': { required: "住所番号を入力してください。" },
+			'bill-recipient': { required: "宛名番号を入力してください。" },
+			'bill-tel1': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
+			'bill-tel2': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
+			'bill-tel3': { required: "電話番号を入力してください。", number : "半角数字で入力してください。", },
+			'privacy_consent': { required: "同意が必要です。" },
+		},
+		//spanでエラー文を出力
+		errorElement: "span",
+		errorClass: "validation_error",
+		errorPlacement: function(error, element){
+			//すでに内容があるときはエラーを消してから入れる(同じ場所にエラー文を入れる場合の処理)
+			var place = element.data('error_place');
+			if($(place).text()){$(place).empty();}
+			// data-error_place="# xxxx"で指定された要素のxxxxにエラーを表示させる
+			error.appendTo(element.data('error_place'));
+		}
+	})
+//* end バリデート ********************************************
 
-},
-
-
-				errorPlacement: function(error, element) {
-					$('.response-output').addClass('text_visible');
-					$('.response-output').removeClass('response-output');
-					switch(element.attr('name')){
-						case "contact_type":
-							error.insertAfter($('#contact_type_error'));
-							break;
-						case "consultation_item[]":
-							error.insertAfter($('#consultation_item_error'));
-							break;
-						case "budget":
-							error.insertAfter($('#budget_error'));
-							break;
-						case "num":
-							error.insertAfter($('#num_error'));
-							break;
-						case "size":
-							error.insertAfter($('#size_error'));
-							break;
-						case "deformed_size":
-							error.insertAfter($('#deformed_size_error'));
-							break;
-						case "page_count":
-							error.insertAfter($('#page_count_error'));
-							break;
-						case "cover_color_num":
-							error.insertAfter($('#cover_color_num_error'));
-							break;
-						case "color_num":
-							error.insertAfter($('#color_num_error'));
-							break;
-						case "binding_style":
-							error.insertAfter($('#binding_style_error'));
-							break;
-						case "cover_paper":
-							error.insertAfter($('#cover_paper_error'));
-							break;
-						case "cover_color":
-							error.insertAfter($('#cover_color_error'));
-							break;
-						case "book_paper":
-							error.insertAfter($('#book_paper_error'));
-							break;
-						case "frontispiece":
-							error.insertAfter($('#frontispiece_error'));
-							break;
-						case "frontispiece_color":
-							error.insertAfter($('#frontispiece_color_error'));
-							break;
-						case "endpaper":
-							error.insertAfter($('#endpaper_error'));
-							break;
-						case "varnish":
-							error.insertAfter($('#varnish_error'));
-							break;
-						case "processing":
-							error.insertAfter($('#processing_error'));
-							break;
-						case "manuscript_type":
-							error.insertAfter($('#manuscript_type_error'));
-							break;
-						case "os_type":
-							error.insertAfter($('#os_type_error'));
-							break;
-						case "application":
-							error.insertAfter($('#application_error'));
-							break;
-						case "message":
-							error.insertAfter($('#message_error'));
-							break;
-						case "company_name":
-							error.insertAfter($('#company_name_error'));
-							break;
-						case "name":
-							error.insertAfter($('#name_error'));
-							break;
-						case "mail_address":
-							error.insertAfter($('#mail_address_error'));
-							break;
-						case "mail_address_confirm":
-							error.insertAfter($('#mail_address_confirm_error'));
-							break;
-						case "telephone_number":
-							error.insertAfter($('#telephone_number_error'));
-							break;
-						case "fax_number":
-							error.insertAfter($('#fax_number_error'));
-							break;
-						case "privacy_consent":
-							error.insertAfter($('#privacy_consent_error'));
-							break;
-					}
-				}
-			});
-});
+});//end ready
 
 		$(document).on('change', '[name=contact_type]', function(){
 			$('.quotation').toggleClass('hidden');

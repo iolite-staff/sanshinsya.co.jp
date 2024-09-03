@@ -717,6 +717,14 @@ h1 .sp_none {
 }
 .smartphone_hidden{display: none;}
 
+#sub_contents_area #student_form table.form_table tbody tr th{
+	padding:0;
+}
+
+#sub_contents_area #student_form table.form_table tbody tr td{
+	padding: 0 0 20px 0;
+}
+
 @media screen and (max-width:535px) {
 
 	#sub_contents_area div nav.inner_link ul{
