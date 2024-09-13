@@ -15,6 +15,25 @@
 <link rel="icon" type="image/png" href="../../favicon-.png" sizes="16x16">
 <link rel="icon" type="image/png" href="../../favicon.png" sizes="32x32">
 <script type="text/javascript" src="../../lib/jquery/jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+<script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.slider_img').slick({
+    infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		responsive: [ {
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
+		}]
+  });
+});
+</script>
 </head>
 <body>
 <header>
@@ -51,34 +70,99 @@
 			<li><a href="../../contact/">お問い合わせ</a></li>
 		</ul>
 	</nav>
-	
-
 	<span id="nav_sp"><span></span><span></span><span></span></span>
-
 </header>
-
-<article id="sub_contents_area">
-
+<article id="sub_contents_area" class="print_service">
 	<div id="title_area">
 		<h1>
-			印刷
+			印刷の流れ
 		</h1>
 	</div>
-	
+	<section>
+		<div class="sub_menu">
+			<span class="production">制作</span>
+			<a class="prepress" href="">製版</a>
+			<a class="print current" href="">印刷</a>
+			<a class="bookbinding" href="">製本</a>
+			<span class="logistics">梱包・物流</span>
+		</div>
+  </section>
 	<div id="bread">
 		<div class="inner">
 			<ul>
 				<li><a href="../../">HOME</a></li>
-                <li><a href="../">印刷サービス</a></li>
+        <li><a href="../">印刷サービス</a></li>
 				<li><span>印刷</span></li>
 			</ul>
 		</div>
 	</div>
-
-	<section>
-        <p>工事中...</p>
-    </section>
-
+	<section class="sub_contents_main">
+		<img src="../img/print_top.jpg" alt="印刷">
+		<div>
+			<h2>印刷</h2>
+			<div class="float">
+				<h3>インクにこだわり、印刷物づくりに誇りを持っています。</h3>
+				<div>
+					<img src="../img/print_detail1.jpg" alt="三進社の印刷サービス1">
+					<p>
+						三進社の印刷サービスは、最新のデジタル技術と伝統的な印刷技術を融合させた、高品質な仕上がりを誇ります。<br>
+						お客様のビジョンやアイデアを忠実に再現し、色彩の鮮やかさや細部へのこだわりに妥協はありません。<br>
+						名刺からポスター、パンフレットまで、多種多様な印刷物に対応し、プロフェッショナルな仕上がりをお約束します。<br>
+						<br>
+						また、迅速な納期と柔軟な対応力で、急なご要望にもお応えできる体制を整えております。<br>
+						三進社の印刷物は、単なる情報の伝達手段に留まらず、貴社のブランドイメージを強力にサポートします。<br>
+					</p>
+				</div>
+				<div>
+					<img src="../img/print_detail2.jpg" alt="三進社の印刷サービス2">
+					<p>
+						信頼できるパートナーとして、品質を重視する皆様に選ばれ続ける理由がここにあります。<br>
+						高品質な印刷サービスをお求めなら、<br>
+						ぜひ三進社にお任せください。
+					</p>
+					<a href="../img/print_detail.pdf" class="btn_a" target="_blank">印刷機の仕様はこちら</a>
+				</div>
+			</div>
+			<div class="slider">
+				<h3>都内3か所（江東区、墨田区、荒川区）で稼働中</h3>
+				<div class="slider_img">
+					<img src="../img/print_slider1.jpg" alt="三進社の印刷サービス">
+					<img src="../img/print_slider2.jpg" alt="三進社の印刷サービス">
+					<img src="../img/print_slider3.jpg" alt="三進社の印刷サービス">
+					<img src="../img/print_slider4.jpg" alt="三進社の印刷サービス">
+					<img src="../img/print_slider5.jpg" alt="三進社の印刷サービス">
+				</div>
+				<p>
+					三進社は印刷物の企画から、印刷製本まで社内一貫生産出来る設備とノウハウをもつ印刷会社です。全ての部署が都内にあり、それぞれの設備に応じた印刷業務を迅速に行っています。<br>
+					三進社の印刷サービスは、最新技術と熟練の技を駆使し、細部までこだわった高品質な仕上がりを提供します。色鮮やかで精緻な印刷が、お客様のメッセージをより効果的に伝えます。印刷物の品質に妥協しない、確かな信頼をお届けします。<br>
+					印刷物の品質は、企業のイメージを左右する重要な要素です。<br>
+					三進社は、高品質な印刷を通じて、お客様のブランド価値を最大限に引き出します。<br>
+					長年の経験と革新的な技術を駆使し、どんなニーズにも柔軟に対応。常に期待を超える成果を提供します。<br>
+					<br>
+					お客様の満足を第一に考え、常に品質向上を追求する私たちの印刷サービス。<br>
+					鮮やかな色彩をクリアな印刷が、あなたのメッセージを強力にサポートします。<br>
+					細部にまでこだわるプロの技術で、他にはない高品質な印刷物をご提供します。
+					</p>
+			</div>
+			<div class="flex">
+				<div>
+					<img src="../img/print_tokusyoku.jpg" alt="調色名人XwM">
+					<p>
+						特色にももちろん対応。<br>
+						調色名人XwMで様々なご要望にお応えします。
+					</p>
+				</div>
+				<div>
+					<img src="../img/print_ondemand.jpg" alt="オンデマンド印刷">
+					<p>
+						オンデマンド印刷も承ります。<br>
+						必要な時に、必要な物を、必要な数だけ。<br>
+						在庫を抱える必要はありません。
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </article>
 <footer>
 	<ul class="bnr">
@@ -87,13 +171,11 @@
 				<p>お問い合わせ・お見積り</p>
 			</a>
 		</li>
-
 		<li class="bg02">
 			<a href="../../student_form/">
 				<p>学生専用申込みフォーム</p>
 			</a>
 		</li>
-
 	</ul>
 	<div id="footer_nav_area">
 		<div class="upload">
@@ -129,7 +211,6 @@
 						<li><a href="../../sp_service/management/">品質管理</a></li>
 					</ul>
 				</li>
-
 				<li><a href="../../contact/">お問い合わせ</a></li>
 				<li><a href="../../student_form/">学生専用申込みフォーム</a></li>
 			</ul>
@@ -148,7 +229,6 @@
 	<a href="../../privacy/" class="privacy" class="privacy">個人情報保護方針</a>
 	<small>&copy; 2024 株式会社三進社  All Right Reserved.</small>
 </footer>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var windowsize = window.matchMedia('screen and (max-width:910px)');

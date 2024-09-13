@@ -2052,3 +2052,105 @@ nav.inner_link ul li:not(:last-child){
 	padding-left: 15px;
 }
 
+/* print_service */
+
+#sub_contents_area.print_service #bread{
+	margin-bottom: 20px;
+}
+#sub_contents_area.print_service section .sub_menu{
+	display: flex;
+}
+#sub_contents_area.print_service section .sub_menu span,
+#sub_contents_area.print_service section .sub_menu a{
+	color: #fff;
+	background-color: #999;
+	background-position: center;
+	background-size: cover;
+	background-color:rgba(80,80,80,0.8);
+	background-blend-mode: multiply;
+	text-align: center;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	aspect-ratio: 1/1;
+}
+#sub_contents_area.print_service section .sub_menu a.current::before,
+#sub_contents_area.print_service section .sub_menu a:hover::before{
+	content: "";
+  position: absolute;
+  border: solid 4px #00b350;
+  top: -8px;
+  left: -8px;
+  bottom: -8px;
+  right: -8px;
+}
+#sub_contents_area.print_service section .sub_menu .production{
+	background-image: url(../print_service/img/produce.jpg);
+}
+#sub_contents_area.print_service section .sub_menu .prepress{
+	background-image: url(../print_service/img/Platemaking.jpg);
+}
+#sub_contents_area.print_service section .sub_menu .print{
+	background-image: url(../print_service/img/printing.jpg);
+}
+#sub_contents_area.print_service section .sub_menu .bookbinding{
+	background-image: url(../print_service/img/bookmaking.jpg);
+}
+#sub_contents_area.print_service section .sub_menu .logistics{
+	background-image: url(../print_service/img/packing.jpg);
+}
+#sub_contents_area.print_service section .sub_menu > span:not(:last-of-type)::after,
+#sub_contents_area.print_service section .sub_menu > a::after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-top: 3px solid #AAA;
+	border-right: 3px solid #AAA;
+	position: absolute;
+}
+
+#sub_contents_area.print_service section > img{
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+#sub_contents_area.print_service section.sub_contents_main{
+	background-color: #f5faf7;
+}
+#sub_contents_area.print_service section.sub_contents_main h2{
+	color: #00b350;
+	text-align: center;
+	border-bottom: 2px solid #00b350;
+	width: fit-content;
+	margin: 0 auto 80px;
+}
+#sub_contents_area.print_service section.sub_contents_main>div{
+	background-color: #fff;
+	position: relative;
+}
+#sub_contents_area.print_service section.sub_contents_main div h3{
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+	margin: 20px auto 60px;
+}
+#sub_contents_area.print_service section.sub_contents_main > div >div{
+	width: 100%;
+	display: inline-block;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div p{
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider p{
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex div img{
+	width: 100%;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex div p{
+	text-align: center;
+}

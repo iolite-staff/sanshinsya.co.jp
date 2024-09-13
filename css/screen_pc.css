@@ -731,3 +731,71 @@ body>footer ul.bnr .bg02{
 	}
 
 }
+
+/* print_service */
+#sub_contents_area.print_service section .sub_menu{
+	width: 85%;
+	max-width: unset;
+	justify-content: space-between;
+}
+#sub_contents_area.print_service section .sub_menu span,
+#sub_contents_area.print_service section .sub_menu a{
+	width: 15%;
+}
+#sub_contents_area.print_service section .sub_menu > span:not(:last-of-type)::after,
+#sub_contents_area.print_service section .sub_menu > a::after{
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 43%;
+	right: -25%;
+}
+
+#sub_contents_area.print_service section > img{
+	aspect-ratio: 3/1;
+}
+#sub_contents_area.print_service section.sub_contents_main h2{
+	font-size: 36px;
+	margin: 0 auto 80px;
+	padding: 10px 5px;
+}
+#sub_contents_area.print_service section.sub_contents_main>div{
+	margin-top: -100px;
+}
+#sub_contents_area.print_service section.sub_contents_main div h3{
+	font-size: 20px;
+	margin: 20px auto 60px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float{
+	margin: 0 auto 80px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div{
+	margin: 40px auto 80px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div img{
+	width: 45%;
+	margin-right: 5%;
+	float: left;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div p{
+	margin: 0 auto 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider{
+	padding: 0 0 60px;
+	margin: 0 auto 100px;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider .slider_img img{
+	width: 48%;
+	margin: 10px;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider p{
+	width: 65%;
+	margin: 60px auto 0;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 150px;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex div{
+	width: 47%;
+}

@@ -724,6 +724,13 @@ h1 .sp_none {
 #sub_contents_area #student_form table.form_table tbody tr td{
 	padding: 0 0 20px 0;
 }
+#sub_contents_area #student_form #student_formarea table.form_table tbody tr td.tdmast{
+	margin-top: 10px;
+}
+#sub_contents_area #student_form #student_formarea table.form_table tbody tr th{
+	margin-top: 15px;
+}
+
 
 @media screen and (max-width:535px) {
 
@@ -741,4 +748,88 @@ h1 .sp_none {
 		border-bottom: 1px rgb(189, 189, 189) solid;
 		padding: 0;
 	}
+}
+
+/* print_service */
+
+#sub_contents_area.print_service>section{
+	margin: 0;
+}
+#sub_contents_area.print_service section .sub_menu{
+	display: none;
+	width: 95%;
+	max-width: unset;
+	flex-direction: column;
+	align-items: center;
+}
+#sub_contents_area.print_service section .sub_menu span,
+#sub_contents_area.print_service section .sub_menu a{
+	width: 65%;
+	margin-bottom: 50px;
+}
+#sub_contents_area.print_service section .sub_menu > span:not(:last-of-type)::after,
+#sub_contents_area.print_service section .sub_menu > a::after{
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+	top: 103%;
+	left: 45%;
+}
+
+#sub_contents_area.print_service section > img{
+	aspect-ratio: 2/1;
+}
+#sub_contents_area.print_service section.sub_contents_main h2{
+	font-size: 28px;
+	margin: 0 auto 40px;
+	padding: 10px 5px;
+}
+#sub_contents_area.print_service section.sub_contents_main>div{
+	width: 95%;
+	margin: -50px auto 80px;
+	padding: 60px 20px 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main div h3{
+	font-size: 18px;
+	margin: 10px auto 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float{
+	margin: 0 auto 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div{
+	margin: 20px auto 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div img{
+	width: 100%;
+	margin: 0 auto 20px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div p{
+	margin: 0 auto 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .float > div a{
+	margin: auto;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider{
+	padding: 0 0 40px;
+	margin: 0 auto 60px;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider .slider_img{
+	width: 90%;
+	margin: auto;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider .slider_img img{
+	width: 98%;
+	margin: 5px;
+}
+#sub_contents_area.print_service section.sub_contents_main .slider p{
+	width: 85%;
+	margin: 20px auto 0;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex div{
+	width: 100%;
+	margin-bottom: 40px;
 }
