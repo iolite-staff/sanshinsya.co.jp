@@ -769,7 +769,8 @@ body>footer ul.bnr .bg02{
 	margin: 0 auto 80px;
 }
 #sub_contents_area.print_service section.sub_contents_main .float > div{
-	margin: 40px auto 80px;
+	margin: 40px auto;
+	display: flow-root;
 }
 #sub_contents_area.print_service section.sub_contents_main .float > div img{
 	width: 45%;
