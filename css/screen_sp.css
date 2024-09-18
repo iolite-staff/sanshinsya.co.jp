@@ -824,6 +824,9 @@ h1 .sp_none {
 	width: 85%;
 	margin: 20px auto 0;
 }
+#sub_contents_area.print_service section.sub_contents_main .slider.bookbinding p{
+	width: 100%;
+}
 #sub_contents_area.print_service section.sub_contents_main .flex{
 	display: flex;
 	flex-direction: column;
@@ -832,4 +835,7 @@ h1 .sp_none {
 #sub_contents_area.print_service section.sub_contents_main .flex div{
 	width: 100%;
 	margin-bottom: 40px;
+}
+#sub_contents_area.print_service section.sub_contents_main .flex.bookbinding div{
+	margin-bottom: 20px;
 }

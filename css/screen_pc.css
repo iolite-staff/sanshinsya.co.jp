@@ -777,7 +777,8 @@ body>footer ul.bnr .bg02{
 	float: left;
 }
 #sub_contents_area.print_service section.sub_contents_main .float > div p{
-	margin: 0 auto 40px;
+	width: 50%;
+	margin: 0 0 40px auto;
 }
 #sub_contents_area.print_service section.sub_contents_main .slider{
 	padding: 0 0 60px;
