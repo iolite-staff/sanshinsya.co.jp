@@ -719,8 +719,8 @@ a.privacy {
 	margin:0 auto 15px;
 	padding:10px 20px;
 	font-size:14px;
-	color:#fff;
-	background-color:#00b350;
+	color:#00b350;
+	background-color:#fff;
 }
 
 @media only screen and (max-width:767px){
