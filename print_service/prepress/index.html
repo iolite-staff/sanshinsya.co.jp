@@ -15,146 +15,147 @@
 <link rel="icon" type="image/png" href="../../favicon-.png" sizes="16x16">
 <link rel="icon" type="image/png" href="../../favicon.png" sizes="32x32">
 <script type="text/javascript" src="../../lib/jquery/jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+<script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.slider_img').slick({
+    infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		responsive: [ {
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
+		}]
+  });
+});
+</script>
 </head>
 <body>
 <header>
 	<h1>
-		<a href="../../index.html">
+		<a href="../../">
 			<img src="../../img/interface/logo.png" alt="SANSHINSYA">
 		</a>
 	</h1>
 	<nav>
-	<ul>
-		<li>
-			<a href="../../company/">企業情報</a>
-			<ul class="menu_inner menu_inner_1">
-				<li><a href="../../company/policy/">こだわり</a></li>
-				<li><a href="../../company/csr/" class="small">CSR活動及び<br class="pc">コンプライアンス</a></li>
-				<li><a href="../../company/facility/">事業所一覧</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="../">印刷サービス</a>
-			<ul class="menu_inner menu_inner_2">
-				<li><a href="#">製版</a></li>
-				<li><a href="../print/">印刷</a></li>
-				<li><a href="../bookbinding/">製本</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="../../sp_service/">セールスプロモーション</a>
-			<ul class="menu_inner menu_inner_3">
-				<li><a href="../../sp_service/tools/" class="small">各種プロモーションツール</a></li>
-				<li><a href="../../sp_service/management/">品質管理</a></li>
-			</ul>
-		</li>
-		<li><a href="../../contact/">お問い合わせ</a></li>
-	</ul>
-</nav>
-
-
+		<ul>
+			<li>
+				<a href="../../company/">企業情報</a>
+				<ul class="menu_inner menu_inner_1">
+					<li><a href="../../company/policy/">こだわり</a></li>
+					<li><a href="../../company/csr/" class="small">CSR活動及び<br class="pc">コンプライアンス</a></li>
+					<li><a href="../../company/facility/">事業所一覧</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="../">印刷サービス</a>
+				<ul class="menu_inner menu_inner_2">
+					<li><a href="#">製版</a></li>
+					<li><a href="../print/">印刷</a></li>
+					<li><a href="../bookbinding/">製本</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="../../sp_service/">セールスプロモーション</a>
+				<ul class="menu_inner menu_inner_3">
+					<li><a href="../../sp_service/tools/" class="small">各種プロモーションツール</a></li>
+					<li><a href="../../sp_service/management/">品質管理</a></li>
+				</ul>
+			</li>
+			<li><a href="../../contact/">お問い合わせ</a></li>
+		</ul>
+	</nav>
 	<span id="nav_sp"><span></span><span></span><span></span></span>
-
 </header>
-
-<article id="sub_contents_area">
-
+<article id="sub_contents_area" class="print_service">
 	<div id="title_area">
 		<h1>
-			製版
+			印刷の流れ
 		</h1>
 	</div>
-
+	<section>
+		<div class="sub_menu">
+			<span class="production">制作</span>
+			<a class="prepress current" href="../prepress/">製版</a>
+			<a class="print" href="../print/">印刷</a>
+			<a class="bookbinding" href="../bookbinding/">製本</a>
+			<span class="logistics">梱包・物流</span>
+		</div>
+  </section>
 	<div id="bread">
 		<div class="inner">
 			<ul>
-				<li><a href="../../index.html">HOME</a></li>
-                <li><a href="../">印刷サービス</a></li>
-				<li><span>製版</span></li>
+				<li><a href="../../">HOME</a></li>
+        <li><a href="../">印刷サービス</a></li>
+				<li><span>印刷の流れ - 製版</span></li>
 			</ul>
 		</div>
 	</div>
-
-	<section id="prepress">
-		<p>工事中...</p>
-<!--
+	<section class="sub_contents_main">
+		<img src="../img/print_top.jpg" alt="印刷">
 		<div>
 			<h2>製版</h2>
-			<div class="prepress_content">
-				<p>
-					<span class="stress">高品質+環境対応力</span>を高めたＣＴＰ刷版により、24時間お客様のご要望にお応えします。
-				</p>
+			<div>
 				<h3>製版部のこだわり</h3>
-				<div id="commit">
-					<div class="left">
+				<div class="flex prepress">
+					<div>
+						<img src="../img/prepress1.jpg" alt="三進社の製版機1">
+						<img src="../img/prepress2.jpg" alt="三進社の製版機2">
+					</div>
+					<div>
 						<p>
-							<span class="blue">環境配慮型プレートセッター</span>
-							<span class="green">「廃液ゼロ」「消費電力低減」</span>
+							高品質+環境対応力を高めたＣＴＰ刷版により、24時間お客様のご要望にお応えします。<br>
 						</p>
-						<p>
-							「環境に配慮した印刷物製造」の社会的要求が高まっています<br />
-							<b>三進社の刷版機は、現像レスによる「環境対応」です<br /></b>
-							（従来の現像・薬品による定着・洗浄などの処理が不要です）
+						<p>【環境配慮型プレートセッター】</p>
+						<ul>
+							<li>「廃液ゼロ」「消費電力低減」</li>
+							<li>
+								「環境に配慮した印刷物製造」の社会的要求が高まっています。
+								三進社の刷版機は、現像レスによる「環境対応」です。<br>
+								（従来の現像・薬品による定着・洗浄などの処理が不要です）
+							</li>
+						</ul>
+						<br>
+						<p>【T-9500CTPNⅡ-X】</p>
+						<ul>
+							<li>2024年5月、木場工場・尾久工場に同機種を設置しました</li>
+							<li>生産性向上→→最高「菊全32版/時」の出力スピード</li>
+							<li>安定性→→新光源は従来機に比べ、露光品質・安定性が大きく向上</li>
+							<li>高精細スクリーニング→→ＦＭスクリーニングにて対応</li>
+							<li>消費電力大幅低減</li>
+							<li>廃液ゼロ（2023年　年間排出量3400㎏→ゼロ）</li>
+						</ul>
 						</p>
-					</div>
-					<div class="right">
-						<img src="../img/sample.png" alt="製品部のこだわり画像">
-					</div>
-				</div>
-				<h3>T-9500CTPNⅡ-X</h3>
-				<div id="machine01">
-					<p>2024年5月、木場工場・尾久工場に同機種を設置しました</p>
-					<div class="half_left">
-						<img src="../img/sample_3.png" alt="画像①">
-					</div>
-					<div class="half_right">
-						<img src="../img/sample_3.png" alt="画像②">
-					</div>
-					<div class="left">
-						<table>
-							<tr>
-								<th>生産性向上</th>
-								<td>最高「菊全32版/時」の出力スピード</td>
-							</tr>
-							<tr>
-								<th>安定性</th>
-								<td>新光源は従来機に比べ、露光品質・安定性が大きく向上</td>
-							</tr>
-							<tr>
-								<th>高精細スクリーニング</th>
-								<td>ＦＭスクリーニングにて対応</td>
-							</tr>
-							<tr>
-								<td colspan=2>消費電力大幅低減</td>
-							</tr>
-							<tr>
-								<td colspan=2>廃液ゼロ（2023年　年間排出量3400㎏→ゼロ）</td>
-							</tr>							　
-						</table>
-					</div>
-					<div class="right">
-						<img src="../img/sample_3.png" alt="画像②">
-					</div>
-				</div>
-				<h3>Ａ3　ＣＴＰシルバー</h3>
-				<div id="machine02">
-					<div class="half_left">
-						<p>
-							小ロット印刷に向いています。<br />
-							お客様から頂いたデジタルデータから直接ペーパーマスターに刷版処理します<br />
-							軽オフセット印刷では再現が難しいアミ・写真がとてもシャープに印刷できます<br />
-							<small>（低エネルギ-で刷版作成します。廃液は産業廃棄物として適正に処理しています）</small>
-						</p>
-					</div>
-					<div class="half_right">
-						<img src="../img/sample_3.png" alt="画像②">
 					</div>
 				</div>
 			</div>
+			<div class="slider">
+				<h3>約束の納期のために…</h3>
+				<div class="slider_img">
+					<img src="../img/prepress3.jpg" alt="三進社の製版">
+					<img src="../img/prepress4.jpg" alt="三進社の製版">
+				</div>
+				<p>
+					お客様からご入稿いただいたデータは、印刷する上で問題がないか一つひとつ迅速かつ丁寧にチェックします。
+				</p>
+			</div>
+			<div class="center">
+				<figcaption>A3 CTPシルバー</figcaption>
+				<img src="../img/prepress5.jpg" alt="A3 CTPシルバー">
+				
+				<p>
+					小ロット印刷に向いています。<br>
+					お客様から頂いたデジタルデータから直接ペーパーマスターに刷版処理します。<br>
+					軽オフセット印刷では再現が難しいアミ・写真がとてもシャープに印刷できます。（低エネルギ-で刷版作成します。廃液は産業廃棄物として適正に処理しています）
+				</p>
+			</div>
 		</div>
--->
-    </section>
-
+	</section>
 </article>
 <footer>
 	<ul class="bnr">
@@ -163,13 +164,11 @@
 				<p>お問い合わせ・お見積り</p>
 			</a>
 		</li>
-
 		<li class="bg02">
 			<a href="../../student_form/">
 				<p>学生専用申込みフォーム</p>
 			</a>
 		</li>
-
 	</ul>
 	<div id="footer_nav_area">
 		<div class="upload">
@@ -181,7 +180,6 @@
 				<a href="https://www.sanshin-sya.co.jp/uploader/login.php?to=/uploader" class="btn_c">データアップサーバ</a>
 			</div>
 		</div>
-
 		<div class="nav">
 			<ul>
 				<li><a href="../../">HOME</a></li>
@@ -194,9 +192,8 @@
 				</li>
 				<li><a href="../">印刷サービス</a>
 					<ul>
-						
-						<li><a href="#">製版</a></li>
-						<li><a href="../print/">印刷</a></li>
+						<li><a href="../prepress/">製版</a></li>
+						<li><a href="#">印刷</a></li>
 						<li><a href="../bookbinding/">製本</a></li>
 					</ul>
 				</li>
@@ -206,7 +203,6 @@
 						<li><a href="../../sp_service/management/">品質管理</a></li>
 					</ul>
 				</li>
-
 				<li><a href="../../contact/">お問い合わせ</a></li>
 				<li><a href="../../student_form/">学生専用申込みフォーム</a></li>
 			</ul>
@@ -225,7 +221,6 @@
 	<a href="../../privacy/" class="privacy" class="privacy">個人情報保護方針</a>
 	<small>&copy; 2024 株式会社三進社  All Right Reserved.</small>
 </footer>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var windowsize = window.matchMedia('screen and (max-width:910px)');

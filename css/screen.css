@@ -718,7 +718,7 @@ a.privacy {
 	display:table;
 	margin:0 auto 15px;
 	padding:10px 20px;
-	font-size:14px;
+	font-size:18px;
 	color:#00b350;
 	background-color:#fff;
 }
@@ -2154,13 +2154,21 @@ nav.inner_link ul li:not(:last-child){
 #sub_contents_area.print_service section.sub_contents_main .flex div p{
 	text-align: center;
 }
-#sub_contents_area.print_service section.sub_contents_main .flex.bookbinding div img{
+#sub_contents_area.print_service section.sub_contents_main .flex.bookbinding div img,
+#sub_contents_area.print_service section.sub_contents_main .flex.prepress div img{
 	margin-bottom: 40px;
 }
-#sub_contents_area.print_service section.sub_contents_main .flex.bookbinding div p{
+#sub_contents_area.print_service section.sub_contents_main .flex.bookbinding div p,
+#sub_contents_area.print_service section.sub_contents_main .flex.prepress div p{
 	text-align: justify;
 	text-justify: inter-ideograph;
 	margin-top: 0;
+}
+#sub_contents_area.print_service section.sub_contents_main div.center{
+	text-align: center;
+}
+#sub_contents_area.print_service section.sub_contents_main div.center img{
+	max-width: 350px;
 }
 #sub_contents_area.print_service section.sub_contents_main .slider.bookbinding > .flex{
 	padding-bottom: 0;
