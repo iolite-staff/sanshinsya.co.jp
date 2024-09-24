@@ -2187,3 +2187,10 @@ nav.inner_link ul li:not(:last-child){
 #sub_contents_area.print_service section.sub_contents_main .slider.bookbinding > .flex{
 	padding-bottom: 0;
 }
+#sub_contents_area.print_service section.sub_contents_main div.bookbinding > div > div{
+	display: ruby;
+}
+#sub_contents_area.print_service section.sub_contents_main div.bookbinding > div > div > a{
+	width: 160px;
+	margin: 0 0 10px 0;
+}
