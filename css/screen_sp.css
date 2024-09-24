@@ -839,3 +839,14 @@ h1 .sp_none {
 #sub_contents_area.print_service section.sub_contents_main .flex.bookbinding div{
 	margin-bottom: 20px;
 }
+#sub_contents_area.print_service section.sub_contents_main div.center p {
+    text-align: justify;
+    display: inline-block;
+    margin: 25px 0 0 0;
+    vertical-align: top;
+	width: 100%;
+}
+#sub_contents_area.print_service section.sub_contents_main div.center figcaption {
+    text-align: center;
+	margin: 0 0 10px 0;
+}
