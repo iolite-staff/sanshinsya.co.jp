@@ -624,7 +624,7 @@ body>footer ul.bnr .bg02{
 #sub_contents_area #sp_message h1{
 	margin: 0;
 	padding: 20px 0;
-	font-size: 18px;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -633,7 +633,10 @@ body>footer ul.bnr .bg02{
 .active_flex{
 	display: flex !important;
 	flex-wrap: wrap !important;
-	height: 540px !important;
+}
+.active_flex div:nth-child(1)::before {
+	height: 250px !important;
+	width: 40% !important;
 }
 .active_resize{
 	width: 40% !important;

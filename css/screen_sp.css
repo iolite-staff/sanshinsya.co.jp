@@ -588,7 +588,7 @@ body header nav ul li ul.menu_inner{
 #sub_contents_area #sp_message h1{
 	margin: 0;
 	padding: 20px 0;
-	font-size: 15px;
+	font-size: 18px;
 	text-align: center;
 }
 h1 .sp_none {
@@ -749,6 +749,12 @@ h1 .sp_none {
 		padding: 0;
 	}
 }
+
+/* sp_service */
+.active_flex div {
+	height: 250px !important;
+}
+
 
 /* print_service */
 
