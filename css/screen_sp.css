@@ -588,7 +588,7 @@ body header nav ul li ul.menu_inner{
 #sub_contents_area #sp_message h1{
 	margin: 0;
 	padding: 20px 0;
-	font-size: 18px;
+	font-size: 17px;
 	text-align: center;
 }
 h1 .sp_none {
@@ -751,10 +751,75 @@ h1 .sp_none {
 }
 
 /* sp_service */
-.active_flex div {
-	height: 250px !important;
+#sp_service .maxwidth,
+#sp_service .display_motion,
+#sp_service .bgbox{
+	transition: all 0s ease-out;
+}
+#sp_service .flexframe{
+	display: block;
+}
+#sp_service .imgbtn_st, #sp_service .imgbtn {
+    width: 100%;
+}
+#sp_service .textcnt {
+    width: 100%;
+}
+#sp_service .imgbtn_st:hover,
+#sp_service .imgbtn:hover{
+	& .bgbox {
+		transform: scale(1);
+		transition: all .03s ease-out;
+	}
+	& p {
+		opacity: 100%;
+	}
 }
 
+#sp_service .imgbtn_st h3,
+#sp_service .imgbtn h3 {
+	position: absolute;
+	text-align:center;
+	font-size:20px;
+	font-weight:500;
+	top:30%;
+	left:0;
+	right:0;
+}
+#sp_service .imgbtn_st p,
+#sp_service .imgbtn p{
+	display:block;
+	position: absolute;
+	font-family: "Montserrat", sans-serif;
+	font-size:14px;
+	font-weight:300;
+	text-align: left;
+	width: fit-content;
+	top:45%;
+	left:0;
+	right:0;
+	margin:auto;
+    opacity: 100%;
+	padding:0 10px;
+    transition: all .3s ease-out;
+}
+#sp_service .imgbtn_st a,
+#sp_service .imgbtn a{
+	bottom:15%;
+}
+#sp_service .linetitle{
+	margin:0;
+}
+#sp_service .textcnt p {
+    padding-top: 15px;
+}
+#sp_service .closebtn{
+	margin-left: auto;
+	margin-right: auto;
+}
+#sp_service .bgbox {
+    height: 400px;
+}
 
 /* print_service */
 

@@ -428,7 +428,13 @@ body{
 	color:#fff;
 	background-color: rgba(0,0,0,0.4);
 }
-.items{
+
+.sp_service_page{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sp_service .items{
 	padding:0;
 	margin:0;
 }
@@ -439,7 +445,7 @@ body{
 	display: flex;
 }
 #sp_service .bgcolor{
-	background-color:#9fa9bc;
+	background-color:#bac3d3;
 }
 #sp_service .bgbox{
 	width: 100%;
@@ -504,7 +510,8 @@ body{
 	font-weight:300;
 	text-align: center;
 	width: 40%;
-	bottom:15%;
+	height: 55px;
+	bottom:12%;
 	left:0;
 	right:0;
 	margin:auto;
@@ -540,11 +547,11 @@ body{
 #sp_service .bg08{
 	background-image:url("../img/sp_bg08.jpg");
 }
-.linetitle{
+#sp_service .linetitle{
 	width:100%;
 	background-color: #001e57;
 	color:#fff;
-	padding:5px;
+	padding:5px 20px;
 	font-size:17px;
 }
 #sp_service .textcnt{
@@ -559,9 +566,22 @@ body{
 	padding-top:20px;
 	margin:0;
 }
+#sp_service .textcnt p{
+	margin:0;
+}
+#sp_service .textcnt li{
+	list-style-type: disc;
+}
+#sp_service .closebtnframe{
+	height:120px;
+}
 #sp_service .closebtn{
 	border:1px solid black;
 	padding:8px;
+	display: block;
+    width: 120px;
+    text-align: center;
+	margin:50px auto 0px auto;
 }
 #sp_service .maxwidth{
 	width:100%;
@@ -578,6 +598,7 @@ body{
 #sp_service .hidden{
 	display: none !important;
 }
+
 
 #home_sp_area ul.item li div::before,
 #sub_contents_area #sp_service ul.item li div:nth-child(1)::before{
