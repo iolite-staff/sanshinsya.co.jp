@@ -820,6 +820,111 @@ h1 .sp_none {
 #sp_service .bgbox {
     height: 400px;
 }
+/* 各種プロモーションツール　・　品質管理SPブラウザ **********************************************/
+#sp_tools #stitle_area,
+#sp_management #stitle_area{
+    padding: 80px 0px 50px;
+}
+#sp_tools .stitle_mini,
+#sp_management .stitle_mini{
+	text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 12px;
+}
+#sp_tools .stitle,
+#sp_management .stitle{
+	text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 22px;
+}
+#sp_tools .stitle_border,
+#sp_management .stitle_border{
+	width: 60px;
+	border-color:#2B3E89;
+}
+#sp_tools .linetitle ,
+#sp_management .linetitle {
+    width: 100%;
+    background-color: #2B3E89;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 17px;
+	text-align: left;
+	margin:0 auto;
+}
+#sp_tools #mainimg_area,
+#sp_management #mainimg_area{
+	display: block;
+    padding: 30px 0px 10px;
+}
+#sp_tools #mainimg_area .leftblock,
+#sp_management #mainimg_area .leftblock{
+    display: flex;
+	width:100%;
+}
+#sp_tools #mainimg_area .leftblock img,
+#sp_management #mainimg_area .leftblock img{
+	width:100%;
+}
+#sp_tools #mainimg_area .rightblock,
+#sp_management #mainimg_area .rightblock{
+	display: block;
+    align-items: center;
+	width:100%;
+    background-color: #2B3E89;
+}
+#sp_tools #mainimg_area .rightblock p,
+#sp_management #mainimg_area .rightblock p{
+	margin:0px;
+	padding:25px 10px 25px 10px;
+	line-height: 200%;
+	color: #fff;
+	font-size: 13px;
+}
+#sp_tools #mainimg_area .rightblock strong{
+	font-size: 19px;
+}
+#sp_tools #subimg_area{
+	display: block;
+	margin-bottom:120px;
+}
+#sub_contents_area section>div#subimg_area{
+	padding: 20px 0px 0px;
+}
+#sp_tools #subimg_area img{
+	width:100%;
+	margin-top:20px;
+}
+#sp_tools #subimg_area .img1,
+#sp_tools #subimg_area .img2{
+	width:100%;
+}
+#sp_tools #subimg_area .img3{
+	width:100%;
+	margin-top:0px;
+}
+
+#sp_management #subimg_area{
+	display: block;
+	margin-bottom:40px;
+}
+#sp_management #subimg_area .imgframe{
+	width:100%;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+#sp_management #subimg_area .videoframe{
+	width:100%;
+}
+#sp_management #message_area{
+	width:100%;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:120px;
+}
+
 
 /* print_service */
 

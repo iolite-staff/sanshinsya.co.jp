@@ -665,6 +665,148 @@ body{
 #sub_contents_area #sp_service ul.item  div a{
 	width: 180px;
 }
+/* 各種プロモーションツール　・　品質管理　 **********************************************/
+#sp_tools #stitle_area, #sp_tools #linetitle_area, #sp_tools #mainimg_area, #sp_tools #subimg_area
+#sp_management #stitle_area, #sp_management #linetitle_area, #sp_management #mainimg_area, #sp_management #subimg_area, #sp_management #message_area{
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 0px 0px 0px;
+}
+#sp_tools #stitle_area,
+#sp_management #stitle_area{
+    padding: 90px 0px 45px;
+}
+#sp_tools .stitle_mini,
+#sp_management .stitle_mini{
+	text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+}
+#sp_tools .stitle,
+#sp_management .stitle{
+	text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 30px;
+}
+#sp_tools .stitle_border,
+#sp_management .stitle_border{
+	width: 60px;
+	border-color:#2B3E89;
+}
+#sp_tools .linetitle,
+#sp_management .linetitle {
+    width: 100%;
+    background-color: #2B3E89;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 17px;
+	text-align: left;
+	margin:0 auto;
+}
+#sp_tools #mainimg_area,
+#sp_management #mainimg_area{
+	display: flex;
+    padding: 30px 0px 60px;
+}
+#sp_tools #mainimg_area .leftblock,
+#sp_management #mainimg_area .leftblock{
+    display: flex;
+	width:50%;
+}
+#sp_tools #mainimg_area .leftblock img,
+#sp_management #mainimg_area .leftblock img{
+	width:100%;
+}
+#sp_tools #mainimg_area .rightblock,
+#sp_management #mainimg_area .rightblock{
+	display: flex;
+    align-items: center;
+	width:50%;
+    background-color: #2B3E89;
+}
+#sp_tools #mainimg_area .rightblock p{
+	margin:0px 10px 0 7%;
+	line-height: 280%;
+	color: #fff;
+	font-size: 14px;
+}
+#sp_management #mainimg_area .rightblock p{
+	margin:0px 10px 0 7%;
+	line-height: 200%;
+	color: #fff;
+	font-size: 14px;
+}
+#sp_tools #mainimg_area .rightblock strong{
+	font-size: 22px;
+}
+@media only screen and (max-width:870px){
+	#sp_tools #mainimg_area .rightblock p{
+		margin:0px 10px 0 18px;
+		font-size:12px;
+	}
+	#sp_tools #mainimg_area .rightblock strong{
+		font-size:20px;
+	}
+}
+@media only screen and (max-width:920px){
+	#sp_management #mainimg_area .rightblock p{
+		margin:0px 10px 0 18px;
+		font-size:12px;
+	}
+}
+
+/* プロモーション */
+#sp_tools #subimg_area{
+	display: flex;
+    flex-wrap: wrap;
+    column-gap: 1%;
+    justify-content: center;
+    align-items: center;
+	margin-bottom:120px;
+}
+#sp_tools #subimg_area img{
+	width:100%;
+}
+#sp_tools #subimg_area .img1,
+#sp_tools #subimg_area .img2{
+	width:28%;
+}
+#sp_tools #subimg_area .img3{
+	width:22%;
+	margin-top:60px;
+}
+/* 品質管理 */
+#sp_management #subimg_area{
+	display: flex;
+    flex-wrap: wrap;
+    column-gap: 7%;
+    justify-content: center;
+    align-items: center;
+	margin-bottom:40px;
+}
+#sp_management #subimg_area img{
+	width:100%;
+}
+#sp_management #subimg_area .imgframe{
+	width:35%;
+}
+#sp_management #subimg_area video{
+	width:100%;
+}
+#sp_management #subimg_area .videoframe{
+	width:35%;
+}
+#sp_management #message_area{
+	width:100%;
+	text-align: center;
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:120px;
+}
+
+
 
 /* sp_nav */
 
@@ -2363,6 +2505,7 @@ nav.inner_link ul li:not(:last-child){
 	display: ruby;
 }
 #sub_contents_area.print_service section.sub_contents_main div.bookbinding > div > div > a{
-	width: 160px;
+	width: 180px;
 	margin: 0 0 10px 0;
+	text-align: center;
 }
