@@ -756,8 +756,26 @@ h1 .sp_none {
 #sp_service .bgbox{
 	transition: all 0s ease-out;
 }
+#sp_service #event .subtitle{
+	font-size:25px;
+}
 #sp_service .flexframe{
 	display: block;
+}
+#sp_service .flexframe2 {
+	display: block;
+	padding:0;
+}
+#sp_service .imgcnt2 {
+	display: block;
+	width: 100%;
+}
+#sp_service .videocnt {
+	margin:0 0 20px 0;
+}
+#sp_service .imgcnt2 .img2 {
+    width: 100%;
+    margin: 0 30px 20px 0;
 }
 #sp_service .imgbtn_st, #sp_service .imgbtn {
     width: 100%;
@@ -776,6 +794,10 @@ h1 .sp_none {
 	}
 }
 
+#sp_service .imgcnt{
+	width:100%;
+	padding:0;
+}
 #sp_service .imgbtn_st h3,
 #sp_service .imgbtn h3 {
 	position: absolute;
@@ -820,6 +842,13 @@ h1 .sp_none {
 #sp_service .bgbox {
     height: 400px;
 }
+#sp_service .width100 {
+    width: 100%;
+}
+#sp_service .flexframeC {
+    display: block;
+}
+
 /* 各種プロモーションツール　・　品質管理SPブラウザ **********************************************/
 #sp_tools #stitle_area,
 #sp_management #stitle_area{
@@ -887,7 +916,6 @@ h1 .sp_none {
 	font-size: 19px;
 }
 #sp_tools #subimg_area{
-	display: block;
 	margin-bottom:120px;
 }
 #sub_contents_area section>div#subimg_area{
@@ -895,14 +923,16 @@ h1 .sp_none {
 }
 #sp_tools #subimg_area img{
 	width:100%;
-	margin-top:20px;
+	margin-bottom:40px;
 }
 #sp_tools #subimg_area .img1,
 #sp_tools #subimg_area .img2{
 	width:100%;
+	padding: 0 25px;
 }
 #sp_tools #subimg_area .img3{
 	width:100%;
+	padding: 0 25px;
 	margin-top:0px;
 }
 
