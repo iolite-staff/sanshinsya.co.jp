@@ -874,7 +874,6 @@ h1 .sp_none {
 }
 
 #sp_service .imgcnt2 {
-	display: block;
 	width: 100%;
 }
 
@@ -883,8 +882,12 @@ h1 .sp_none {
 }
 
 #sp_service .imgcnt2 .img2 {
-	width: 100%;
-	margin: 0 30px 20px 0;
+	width: 98%;
+	margin: 0 1% 20px;
+}
+#sp_service .imgcnt2 .img2h {
+	width: 48%;
+	margin: 0 1% 20px;
 }
 
 #sp_service .imgbtn_st,
@@ -972,7 +975,7 @@ h1 .sp_none {
 	display: block;
 }
 
-/* Šeíƒvƒƒ‚[ƒVƒ‡ƒ“ƒc[ƒ‹@E@•i¿ŠÇ—SPƒuƒ‰ƒEƒU **********************************************/
+/* ï¿½eï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½cï¿½[ï¿½ï¿½ï¿½@ï¿½Eï¿½@ï¿½iï¿½ï¿½ï¿½Ç—ï¿½SPï¿½uï¿½ï¿½ï¿½Eï¿½U **********************************************/
 #sp_tools #stitle_area,
 #sp_management #stitle_area {
 	padding: 80px 0px 50px;

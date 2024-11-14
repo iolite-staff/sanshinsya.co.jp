@@ -666,7 +666,7 @@ body {
 }
 
 #sp_service .imgcnt2 {
-	width: 58%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -676,8 +676,12 @@ body {
 }
 
 #sp_service .imgcnt2 .img2 {
-	width: 43%;
-	margin: 0 30px 20px 0;
+	width: 48%;
+	margin: 0 1% 20px;
+}
+#sp_service .imgcnt2 .img2h {
+	width: 23%;
+	margin: 0 1% 20px;
 }
 
 #sp_service .videocnt video,
