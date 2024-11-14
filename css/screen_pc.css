@@ -552,8 +552,9 @@ body>footer ul.bnr .bg02 {
 	}
 
 }
-
-
+#sub_contents_area #ink div.ink_detail_features li{
+	list-style-type: disclosure-closed;
+}
 
 
 /* print_service */

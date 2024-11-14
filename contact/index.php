@@ -586,7 +586,6 @@
 				<p>学生専用申込みフォーム</p>
 			</a>
 		</li>
-
 	</ul>
 	<div id="footer_nav_area">
 		<div class="upload">
