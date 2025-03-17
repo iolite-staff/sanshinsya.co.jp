@@ -876,7 +876,9 @@ h1 .sp_none {
 #sp_service .imgcnt2 {
 	width: 100%;
 }
-
+#sp_service .pc {
+	display: none;
+}
 #sp_service .videocnt {
 	margin: 0 0 20px 0;
 }
@@ -1238,3 +1240,25 @@ h1 .sp_none {
 	width: 45%;
 	padding: 10px 10px 12px;
 }
+
+#sp_service .videocnt {
+    width: 100%;
+    margin: 0 1% 20px;
+	display: flex;
+	justify-content: center;
+}
+#sp_service .videocnt video{
+	width: 50%;
+	margin: 0 0 23px 0;
+}
+#sp_service .img2 h5{
+	font-size: 3.6vw;
+}
+#sp_service .imgcnt3 div {
+    width: 100%;
+}
+
+#print_service_reason div.select_reason:last-child div.select_reason_frame{
+	margin-top: 20px;
+}
+

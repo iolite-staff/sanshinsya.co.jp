@@ -179,7 +179,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="../print_service/">印刷サービス</a>
+				<a href="../print_service/">事業案内</a>
 				<ul class="menu_inner">
 					
 					<li><a href="../print_service/prepress/">製版</a></li>
@@ -187,13 +187,7 @@
 					<li><a href="../print_service/bookbinding/">製本</a></li>
 				</ul>
 			</li>
-			<li>
-				<a href="../sp_service/">セールスプロモーション</a>
-				<ul class="menu_inner">
-					<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
-					<li><a href="../sp_service/management/">品質管理</a></li>
-				</ul>
-			</li>
+			<li><a href="../management/">品質管理</a></li>
 			<li><a href="#">お問い合わせ</a></li>
 		</ul>
 	</nav>
@@ -470,7 +464,7 @@
 						<li><a href="../company/facility/">事業所一覧</a></li>
 					</ul>
 				</li>
-				<li><a href="../print_service/">印刷サービス</a>
+				<li><a href="../print_service/">事業案内</a>
 					<ul>
 						
 						<li><a href="../print_service/prepress/">製版</a></li>
@@ -478,13 +472,7 @@
 						<li><a href="../print_service/bookbinding/">製本</a></li>
 					</ul>
 				</li>
-				<li><a href="../sp_service/">セールスプロモーション</a>
-					<ul>
-						<li><a href="../sp_service/tools/">各種プロモーションツール</a></li>
-						<li><a href="../sp_service/management/">品質管理</a></li>
-					</ul>
-				</li>
-
+				<li><a href="../management/">品質管理</a></li>
 				<li><a href="#">お問い合わせ</a></li>
 				<li><a href="../student_form/">学生専用申込みフォーム</a></li>
 			</ul>

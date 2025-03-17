@@ -237,6 +237,8 @@ body>footer ul.bnr .bg02 {
 	width: 50%;
 	box-sizing: border-box;
 	padding: 0 0 0 30px;
+	border-left: 1px solid #ddd;
+	margin-left: 30px;
 }
 
 #footer_nav_area .upload>a {
@@ -795,7 +797,7 @@ body>footer ul.bnr .bg02 {
 		text-align: center;
 	}
 
-	/*印刷サービス***********/
+	/*事業案内***********/
 	#print_service_knowhow ul.item {
 		display: block;
 	}
@@ -944,4 +946,19 @@ body>footer ul.bnr .bg02 {
 		width: 140px;
 		padding: 10px 10px 12px;
 	}
+}
+
+#sp_service .img2 h5{
+	font-size: min(2.2vw, 21px);
+}
+
+#sp_service .videocnt {
+	width: 30%;
+	min-width: 196px;
+	margin: 0 1% 20px;
+	max-width: 320px;
+}
+#sp_service .imgcnt3 div{
+	width: 31%;
+	max-width: 700px;
 }

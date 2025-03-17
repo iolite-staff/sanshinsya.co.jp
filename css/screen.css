@@ -41,7 +41,9 @@ a.btn_a {
 	background-color: #00b350;
 }
 
-a.btn_a:hover {
+
+a.btn_a:hover,
+a.btn_c:hover {
 	background-color: #00b3519f;
 	transition: 0.3s;
 }
@@ -52,15 +54,16 @@ a.btn_b {
 	font-size: 18px;
 	color: #fff;
 	background-color: #00b350;
+	clip-path: polygon(0 0, 56% 0, 92% 0, 100% 50%, 92% 100%, 21% 100%, 0 100%);	
 }
 
 a.btn_b span {
 	display: block;
 	padding: 20px 0 20px 40px;
-	background-image: url("../img/interface/bnr_bg.png");
-	background-repeat: no-repeat;
-	background-position: right center;
-	background-size: auto 80px;
+}
+a.btn_b:hover{
+	opacity: 0.7;
+	transition: 0.2s;
 }
 
 a.btn_c {
@@ -669,6 +672,12 @@ body {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+}
+#sp_service .imgcnt3{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #sp_service .maincnt {
@@ -676,17 +685,24 @@ body {
 }
 
 #sp_service .imgcnt2 .img2 {
-	width: 48%;
+	width: 60%;
+	max-width:800px;
 	margin: 0 1% 20px;
 }
-#sp_service .imgcnt2 .img2h {
-	width: 23%;
+#sp_service .center {
+	width: 60%;
+	margin: auto;
+}
+#sp_service .imgcnt3 div{
 	margin: 0 1% 20px;
 }
 
 #sp_service .videocnt video,
-#sp_service .imgcnt2 img {
+#sp_service .imgcnt2 img,
+#sp_service .imgcnt3 img {
 	width: 100%;
+    max-width: 690px;
+    margin: auto;
 }
 
 #sp_service .textcnt li {
@@ -725,6 +741,10 @@ body {
 	display: none !important;
 }
 
+#sp_service .img2 h5{
+	text-align: center;
+	margin-bottom: 20px;
+}
 
 #home_sp_area ul.item li div::before,
 #sub_contents_area #sp_service ul.item li div:nth-child(1)::before {
@@ -1653,7 +1673,7 @@ a.privacy {
 	padding: 0;
 }
 
-/*印刷サービス　選ばれる理由*/
+/*事業案内　選ばれる理由*/
 #sub_contents_area section.print_service_detail>div {
 	padding: 80px 0 40px;
 	margin: 0 5%;
@@ -1734,12 +1754,11 @@ a.privacy {
 
 #sub_contents_area #print_service_reason .reason_link {
 	width: 240px;
-	text-align: right;
 	display: block;
 	margin: auto;
 }
 
-/*印刷サービス　実績*/
+/*事業案内　実績*/
 #sub_contents_area section .print_service_jisseki {
 	padding-top: 0;
 }
@@ -1768,7 +1787,7 @@ a.privacy {
 	width: 100%;
 }
 
-/*印刷サービス　ノウハウ*/
+/*事業案内　ノウハウ*/
 /* #print_service_knowhow h2{
 	font-size:18px;
 }
@@ -3010,4 +3029,19 @@ nav.inner_link ul li:not(:last-child) {
 	margin: 0 10px 10px 0;
 	padding: 10px 10px 12px;
 	text-align: center;
+}
+
+#print_service_reason div .select_reason_frame{
+	position: relative;
+}
+#print_service_reason div .select_reason_frame ul{
+	position: absolute;
+	left: 15px;
+	padding: 0;
+	width: 100%;
+}
+#print_service_reason div .select_reason_frame ul li{
+	list-style: "▶";
+	width: 240px;
+	margin: auto;
 }
