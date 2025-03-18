@@ -3045,3 +3045,8 @@ nav.inner_link ul li:not(:last-child) {
 	width: 240px;
 	margin: auto;
 }
+
+#narihira img.wide_img {
+    width: 88%;
+    max-width: 975px;
+}
