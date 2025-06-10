@@ -45,6 +45,7 @@
 				</ul>
 			</li>
 			<li><a href="../management/">品質管理</a></li>
+			<li><a href="../recruit/">採用情報</a></li>
 			<li><a href="#">お問い合わせ</a></li>
 		</ul>
 	</nav>
@@ -125,6 +126,10 @@
 									<span>
 										<input type="checkbox" name="consultation_item[]" id="consultation_item5" value="データ入稿について">
 										<label for="consultation_item5">データ入稿について</label>
+									</span>
+									<span>
+										<input type="checkbox" name="consultation_item[]" id="consultation_item7" value="採用">
+										<label for="consultation_item7">採用</label>
 									</span>
 									<span>
 										<input type="checkbox" name="consultation_item[]" id="consultation_item6" value="その他">
@@ -411,6 +416,7 @@
 							<tr class="no_border">
 								<td colspan="3">
 									<p>
+										採用：採用に関するお問い合わせ内容をご自由にお書きください。<br />
 										その他：ご希望の納期、仕様などご自由にお書きください。<br />
 										※お手持ちのデータについてのご質問は、できるだけ詳しくご記入下さい。
 									</p>
@@ -571,6 +577,14 @@
 
 </article>
 <footer>
+	<div class="bg03">
+		<a href="../recruit">
+			<div>
+				<p>採用情報</p>
+				<span>ただいま、新しい仲間を募集しています。<br>ご興味のある方は、こちらから詳細をご確認ください。</span>
+			</div>
+		</a>
+	</div>
 	<ul class="bnr">
 		<li class="bg01">
 			<a href="#">
@@ -612,6 +626,7 @@
 					</ul>
 				</li>
 				<li><a href="../management/">品質管理</a></li>
+				<li><a href="../recruit/">採用情報</a></li>
 				<li><a href="#">お問い合わせ</a></li>
 				<li><a href="../student_form/">学生専用申込みフォーム</a></li>
 			</ul>

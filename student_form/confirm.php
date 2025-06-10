@@ -58,6 +58,7 @@
 				</ul>
 			</li>
 			<li><a href="../management/">品質管理</a></li>
+			<li><a href="../recruit/">採用情報</a></li>
 			<li><a href="../contact/">お問い合わせ</a></li>
 		</ul>
 	</nav>
@@ -282,6 +283,14 @@
 
 </article>
 <footer>
+	<div class="bg03">
+		<a href="../recruit">
+			<div>
+				<p>採用情報</p>
+				<span>ただいま、新しい仲間を募集しています。<br>ご興味のある方は、こちらから詳細をご確認ください。</span>
+			</div>
+		</a>
+	</div>
 	<ul class="bnr">
 		<li class="bg01">
 			<a href="../contact/">
@@ -290,7 +299,7 @@
 		</li>
 		<li class="bg02">
 			<a href="../student_form/">
-				<p>学生専用申込みフォーム</p>
+				<p>学生用申込みフォーム</p>
 			</a>
 		</li>
 	</ul>
@@ -324,6 +333,7 @@
 				</li>
 				<li><a href="../management/">品質管理</a></li>
 				<li><a href="../contact/">お問い合わせ</a></li>
+				<li><a href="../recruit/">採用情報</a></li>
 				<li><a href="../student_form/">学生専用申込みフォーム</a></li>
 			</ul>
 		</div>

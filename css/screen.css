@@ -134,7 +134,10 @@ body {
 	color: #fff;
 	text-shadow: 1px 2px 2px #333;
 	position: absolute;
-	top: 25%;
+/* TOPICあり 
+	top: 25%; */
+/* TOPICなし */
+	top: 34%;
 	left: 10%;
 }
 
@@ -235,7 +238,7 @@ body {
 
 #home_welcome_area p {
 	margin: 0;
-	padding: 100px 20px 120px;
+	padding: 100px 20px 50px;
 	text-align: center;
 	font-size: 18px;
 	line-height: 1.8;
@@ -947,6 +950,11 @@ body {
 	}
 }
 
+#home_welcome_area a{
+	display: block;
+	text-align: center;
+	padding-bottom: 30px;
+}
 /* プロモーション */
 #sp_tools #subimg_area {
 	display: flex;
@@ -1281,11 +1289,7 @@ a.privacy {
 }
 
 #home_sponsor_area {
-	padding: 100px 20px;
-	background-image: url("../img/sponsor_bg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	padding: 15px 20px;
 }
 
 #home_sponsor_area>div {
@@ -3049,4 +3053,127 @@ nav.inner_link ul li:not(:last-child) {
 #narihira img.wide_img {
     width: 88%;
     max-width: 975px;
+}
+
+body>footer div.bg03:hover,
+body>footer ul.bnr li:hover{
+	transition: 0.5s;
+	opacity: 0.7;
+}
+body>footer ul.bnr .bg01 {
+	background-image: url("../img/interface/bg_contact.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+body>footer ul.bnr .bg02 {
+	background-image: url("../img/interface/bg_form.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+body>footer div.bg03{
+	width: 100%;
+	height: 200px;
+	background-image: url("../img/interface/bg_recruit.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#recruit_contents{
+	margin-bottom: 80px;
+}
+
+#recruit_contents .message{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+	background-image: url(../img/recruit_bg.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-top: 100px;
+}
+#recruit_contents .message p{
+	display: block;
+	box-sizing: border-box;
+    background: rgb(255 255 255 /0.8);
+    padding: 50px;
+    width: 100%;
+	margin: auto;
+	max-width: 800px;
+}
+#recruit_contents .requirements{
+	width: 100%;
+	margin: 80px 0;
+}
+#recruit_contents .requirements .recruit_border{
+	width: 60px;
+	height: 2px;
+	background-color: #00B350;
+}
+#recruit_contents .requirements table{
+	width: auto;
+	margin: auto;
+	padding-top: 20px;
+	max-width: 800px;
+}
+#recruit_contents .requirements table th{
+	background-color: #0B8643;
+	padding: 0 50px;
+	color: #FFFFFF;
+	font-weight: 300;
+}
+#recruit_contents .requirements table td{
+	background-color: #DFF3E8;
+	padding: 20px 50px;
+}
+#recruit_contents .requirements table td dl dd{
+	margin: 0;
+	text-indent: 10px;
+}
+#recruit_contents .requirements table td ul{
+	padding: 0;
+	margin: 0;
+}
+#recruit_contents .requirements table td ul li{
+	list-style: none;
+}
+#recruit_contents h2{
+	text-align: center;
+	color: #009944;
+}
+#recruit_contents .recruit_link{
+	position: relative;
+	background: #009944;
+	color: #FFFFFF;
+	margin: auto;
+	padding: 30px;
+	border-radius: 50px;
+	width: 300px;
+}
+#recruit_contents .recruit_link:hover{
+	transition: 0.3s;
+	opacity: 0.7;
+}
+#recruit_contents .recruit_link a{
+	color: #FFFFFF;
+	font-size: 18px;
+	height: 100%;
+	width: 100%;
+}
+#recruit_contents .recruit_link a::before{
+	content: "";
+	position: absolute;
+	right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/interface/arrow_white_2.png);
+	background-size: cover;
 }
