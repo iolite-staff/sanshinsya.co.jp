@@ -15,6 +15,43 @@
 <link rel="icon" type="image/png" href="./favicon-.png" sizes="16x16">
 <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32">
 <script type="text/javascript" src="./lib/jquery/jquery-3.7.1.min.js"></script>
+<script>
+$(function () {
+  const $topicsArea = $('#home_topics_area');
+  const $p = $topicsArea.find('p');
+  const pText = $p.text().replace(/\s|　/g, ''); // テキストのみ取得（空判定用）
+  const brCount = $p.html().split('<br>').length - 1; // <br>の数をカウント
+
+  if (pText.length > 0) {
+    $topicsArea.css('display', 'block');
+
+    // <br>数によってmargin-bottomを変える
+    let marginBottom;
+    switch (true) {
+      case brCount === 0:
+        marginBottom = '70px';
+        break;
+      case brCount === 1:
+        marginBottom = '95px';
+        break;
+      case brCount === 2:
+        marginBottom = '110px';
+        break;
+      default:
+        marginBottom = '135px';
+    }
+
+    $('.bunner_area').css('margin-bottom', marginBottom);
+
+    // デバイス幅が990px以下の時だけ高さ変更
+    if (window.innerWidth <= 990) {
+      $('#home_key_area').css('height', '650px');
+    }
+  } else {
+    $topicsArea.css('display', 'none');
+  }
+});
+</script>
 </head>
 <body>
 <header>
@@ -57,20 +94,20 @@
 	<p class="catchcopy">
 		<span>三進社は、</span><br><span>『こだわりを持ち、<br class="sp">モノづくりに誇りを持っている』</span><br><span>総合印刷会社です。</span>
 	</p>
-<!--
+<!-- TOPICS掲載内容がないときは<p>タグ内を空にすると自動的に非表示になります -->
 	<div id="home_topics_area">
 		<h2>TOPICS</h2>
-		<p>
-
-		</p>
+		<p>aaa<br>aaa<br>aaa<br>aaa</p>
 	</div>
--->
+
+	<div class="bunner_area">
+		<a href="./company/policy/index.html#biomass-ink"><img src="./img/bunner.png" alt="バナー"></a>
+	</div>
 </article>
 <article id="home_welcome_area">
 	<p>
-		「ピンホールに強い！バイオマスインキ５５を用いた印刷物」のご提案をいたします
+		常により良い未来を想像する印刷会社を目指します！
 	</p>
-	<a href="./company/policy/index.html#biomass-ink">詳しくはこちら</a>
 </article>
 <article id="home_service_area">
 	<h2>印刷サービス<span>Printing Service</span></h2>
